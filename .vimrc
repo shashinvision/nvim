@@ -1,6 +1,5 @@
 " Para instalar el gestor de plugins esto en la consola
-" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 call plug#begin('~/.vim/plugged') " Para agregar plugins siempre va al principio del docu
 
 " con el comando :Pluginstall puedes instalar los plugins que instales, si
