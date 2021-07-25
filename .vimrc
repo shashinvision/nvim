@@ -1,28 +1,28 @@
-" Para instalar el gestor de plugins esto en la consola
-" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 call plug#begin('~/.vim/plugged') " Para agregar plugins siempre va al principio del docu
-
 " con el comando :Pluginstall puedes instalar los plugins que instales, si
 " usar :Plug y luego tabulas y aparecen mas opciones esta confirmado que se
 " instalo bien
 
-" gestor de plugins https://github.com/junegunn/vim-plug 
+" gestor de plugins https://github.com/junegunn/vim-plug
 " hay configuraciones para vim y neovim elige el que uses, yo uso neovim
 "
-" THEMA Dracula desde la web oficial 
+" THEMA Dracula desde la web oficial
 " mkdir -p ~/.vim/pack/themes/start
 " cd ~/.vim/pack/themes/start
 " git clone https://github.com/dracula/vim.git dracula
-" y luego colocar el codigo que viene aca abajo 
+" y luego colocar el codigo que viene aca abajo
 " fuente = https://draculatheme.com/vim
 " packadd! dracula
 " syntax enable
 " colorscheme dracula
-Plug 'joshdick/onedark.vim' 
+Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
-Plug 'christoomey/vim-tmux-navigator' " con control h y control l navego facil entre pantalla, con nerdtree me posiciono en otro archicvo y presiono la tecla s y divide la pantalla 
+" Plug 'tpope/vim-fugitive'
+" Plug 'itchyny/vim-gitbranch'
+Plug 'christoomey/vim-tmux-navigator' " con control h y control l navego facil entre pantalla, con nerdtree me posiciono en otro archicvo y presiono la tecla s y divide la pantalla
 " git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 " git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
 Plug 'jiangmiao/auto-pairs'
@@ -40,7 +40,7 @@ call plug#end() " para indicar que termino el gestor de plugins
 set number " para que me muestre los numeros de las lineas
 set rnu " set relativenumber - para que me de el numero de lineas relativo
 set cursorline "Para que muestre el cursor donde estamos
-set mouse=a "Para activar el mouse 
+set mouse=a "Para activar el mouse
 set clipboard=unnamed " Para poder utilizar el copy/paste desde terminal
 set laststatus=10 " Para guardar la cantidad de rehacer y deshacer
 set showcmd " para mostrar los comandos que se escriben
@@ -63,15 +63,31 @@ endif
 " en la linea de comando de cualquier archivo, puedes escribir :source % y se
 " recarga el archivo
 
-" si trabajo con neovim debo modificar el archivo de la ruta 
+" si trabajo con neovim debo modificar el archivo de la ruta
 " vim ~/.config/nvim/init.vim
-" y escribir 
+" y escribir
 " set runtimepath^=~/.vim runtimepath+=~/.vim/after
 " let &packpath=&runtimepath
 " source ~/.vimrc
 " para airline themes
+
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
+
+" lightline configuracion
+" se configura el .zshrc con export TERM=xterm-256color
+
+" set laststatus=2
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
 
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
