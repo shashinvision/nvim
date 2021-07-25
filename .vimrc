@@ -18,7 +18,6 @@ call plug#begin('~/.vim/plugged') " Para agregar plugins siempre va al principio
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
 " Plug 'tpope/vim-fugitive'
 " Plug 'itchyny/vim-gitbranch'
@@ -79,10 +78,9 @@ let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
 
-" lightline configuracion
+"configuracion
 " se configura el .zshrc con export TERM=xterm-256color
 
-" set laststatus=2
 
 if !has('gui_running')
   set t_Co=256
