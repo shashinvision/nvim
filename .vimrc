@@ -16,11 +16,12 @@ call plug#begin('~/.vim/plugged') " Para agregar plugins siempre va al principio
 " syntax enable
 " colorscheme dracula
 Plug 'joshdick/onedark.vim'
+" Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
-" Plug 'tpope/vim-fugitive'
-" Plug 'itchyny/vim-gitbranch'
+Plug 'tpope/vim-fugitive'
+Plug 'itchyny/vim-gitbranch'
 Plug 'christoomey/vim-tmux-navigator' " con control h y control l navego facil entre pantalla, con nerdtree me posiciono en otro archicvo y presiono la tecla s y divide la pantalla
 " git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 " git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
@@ -74,6 +75,7 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
+set laststatus=2
 let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
