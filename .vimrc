@@ -51,6 +51,12 @@ Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay
 Plug 'airblade/vim-gitgutter' " Para ver los cambios en git como linea que se agrega con un signo +, si quitamos lineas con - y si se modifico una con ~
 Plug 'vim-scripts/taglist.vim' " Para ver os tags de los archivos
 
+"  Este complemento añade o mejora las posibilidades de plegado
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+Plug 'tpope/vim-surround' " Para eliminar todo lo que este rodeado por un elemento ejemplo comillas dobles
+" para cambiar las comillas simples por dobles cs'" con ds" se eliminan las comillas
 
 " Para usar formato de prettier es :CocCommand prettier.formatFile
 
