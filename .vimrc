@@ -149,3 +149,7 @@ autocmd BufWrite *.js :CocCommand prettier.formatFile
 autocmd BufWrite *.css :CocCommand prettier.formatFile
 autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
+
+" para gutter
+autocmd BufWritePost * GitGutter
+
