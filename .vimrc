@@ -31,12 +31,32 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
 " :CocInstall coc-json coc-emmet coc-html coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css
+Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
+Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack-grep
+" Modo de uso
+" :Ack [options] {pattern} [{directories}]
+
+" ?    a quick summary of these keys, repeat to close
+" o    to open (same as Enter)
+" O    to open and close the quickfix window
+" go   to preview file, open but maintain focus on ack.vim results
+" t    to open in new tab
+" T    to open in new tab without moving to it
+" h    to open in horizontal split
+" H    to open in horizontal split, keeping focus on the results
+" v    to open in vertical split
+" gv   to open in vertical split, keeping focus on the results
+" q    to close the quickfix window
+
+Plug 'airblade/vim-gitgutter' " Para ver los cambios en git como linea que se agrega con un signo +, si quitamos lineas con - y si se modifico una con ~
+Plug 'vim-scripts/taglist.vim' " Para ver os tags de los archivos
+
 
 " Para usar formato de prettier es :CocCommand prettier.formatFile
 
 call plug#end() " para indicar que termino el gestor de plugins
 
-
+let mapleader = "\ " " Esto configura la tecla lider en VIM, en este momento dejamos la tecla 'espacio', esto es para no 'pisar' los atajos que vi tiene con la tecla Control y podemos personalizar todo, se debe usar la combinacion de botones en menos de un segundo para que haga efecto
 set number " para que me muestre los numeros de las lineas
 set rnu " set relativenumber - para que me de el numero de lineas relativo
 set cursorline "Para que muestre el cursor donde estamos
@@ -88,11 +108,24 @@ if !has('gui_running')
   set t_Co=256
 endif
 
+"en mi archivo .zshrc y/o en .bashrc se agrega esto para que ack no tenga
+"errores con perl
 
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+
+" Al colocar <C-n> es decir lo mismo que la tecla Control + la tecla n
+" AL decir al final <CR> es lo mismo que decir al final ejecuta la tecla
+" enter, si coloco <Space> le indico que coloque espacio luego del comando
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+" buscar archivos con FZF
+nnoremap <leader>f :FZF<CR>
+" buscar contenido de archivos con ack
+nnoremap <leader>s :Ack!<Space>
 
 " comandos personalizados
 " para guardar rapido
