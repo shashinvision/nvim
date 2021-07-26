@@ -111,9 +111,9 @@ endif
 "en mi archivo .zshrc y/o en .bashrc se agrega esto para que ack no tenga
 "errores con perl
 
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US.UTF-8"
-export LANGUAGE="en_US.UTF-8"
+" export LC_ALL="en_US.UTF-8"
+" export LANG="en_US.UTF-8"
+" export LANGUAGE="en_US.UTF-8"
 
 " Al colocar <C-n> es decir lo mismo que la tecla Control + la tecla n
 " AL decir al final <CR> es lo mismo que decir al final ejecuta la tecla
