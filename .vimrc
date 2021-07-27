@@ -32,7 +32,7 @@ Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una lin
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
 " :CocInstall coc-json coc-emmet coc-html coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java
 Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
-Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack-grep
+Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
 " Modo de uso
 " :Ack [options] {pattern} [{directories}]
 
