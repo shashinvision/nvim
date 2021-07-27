@@ -56,8 +56,26 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 Plug 'tpope/vim-surround' " Para eliminar todo lo que este rodeado por un elemento ejemplo comillas dobles
-" para cambiar las comillas simples por dobles cs'" con ds" se eliminan las
-" comillas
+" para cambiar las comillas simples por dobles cs'" con ds" se eliminan las comillas
+
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multicursor
+
+" Basic usage:
+
+" select words with Ctrl-N (like Ctrl-d in Sublime Text/VS Code)
+" create cursors vertically with Ctrl-Down/Ctrl-Up
+" select one character at a time with Shift-Arrows
+" press n/N to get next/previous occurrence
+" press [/] to select next/previous cursor
+" press q to skip current and get next occurrence
+" press Q to remove current cursor/selection
+" start insert mode with i,a,I,A
+" Two main modes:
+
+" in cursor mode commands work as they would in normal mode
+" in extend mode commands work as they would in visual mode
+" press Tab to switch between «cursor» and «extend» mode
+" Most vim commands work as expected (motions, r to replace characters, ~ to change case, etc)
 
 
 " Para usar formato de prettier es :CocCommand prettier.formatFile
@@ -144,6 +162,18 @@ nmap <C-q> :q!<CR>
 " para navegar en el buffer
 nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
+
+" Para multicursor
+
+let g:VM_maps = {}
+let g:VM_maps['Find Under']         = '<C-d>'           " replace C-n
+let g:VM_maps['Find Subword Under'] = '<C-d>'           " replace visual C-n
+
+let g:VM_mouse_mappings = 1
+nmap   <C-LeftMouse>         <Plug>(VM-Mouse-Cursor)
+nmap   <C-RightMouse>        <Plug>(VM-Mouse-Word)
+nmap   <M-C-RightMouse>      <Plug>(VM-Mouse-Column)
+
 
 " comandos automaticos como prettier por ejemplo
 autocmd BufWrite *.html :CocCommand prettier.formatFile
