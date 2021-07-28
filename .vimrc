@@ -89,7 +89,7 @@ set number " para que me muestre los numeros de las lineas
 set rnu " set relativenumber - para que me de el numero de lineas relativo
 set cursorline "Para que muestre el cursor donde estamos
 set mouse=a "Para activar el mouse
-set clipboard=unnamed " Para poder utilizar el copy/paste desde terminal, solo selecciona en modo visual teclas la letra y para copiar
+set clipboard=unnamed " Para poder utilizar el copy/paste fuera de la terminal, solo selecciona en modo visual teclas la letra y para copiar, para pegar desde fuera de la terminal teclas la letra p en modo visual y listo
 set clipboard=unnamedplus
 set laststatus=10 " Para guardar la cantidad de rehacer y deshacer
 set showcmd " para mostrar los comandos que se escriben
@@ -194,3 +194,4 @@ autocmd BufWrite *.css :CocCommand prettier.formatFile
 autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
+
