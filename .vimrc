@@ -77,6 +77,8 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multicursor
 " press Tab to switch between «cursor» and «extend» mode
 " Most vim commands work as expected (motions, r to replace characters, ~ to change case, etc)
 
+Plug 'vimlab/split-term.vim'
+
 
 " Para usar formato de prettier es :CocCommand prettier.formatFile
 
@@ -95,6 +97,8 @@ set showmatch
 set encoding=utf-8
 syntax enable " para resaltar el codigo cuando lo seleccionamos
 colorscheme onedark
+set splitright
+set splitbelow
 
 " Para el theme de onedark
 if (empty($TMUX))
@@ -163,6 +167,12 @@ nmap <C-q> :q!<CR>
 nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
 
+
+" abrir terminal en nvim con lider t para abrir vertical leader s para abrir horizontal
+nnoremap <leader>t :Term<CR>
+nnoremap <leader>v :VTerm<CR>
+
+
 " Para multicursor
 
 let g:VM_maps = {}
@@ -174,9 +184,6 @@ nmap   <C-LeftMouse>         <Plug>(VM-Mouse-Cursor)
 nmap   <C-RightMouse>        <Plug>(VM-Mouse-Word)
 nmap   <M-C-RightMouse>      <Plug>(VM-Mouse-Column)
 
-" abrir terminal en nvim con Shit t para abrir vertical Shit s para abrir horizontal 
-map <S-t>:vsplit | term<CR>
-map <S-s>:split | term<CR>
 
 " comandos automaticos como prettier por ejemplo
 autocmd BufWrite *.html :CocCommand prettier.formatFile
