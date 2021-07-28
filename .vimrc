@@ -173,6 +173,7 @@ nnoremap <C-n> :bnext<CR>
 " abrir terminal en nvim con lider t para abrir vertical leader s para abrir horizontal 
 nnoremap <leader>t :Term<CR>
 nnoremap <leader>v :VTerm<CR>
+nnoremap <leader>d :bd<CR> " para cerrar el buffer actual 
 
 
 " Para multicursor
