@@ -175,8 +175,8 @@ nmap   <C-RightMouse>        <Plug>(VM-Mouse-Word)
 nmap   <M-C-RightMouse>      <Plug>(VM-Mouse-Column)
 
 " abrir terminal en nvim con Shit t para abrir vertical Shit s para abrir horizontal 
-map <S-t> :vsplit | term<CR>
-map <S-s> :split | term<CR>
+map <S-t>:vsplit | term<CR>
+map <S-s>:split | term<CR>
 
 " comandos automaticos como prettier por ejemplo
 autocmd BufWrite *.html :CocCommand prettier.formatFile
