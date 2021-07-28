@@ -89,7 +89,8 @@ set number " para que me muestre los numeros de las lineas
 set rnu " set relativenumber - para que me de el numero de lineas relativo
 set cursorline "Para que muestre el cursor donde estamos
 set mouse=a "Para activar el mouse
-set clipboard=unnamed " Para poder utilizar el copy/paste desde terminal
+set clipboard=unnamed " Para poder utilizar el copy/paste desde terminal, solo selecciona en modo visual teclas la letra y para copiar
+set clipboard=unnamedplus
 set laststatus=10 " Para guardar la cantidad de rehacer y deshacer
 set showcmd " para mostrar los comandos que se escriben
 set noshowmode " eliminamos que nos indique en que modo estamos (vista, insertar comando)
@@ -99,6 +100,7 @@ syntax enable " para resaltar el codigo cuando lo seleccionamos
 colorscheme onedark
 set splitright
 set splitbelow
+
 
 " Para el theme de onedark
 if (empty($TMUX))
@@ -168,7 +170,7 @@ nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
 
 
-" abrir terminal en nvim con lider t para abrir vertical leader s para abrir horizontal
+" abrir terminal en nvim con lider t para abrir vertical leader s para abrir horizontal 
 nnoremap <leader>t :Term<CR>
 nnoremap <leader>v :VTerm<CR>
 
