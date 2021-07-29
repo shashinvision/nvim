@@ -101,6 +101,11 @@ colorscheme onedark
 set splitright
 set splitbelow
 
+" identancion
+
+set shiftwidth=2
+set autoindent
+set smartindent
 
 " Para el theme de onedark
 if (empty($TMUX))
