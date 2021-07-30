@@ -100,9 +100,10 @@ syntax enable " para resaltar el codigo cuando lo seleccionamos
 colorscheme onedark
 set splitright
 set splitbelow
+set ignorecase " para innorar el key sensitive en las busquedas
+
 
 " identancion
-
 set shiftwidth=2
 set autoindent
 set smartindent
