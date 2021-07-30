@@ -100,8 +100,8 @@ syntax enable " para resaltar el codigo cuando lo seleccionamos
 colorscheme onedark
 set splitright
 set splitbelow
-set ignorecase " para innorar el key sensitive en las busquedas
-
+set ignorecase " para innorar el key sensitive en las busquedas, podria interferir en los reemplazos masivos, para eso colocar el comando :set noignorecase
+set smartcase
 
 " identancion
 set shiftwidth=2
