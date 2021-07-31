@@ -95,8 +95,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'kabbamine/vcoolor.vim'
 Plug 'easymotion/vim-easymotion'
 
-
-Plug 'sheerun/vim-polyglot'
 " Para usar formato de prettier es :CocCommand prettier.formatFile
 
 call plug#end() " para indicar que termino el gestor de plugins
