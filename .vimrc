@@ -81,11 +81,29 @@ Plug 'vimlab/split-term.vim'
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
+"autocomplete
+Plug 'Townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
+Plug 'mattn/emmet-vim'
+"web developer
+" Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
+Plug 'pangloss/vim-javascript'
+
+Plug 'sheerun/vim-polyglot'
+Plug 'kabbamine/vcoolor.vim'
+Plug 'easymotion/vim-easymotion'
+
+
+Plug 'sheerun/vim-polyglot'
 " Para usar formato de prettier es :CocCommand prettier.formatFile
 
 call plug#end() " para indicar que termino el gestor de plugins
 
 let mapleader = "\ " " Esto configura la tecla lider en VIM, en este momento dejamos la tecla 'espacio', esto es para no 'pisar' los atajos que vi tiene con la tecla Control y podemos personalizar todo, se debe usar la combinacion de botones en menos de un segundo para que haga efecto
+
+set nocompatible
 set number " para que me muestre los numeros de las lineas
 set rnu " set relativenumber - para que me de el numero de lineas relativo
 set cursorline "Para que muestre el cursor donde estamos
@@ -103,11 +121,27 @@ set splitright
 set splitbelow
 set ignorecase " para innorar el key sensitive en las busquedas, podria interferir en los reemplazos masivos, para eso colocar el comando :set noignorecase
 set smartcase
-
+" set pythondll=libpython3.8.so
 " identancion
+
 set shiftwidth=2
 set autoindent
 set smartindent
+set history=10000 " Sets how many lines of history VIM has to remember
+set gdefault " Add g (global) to substitute operations, :s/pattern/replacement/
+set splitbelow " Open split below
+set splitright " Open split right
+set hlsearch " Highlight search results
+set incsearch " Makes search act like search in modern browsers
+set nojoinspaces " Prevents inserting two spaces after punctuation on a join (J)
+set tabstop=2 " An indentation every four columns
+set softtabstop=2 " Let backspace delete indent
+set wrap! " Don't wrap long lines
+set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
+set fileencoding=utf-8 " The encoding written to file.
+set magic " For regular expressions turn magic on
+
+
 
 " Para el theme de onedark
 if (empty($TMUX))
@@ -181,7 +215,27 @@ nnoremap <C-n> :bnext<CR>
 nnoremap <leader>t :Term<CR>
 nnoremap <leader>v :VTerm<CR>
 nnoremap <leader>d :bd<CR> " para cerrar el buffer actual 
+"buscar palabras dentro del codigo
+nmap <Leader>b <Plug>(easymotion-s2)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+" <Leader>f{char} to move to {char}
+map  <Leader>c <Plug>(easymotion-bd-f)
+nmap <Leader>c <Plug>(easymotion-overwin-f)
 
+" para vcolor Use it:
+" * To insert a color anywhere.
+" * To modify the current hex, rgb, rgba or hsl color.
+
+" Using `<Alt-R>` you can insert a rgb color anywhere (NORMAL and INSERT modes).
+" Using `<Alt-V>` you can insert a hsl color anywhere (NORMAL and INSERT modes).
+" Using `<Alt-W>` you can insert a rgba color anywhere (NORMAL and INSERT modes).
+
+
+"Abrir y cerrar liver server
+" nmap <leader>b :Bracey<CR>
+" nmap <leader>q :BraceyStop<CR>
 
 " Para multicursor
 
