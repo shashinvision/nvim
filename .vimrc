@@ -79,7 +79,8 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multicursor
 
 Plug 'vimlab/split-term.vim'
 
-
+Plug 'ryanoasis/vim-devicons'
+Plug 'Yggdroot/indentLine'
 " Para usar formato de prettier es :CocCommand prettier.formatFile
 
 call plug#end() " para indicar que termino el gestor de plugins
