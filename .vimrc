@@ -134,7 +134,7 @@ set incsearch " Makes search act like search in modern browsers
 set nojoinspaces " Prevents inserting two spaces after punctuation on a join (J)
 set tabstop=2 " An indentation every four columns
 set softtabstop=2 " Let backspace delete indent
-set wrap! " Don't wrap long lines
+" set wrap! " Don't wrap long lines
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 set fileencoding=utf-8 " The encoding written to file.
 set magic " For regular expressions turn magic on
