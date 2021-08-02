@@ -97,7 +97,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'luochen1990/rainbow'
 
 
-Plug 'kien/rainbow_parentheses.vim'
 " Para usar formato de prettier es :CocCommand prettier.formatFile
 
 call plug#end() " para indicar que termino el gestor de plugins
@@ -173,13 +172,6 @@ set laststatus=2
 let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
-
-
-
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 
 "configuracion
 " se configura el .zshrc con export TERM=xterm-256color
@@ -264,4 +256,3 @@ autocmd BufWrite *.css :CocCommand prettier.formatFile
 autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
-
