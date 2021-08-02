@@ -95,15 +95,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'kabbamine/vcoolor.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'luochen1990/rainbow'
-" para rainbow pair 
- " git clone https://github.com/luochen1990/rainbow.git
- " cd rainbow
- " mkdir -p ~/.vim/plugin
- " cp plugin/* ~/.vim/plugin
- " cp autoload/* ~/.vim/autoload
 
- " let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
+Plug 'kien/rainbow_parentheses.vim'
 " Para usar formato de prettier es :CocCommand prettier.formatFile
 
 call plug#end() " para indicar que termino el gestor de plugins
@@ -148,8 +142,7 @@ set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatib
 set fileencoding=utf-8 " The encoding written to file.
 set magic " For regular expressions turn magic on
 
-" para rainbow
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+
 
 " Para el theme de onedark
 if (empty($TMUX))
@@ -180,6 +173,13 @@ set laststatus=2
 let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
+
+
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 "configuracion
 " se configura el .zshrc con export TERM=xterm-256color
@@ -264,3 +264,4 @@ autocmd BufWrite *.css :CocCommand prettier.formatFile
 autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
+
