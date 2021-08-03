@@ -31,7 +31,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
 " :CocInstall coc-json coc-emmet coc-html coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java
-Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
+" Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
 Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
 " Modo de uso
 " :Ack [options] {pattern} [{directories}]
@@ -94,7 +94,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
 Plug 'kabbamine/vcoolor.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'luochen1990/rainbow'
+" Plug 'luochen1990/rainbow'
 
 
 " Para usar formato de prettier es :CocCommand prettier.formatFile
@@ -127,7 +127,7 @@ set smartcase
 set shiftwidth=2
 set autoindent
 set smartindent
-set history=10000 " Sets how many lines of history VIM has to remember
+set history=1000 " Sets how many lines of history VIM has to remember
 set gdefault " Add g (global) to substitute operations, :s/pattern/replacement/
 set splitbelow " Open split below
 set splitright " Open split right
@@ -256,3 +256,4 @@ autocmd BufWrite *.css :CocCommand prettier.formatFile
 autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
+
