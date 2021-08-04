@@ -218,6 +218,8 @@ nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
 
 
+nnoremap <leader>1 :split<CR>
+nnoremap <leader>2 :vsplit<CR>
 " abrir terminal en nvim con lider t para abrir vertical leader s para abrir horizontal 
 nnoremap <leader>t :Term<CR>
 nnoremap <leader>v :VTerm<CR>
