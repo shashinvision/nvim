@@ -25,7 +25,6 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'christoomey/vim-tmux-navigator' " con control h y control l navego facil entre pantalla, con nerdtree me posiciono en otro archicvo y presiono la tecla s y divide la pantalla
 " git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 " git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
-Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
@@ -88,7 +87,6 @@ Plug 'mattn/emmet-vim'
 "web developer
 " Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-surround'
 Plug 'pangloss/vim-javascript'
 
 Plug 'sheerun/vim-polyglot'
@@ -117,8 +115,6 @@ set showmatch
 set encoding=utf-8
 syntax enable " para resaltar el codigo cuando lo seleccionamos
 colorscheme onedark
-set splitright
-set splitbelow
 set ignorecase " para innorar el key sensitive en las busquedas, podria interferir en los reemplazos masivos, para eso colocar el comando :set noignorecase
 set smartcase
 " set pythondll=libpython3.8.so
@@ -140,8 +136,11 @@ set softtabstop=2 " Let backspace delete indent
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 set fileencoding=utf-8 " The encoding written to file.
 set magic " For regular expressions turn magic on
-
-
+" para usar tags 
+" set tags=tags;/
+set tags=./tags;/
+" Para indexar toda una carpeta raiz desde la terminal y que git ignore esa carpeta
+" ctags -R -f ./.git/tags .
 
 " Para el theme de onedark
 if (empty($TMUX))
@@ -180,6 +179,14 @@ let g:airline_theme='onedark'
 if !has('gui_running')
   set t_Co=256
 endif
+
+" primero hay que ir al archivo o carpeta en la terimnal y crear un tag, eso
+" se hace ejemplo ctags block.js y creará un archivo con las definiciones 
+" go to definition  like Vscode
+nmap<f12> <c-]>
+" go back
+nmap<leader>f12 <c-T>
+
 
 "en mi archivo .zshrc y/o en .bashrc se agrega esto para que ack no tenga
 "errores con perl
