@@ -218,11 +218,11 @@ nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
 
 
-nnoremap <leader>1 :split<CR>
-nnoremap <leader>2 :vsplit<CR>
-" abrir terminal en nvim con lider t para abrir vertical leader s para abrir horizontal 
-nnoremap <leader>t :Term<CR>
-nnoremap <leader>v :VTerm<CR>
+nnoremap <leader>h :split<CR>
+nnoremap <leader>v :vsplit<CR>
+" abrir terminal en nvim con lider 1 para abrir vertical leader 2 para abrir horizontal 
+nnoremap <leader>1 :VTerm<CR>
+nnoremap <leader>2 :Term<CR>
 nnoremap <leader>d :bd<CR> " para cerrar el buffer actual 
 "buscar palabras dentro del codigo
 nmap <Leader>b <Plug>(easymotion-s2)
