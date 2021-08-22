@@ -283,3 +283,10 @@ autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
 
+augroup toggleCocExtensions
+    autocmd!
+    autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver') 
+    autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver') 
+augroup END
+
+
