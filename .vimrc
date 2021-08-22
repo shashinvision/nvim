@@ -29,6 +29,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
+Plug 'puremourning/vimspector'
 " :CocInstall coc-json coc-emmet coc-html coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java
 " Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
 Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
@@ -183,10 +184,14 @@ endif
 " primero hay que ir al archivo o carpeta en la terimnal y crear un tag, eso
 " se hace ejemplo ctags block.js y creará un archivo con las definiciones 
 " go to definition  like Vscode
-nmap<f12> <c-]>
+"nmap<f12> <c-]>
 " go back
-nmap<leader>f12 <c-T>
-
+"nmap<leader>f12 <c-T>
+" key mappings for goToDefinition
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" there's way more, see `:help coc-key-mappings@en'
 
 "en mi archivo .zshrc y/o en .bashrc se agrega esto para que ack no tenga
 "errores con perl
