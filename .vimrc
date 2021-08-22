@@ -30,7 +30,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
 Plug 'puremourning/vimspector'
-" :CocInstall coc-json coc-emmet coc-html coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi
+" :CocInstall coc-json coc-emmet coc-html coc-vetur coc-vue coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi
 " Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
 Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
 " Modo de uso
@@ -120,7 +120,19 @@ set ignorecase " para innorar el key sensitive en las busquedas, podria interfer
 set smartcase
 " set pythondll=libpython3.8.so
 " identancion
-
+set foldmethod=manual " para plegar y desplegar codigo 
+" establece el modo manual con set foldmethod=manual. Ahora ya puedes plegar texto como si no hubiera un mañana. Por ejemplo, si quieres plegar las 3 siguientes líneas, desde el modo normal utiliza la siguiente combinación de teclas zf3j.
+" Si, lo adivinaste, en Vim, para plegar o recoger texto se utiliza siempre la z. Así, para plegar utilizas zf<movimiento>. Esto te va a crear un nuevo pliege que vas a poder accionar cuando tu necesites.
+" De la misma manera, en el caso de que quieras plegar dos párrafos, simplemente tienes que utilizar zf2{ para el caso que quieras que sean los dos siguientes, mientras que utilizarás zf2}, en el caso de que quieras que sean los dos anteriores.
+" Otra opción es utilizar zfa<elemento>. Esto lo puedes utilizar por ejemplo cuando estás escribiendo código, donde las funciones y otros elementos están definidos por {}. De esta manera, para colapsar una función, tendrás que utilizar zfa{. En este caso, para plegar párrafos, tienes que utilizar zfap.
+" Para facilitarte todo esto del plegado, a continuación encontrarás los comandos mas utilizados en el modo normal,
+" zo abre el pliegue sobre el que te encuentras. También lo puedes hacer con la barra espaciadora.
+" zc hace la operación inversa de la anterior, es decir, cierra el pliegue sobre el que te encuentres…, en caso de que exista claro.
+" za abre o cierra el pliegue el que te encuentres. Es decir, si el pliegue está abierto lo cierra, y en el caso de que esté cerrado lo abre.
+" zd en caso de encontrarte ante un pliegue manual, con esta combinación de teclas, borrará el pliegue. De esta manera ya no podrás activarlo de nuevo. Esto no borra el texto contenido en el pliegue, solo borra el pliegue en si.
+" zj desplaza el cursor hasta el siguiente pliegue.
+" zk mueve el cursor hasta el pliegue anterior.
+" zR abre todos los pliegues en la memoria actual, recuerda el capítulo anterior sobre memorias,
 set shiftwidth=2
 set autoindent
 set smartindent
