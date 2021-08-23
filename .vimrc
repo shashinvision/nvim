@@ -308,3 +308,8 @@ augroup toggleCocExtensions
     autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver') 
 augroup END
 
+" Solo para Mac se instala pytho3 desde brew lo mism nvim y para que no tenga
+" problemas con reconocer python3 se usan los siguientes comandos
+" pip3 uninstall neovim
+" pip3 uninstall pynvim
+" pip3 install pynvim
