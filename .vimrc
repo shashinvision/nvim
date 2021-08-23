@@ -13,7 +13,6 @@ call plug#begin('~/.vim/plugged') " Para agregar plugins siempre va al principio
 " y luego colocar el codigo que viene aca abajo
 " fuente = https://draculatheme.com/vim
 packadd! dracula
-syntax enable
 colorscheme dracula
 " Plug 'joshdick/onedark.vim'
 " Plug 'itchyny/lightline.vim'
