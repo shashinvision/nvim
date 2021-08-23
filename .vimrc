@@ -300,7 +300,16 @@ autocmd BufWrite *.css :CocCommand prettier.formatFile
 autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
-
+             
+nmap <leader>gb :Gblame<cr>
+nmap <leader>gs :Git<cr> "Para el status
+nmap <leader>gc :Git commit -v<cr>
+nmap <leader>ga :Git add -p<cr>
+nmap <leader>gm :Gcommit --amend<cr>
+nmap <leader>gp :Gpush<cr>
+nmap <leader>gd :Gdiff<cr>
+nmap <leader>gw :Gwrite<cr>
+nmap <leader>gl :Glog<cr>
 
 augroup toggleCocExtensions
     autocmd!
