@@ -20,9 +20,9 @@ Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
-Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/vim-gitbranch'
+Plug 'jparise/vim-graphql'
 Plug 'christoomey/vim-tmux-navigator' " con control h y control l navego facil entre pantalla, con nerdtree me posiciono en otro archicvo y presiono la tecla s y divide la pantalla
 " git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 " git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
@@ -31,7 +31,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
 Plug 'puremourning/vimspector'
-" :CocInstall coc-json coc-emmet coc-html coc-vetur coc-vue coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight
+" :CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight
 " Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
 Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
 " Modo de uso
@@ -108,22 +108,9 @@ Plug 'MattesGroeger/vim-bookmarks'
 " Move bookmark at current line to another line	[count]mg	:BookmarkMoveToLine <LINE>
 " Save all bookmarks to a file		:BookmarkSave <FILE_PATH>
 " Load bookmarks from a file		:BookmarkLoad <FILE_PATH>
-Plug 'posva/vim-vue'
-Plug 'MattesGroeger/vim-bookmarks'
-" Add/remove bookmark at current line	mm	:BookmarkToggle
-" Add/edit/remove annotation at current line	mi	:BookmarkAnnotate <TEXT>
-" Jump to next bookmark in buffer	mn	:BookmarkNext
-" Jump to previous bookmark in buffer	mp	:BookmarkPrev
-" Show all bookmarks (toggle)	ma	:BookmarkShowAll
-" Clear bookmarks in current buffer only	mc	:BookmarkClear
-" Clear bookmarks in all buffers	mx	:BookmarkClearAll
-" Move up bookmark at current line	[count]mkk	:BookmarkMoveUp [<COUNT>]
-" Move down bookmark at current line	[count]mjj	:BookmarkMoveDown [<COUNT>]
-" Move bookmark at current line to another line	[count]mg	:BookmarkMoveToLine <LINE>
-" Save all bookmarks to a file		:BookmarkSave <FILE_PATH>
-" Load bookmarks from a file		:BookmarkLoad <FILE_PATH>
 
 " Plug 'luochen1990/rainbow'
+
 
 " Para usar formato de prettier es :CocCommand prettier.formatFile
 
@@ -214,6 +201,7 @@ let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
 
+
 "configuracion
 " se configura el .zshrc con export TERM=xterm-256color
 
@@ -225,14 +213,15 @@ endif
 " primero hay que ir al archivo o carpeta en la terimnal y crear un tag, eso
 " se hace ejemplo ctags block.js y creará un archivo con las definiciones 
 " go to definition  like Vscode
-"nmap<f12> <c-]>
+" nmap<f12> <c-]>
 " go back
-"nmap<leader>f12 <c-T>
+" nmap<leader>f12 <c-T>
 " key mappings for goToDefinition
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " there's way more, see `:help coc-key-mappings@en'
+
 
 "en mi archivo .zshrc y/o en .bashrc se agrega esto para que ack no tenga
 "errores con perl
@@ -245,7 +234,7 @@ nmap <silent> gr <Plug>(coc-references)
 " AL decir al final <CR> es lo mismo que decir al final ejecuta la tecla
 " enter, si coloco <Space> le indico que coloque espacio luego del comando
 nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
+"nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 " buscar archivos con FZF
@@ -312,10 +301,10 @@ autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
 
+
 augroup toggleCocExtensions
     autocmd!
     autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver') 
     autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver') 
 augroup END
-
 
