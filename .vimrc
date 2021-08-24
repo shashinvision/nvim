@@ -307,7 +307,7 @@ nmap <leader>gc :Git commit -v<cr>
 nmap <leader>ga :Git add -p<cr>
 nmap <leader>gm :Git commit --amend<cr>
 nmap <leader>gp :Git push<cr>
-nmap <leader>gu :Gpull<cr>
+nmap <leader>gu :Git pull<cr>
 nmap <leader>gd :Git diff<cr>
 nmap <leader>gw :Git write<cr>
 nmap <leader>gl :Git log<cr>
