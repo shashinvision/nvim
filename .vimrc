@@ -301,15 +301,15 @@ autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
              
-nmap <leader>gb :Gblame<cr>
+nmap <leader>gb :Git blame<cr>
 nmap <leader>gs :Git<cr> "Para el status
 nmap <leader>gc :Git commit -v<cr>
 nmap <leader>ga :Git add -p<cr>
-nmap <leader>gm :Gcommit --amend<cr>
-nmap <leader>gp :Gpush<cr>
-nmap <leader>gd :Gdiff<cr>
-nmap <leader>gw :Gwrite<cr>
-nmap <leader>gl :Glog<cr>
+nmap <leader>gm :Git commit --amend<cr>
+nmap <leader>gp :Git push<cr>
+nmap <leader>gd :Git diff<cr>
+nmap <leader>gw :Git write<cr>
+nmap <leader>gl :Git log<cr>
 
 augroup toggleCocExtensions
     autocmd!
