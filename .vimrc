@@ -110,7 +110,6 @@ Plug 'MattesGroeger/vim-bookmarks'
 
 " Plug 'luochen1990/rainbow'
 
-
 " Para usar formato de prettier es :CocCommand prettier.formatFile
 
 call plug#end() " para indicar que termino el gestor de plugins
@@ -312,11 +311,15 @@ nmap <leader>gd :Git diff<cr>
 nmap <leader>gw :Git write<cr>
 nmap <leader>gl :Git log<cr>
 
-augroup toggleCocExtensions
-    autocmd!
-    autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver') 
-    autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver') 
-augroup END
+
+autocmd BufReadPost,BufNewFile *.vue setlocal filetype=vue
+" augroup toggleCocExtensions
+"     autocmd!
+"     autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver') 
+"     autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver') 
+" augroup END
+
+nmap <leader>3 :CocList extensions<CR>
 
 " Solo para Mac se instala pytho3 desde brew lo mism nvim y para que no tenga
 " problemas con reconocer python3 se usan los siguientes comandos
