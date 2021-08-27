@@ -323,7 +323,7 @@ augroup toggleCocExtensions
     autocmd BufLeave *.html call CocActionAsync('activeExtension', 'coc-tsserver') 
 augroup END
 
-# Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
+" Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
 nmap <leader>3 :CocList extensions<CR>
 
 " Solo para Mac se instala pytho3 desde brew lo mism nvim y para que no tenga
