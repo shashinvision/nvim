@@ -318,9 +318,9 @@ augroup toggleCocExtensions
     autocmd!
     autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver') 
     " autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver') 
-    autocmd BufLeave *.js call CocActionAsync('activeExtension', 'coc-tsserver') 
-    autocmd BufLeave *.ts call CocActionAsync('activeExtension', 'coc-tsserver') 
-    autocmd BufLeave *.html call CocActionAsync('activeExtension', 'coc-tsserver') 
+    autocmd BufEnter *.js call CocActionAsync('activeExtension', 'coc-tsserver') 
+    autocmd BufEnter *.ts call CocActionAsync('activeExtension', 'coc-tsserver') 
+    autocmd BufEnter *.html call CocActionAsync('activeExtension', 'coc-tsserver') 
 augroup END
 
 " Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
