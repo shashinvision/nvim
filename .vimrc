@@ -298,6 +298,7 @@ autocmd BufWrite *.js :CocCommand prettier.formatFile
 autocmd BufWrite *.css :CocCommand prettier.formatFile
 autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
+autocmd BufWrite *.vue :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
              
 nmap <leader>gb :Git blame<cr>
@@ -313,12 +314,16 @@ nmap <leader>gl :Git log<cr>
 
 
 autocmd BufReadPost,BufNewFile *.vue setlocal filetype=vue
-" augroup toggleCocExtensions
-"     autocmd!
-"     autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver') 
-"     autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver') 
-" augroup END
+augroup toggleCocExtensions
+    autocmd!
+    autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver') 
+    " autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver') 
+    autocmd BufLeave *.js call CocActionAsync('activeExtension', 'coc-tsserver') 
+    autocmd BufLeave *.ts call CocActionAsync('activeExtension', 'coc-tsserver') 
+    autocmd BufLeave *.html call CocActionAsync('activeExtension', 'coc-tsserver') 
+augroup END
 
+# Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
 nmap <leader>3 :CocList extensions<CR>
 
 " Solo para Mac se instala pytho3 desde brew lo mism nvim y para que no tenga
