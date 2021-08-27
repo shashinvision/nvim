@@ -313,7 +313,7 @@ nmap <leader>gw :Git write<cr>
 nmap <leader>gl :Git log<cr>
 
 
-autocmd BufReadPost,BufNewFile *.vue setlocal filetype=vue
+" autocmd BufReadPost,BufNewFile *.vue setlocal filetype=vue
 augroup toggleCocExtensions
     autocmd!
     autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver') 
