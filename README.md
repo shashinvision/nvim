@@ -37,7 +37,9 @@ o en su defecto puedo escribir todo el contenido del .vimrc en el vim ~/.config/
 
 ### Solo para Mac se instala python3 desde brew lo mism nvim y para que no tenga problemas con reconocer python3 se usan los siguientes comandos
 ```pip3 uninstall neovim```
+
 ```pip3 uninstall pynvim```
+
 ```pip3 install pynvim```
 
 ### Configuracion de colores para la terminal 
