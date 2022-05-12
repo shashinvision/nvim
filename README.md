@@ -16,7 +16,11 @@ https://www.udemy.com/course/vim-profesional/
 ### [OPCIONAL] Puedo modificar el archivo de la ruta para que tome el .vimrc por defecto
 
 ```
-~/.config/nvim/init.vim
+vim ~/.config/nvim/init.vim
+```
+o
+```
+nvim ~/.config/nvim/init.vim
 ```
 
 y escribir dentro del archivo 
