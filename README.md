@@ -8,8 +8,9 @@ https://www.udemy.com/course/vim-profesional/
 vim ~/.config/nvim/init.vim
 
 y escribir
+```
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vimrc
-
+```
 o en su defecto puedo escribir todo el contenido del .vimrc en el vim ~/.config/nvim/init.vim
