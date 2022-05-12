@@ -1,4 +1,4 @@
-### Mi VIM RC
+### Mi Configuración de NeoVIM
 
 Recomendación: Curso VIM profesional
 ```
