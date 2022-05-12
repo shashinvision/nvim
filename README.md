@@ -32,7 +32,9 @@ source ~/.vimrc
 
 ### Debemos instalar nodeJS idealmente con la versión 12+
 en caso de querer instalar distintas versiones de node se puede usar nvm (node version manager)
-```https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/
+```
+https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/
+```
 
 
 ### [Obligación] Instalaciones a considerar 
