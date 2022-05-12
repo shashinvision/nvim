@@ -15,9 +15,11 @@ https://www.udemy.com/course/vim-profesional/
 
 ### [OPCIONAL] Puedo modificar el archivo de la ruta para que tome el .vimrc por defecto
 
-vim ~/.config/nvim/init.vim
+```
+~/.config/nvim/init.vim
+```
 
-y escribir
+y escribir dentro del archivo 
 ```
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
