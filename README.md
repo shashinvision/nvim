@@ -19,6 +19,7 @@ o en su defecto puedo escribir todo el contenido del .vimrc en el vim ~/.config/
 ### Instalaciones a considerar 
 
 ```git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline```
+
 ```git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes```
 
 ### Mac
