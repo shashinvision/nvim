@@ -3,7 +3,17 @@
 https://www.udemy.com/course/vim-profesional/
 
 
-### si trabajo con neovim debo modificar el archivo de la ruta
+
+
+### Se debe instalar neovim
+
+### Todo el contenido equivalente al .vimrc de VIM en NeoVIm se encuentra en el siguiente path:
+
+```
+~/.config/nvim/init.vim
+```
+
+### [OPCIONAL] Puedo modificar el archivo de la ruta para que tome el .vimrc por defecto
 
 vim ~/.config/nvim/init.vim
 
@@ -13,10 +23,10 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vimrc
 ```
-o en su defecto puedo escribir todo el contenido del .vimrc en el vim ~/.config/nvim/init.vim
 
 
-### Instalaciones a considerar 
+
+### [Obligación] Instalaciones a considerar 
 
 ```git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline```
 
