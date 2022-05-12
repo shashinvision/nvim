@@ -15,10 +15,11 @@ call plug#begin()
 " y luego colocar el codigo que viene aca abajo
 " fuente = https://draculatheme.com/vim
 
-Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'dracula/vim', { 'as': 'dracula' }
 "packadd! dracula
 "colorscheme dracula
-" Plug 'joshdick/onedark.vim'
+
+Plug 'joshdick/onedark.vim'
 " Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -133,7 +134,7 @@ set noshowmode " eliminamos que nos indique en que modo estamos (vista, insertar
 set showmatch
 set encoding=utf-8
 syntax enable " para resaltar el codigo cuando lo seleccionamos
-" colorscheme onedark
+colorscheme onedark
 set ignorecase " para innorar el key sensitive en las busquedas, podria interferir en los reemplazos masivos, para eso colocar el comando :set noignorecase
 set smartcase
 " set pythondll=libpython3.8.so
@@ -201,8 +202,8 @@ endif
 set laststatus=2
 let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline_theme='onedark'
-let g:airline_theme='dracula'
+let g:airline_theme='onedark'
+"let g:airline_theme='dracula'
 
 
 "configuracion
