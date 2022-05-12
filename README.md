@@ -1,7 +1,9 @@
-### mi VIM RC desde el curso VIM profesional
+### Mi VIM RC
 
+Recomendación: Curso VIM profesional
+```
 https://www.udemy.com/course/vim-profesional/
-
+```
 
 
 
