@@ -1,4 +1,6 @@
-call plug#begin('~/.vim/plugged') " Para agregar plugins siempre va al principio del docu
+call plug#begin() 
+" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+"call plug#begin('~/.vim/plugged') " Para agregar plugins siempre va al principio del docu
 " con el comando :Pluginstall puedes instalar los plugins que instales, si
 " usar :Plug y luego tabulas y aparecen mas opciones esta confirmado que se
 " instalo bien
@@ -12,8 +14,10 @@ call plug#begin('~/.vim/plugged') " Para agregar plugins siempre va al principio
 " git clone https://github.com/dracula/vim.git dracula
 " y luego colocar el codigo que viene aca abajo
 " fuente = https://draculatheme.com/vim
-packadd! dracula
-colorscheme dracula
+
+Plug 'dracula/vim', { 'as': 'dracula' }
+"packadd! dracula
+"colorscheme dracula
 " Plug 'joshdick/onedark.vim'
 " Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
