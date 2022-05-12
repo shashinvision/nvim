@@ -43,7 +43,18 @@ source ~/.vimrc
 ### o para ubuntu
 ```sudo apt install ack```
 
-### Para instalar los plugins de Coc
+### Dentro de nvim se ejecuta el siguinete comando
+
+
+Presionar tecla Escape, luego : y escribir PlugInstall
+quedando de la siguinete forma
+
+```
+:PlugInstall
+```
+
+
+### Para instalar los plugins de Coc, el mismo paso anterior colocando lo siguiente
 ```
 :CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight
 ```
@@ -63,4 +74,5 @@ source ~/.vimrc
 Se configura el .zshrc con
 
 ```export TERM=xterm-256color```
+
 
