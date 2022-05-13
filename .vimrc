@@ -259,6 +259,7 @@ nnoremap <leader>v :vsplit<CR>
 nnoremap <leader>1 :VTerm<CR>
 nnoremap <leader>2 :Term<CR>
 nnoremap <leader>d :bd<CR> " para cerrar el buffer actual 
+nnoremap <Leader>l :MRU<CR> " Para ver el historial de archivos visitados
 "buscar palabras dentro del codigo
 nmap <Leader>b <Plug>(easymotion-s2)
 " Move to word
