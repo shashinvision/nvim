@@ -214,13 +214,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-" primero hay que ir al archivo o carpeta en la terimnal y crear un tag, eso
-" se hace ejemplo ctags block.js y creará un archivo con las definiciones 
-" go to definition  like Vscode
-" nmap<f12> <c-]>
-" go back
-" nmap<leader>f12 <c-T>
-" key mappings for goToDefinition
+" key mappings for goToDefinition ir a la definición
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
