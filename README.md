@@ -45,6 +45,11 @@ https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/
 
 ```git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes```
 
+### Instalar Plug Para VIM NVIM
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
 ### Mac
 ```brew install ack```
 ### o para ubuntu
