@@ -68,7 +68,7 @@ quedando de la siguinete forma
 
 ### Para instalar los plugins de Coc, el mismo paso anterior colocando lo siguiente
 ```
-:CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight
+:CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight coc-tabnine
 ```
 
 ### En mac necesitamos instalar python la versión 3 
