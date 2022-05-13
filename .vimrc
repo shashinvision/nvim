@@ -21,6 +21,8 @@ call plug#begin()
 
 Plug 'joshdick/onedark.vim'
 " Plug 'itchyny/lightline.vim'
+Plug 'yegappan/mru' " Esto es para acceder al historial de archivos visitados y editados el comando es :MRU
+Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
