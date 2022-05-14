@@ -90,7 +90,7 @@ export LANG=en_US.UTF-8
 
 ```
 
-### En Mac puede dar errores en Mac con Terminal o ITerm2 con Locale, esta es la solución en la termina 
+### En Mac puede dar errores con la Terminal o ITerm2 debido al Locale, esta es la solución 
 
 [Link de Fuente](https://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/)
 
