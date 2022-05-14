@@ -85,6 +85,11 @@ quedando de la siguinete forma
 
 Se configura el .zshrc con
 
-```export TERM=xterm-256color```
+```
+export TERM=xterm-256color
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+```
 
 
