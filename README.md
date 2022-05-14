@@ -1,9 +1,7 @@
 ### Mi Configuración de NeoVIM
 
 Recomendación: Curso VIM profesional
-```
-https://www.udemy.com/course/vim-profesional/
-```
+[Link Curso VIM Profesional](https://www.udemy.com/course/vim-profesional/)
 
 
 
@@ -34,9 +32,7 @@ source ~/.vimrc
 
 ### Debemos instalar nodeJS idealmente con la versión 12+
 en caso de querer instalar distintas versiones de node se puede usar nvm (node version manager)
-```
-https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/
-```
+[Link de web NVM Node Version Manager](https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/)
 
 
 ### [Obligación] Instalaciones a considerar 
@@ -96,7 +92,9 @@ export LANG=en_US.UTF-8
 
 ### En Mac puede dar errores en Mac con Terminal o ITerm2 con Locale, esta es la solución en la termina 
 
+[Link de Fuente](https://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/)
+
 ![Fix Locale](fix_set_locale_en_ack_mac.png)
 
-[Link de Fuente](https://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/)
+
 
