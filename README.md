@@ -81,7 +81,7 @@ quedando de la siguinete forma
 
 ```pip3 install pynvim```
 
-### Configuracion de colores para la terminal 
+### Configuracion de colores para la terminal y Locale
 
 Se configura el .zshrc con
 
@@ -94,4 +94,9 @@ export LANG=en_US.UTF-8
 
 ```
 
+### En Mac puede dar errores en Mac con Terminal o ITerm2 con Locale, esta es la solución en la termina 
+
+![Fix Locale](fix set locale en ack mac.png)
+
+[Fuente](https://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/)
 
