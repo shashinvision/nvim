@@ -89,11 +89,11 @@ export LANG=en_US.UTF-8
 
 
 ```
-Solo para Mac instalar ctags
+### En Mac instalar ctags
 ```
 brew install ctags
 ```
-### En el mismo archivo .zshrc
+### En el mismo archivo .zshrc se coloca el alias
 ```
 alias ctags="`brew --prefix`/bin/ctags"
 ```
