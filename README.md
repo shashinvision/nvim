@@ -89,6 +89,14 @@ export LANG=en_US.UTF-8
 
 
 ```
+Solo para Mac instalar ctags
+```
+brew install ctags
+```
+### En el mismo archivo .zshrc
+```
+alias ctags="`brew --prefix`/bin/ctags"
+```
 
 ### En Mac puede dar errores con la Terminal o ITerm2 debido al Locale, esta es la solución 
 
