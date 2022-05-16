@@ -51,7 +51,20 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ### o para ubuntu
 ```sudo apt install ack```
 
-### Dentro de nvim se ejecuta el siguinete comando
+### En Mac instalar ctags
+```
+brew install ctags
+```
+```
+sudo apt-get install ctags
+```
+### En el mismo archivo .zshrc se coloca el alias
+```
+alias ctags="`brew --prefix`/bin/ctags"
+```
+
+
+### Dentro de nvim se ejecuta el siguiente comando
 
 
 Presionar tecla Escape, luego : y escribir PlugInstall
@@ -86,16 +99,6 @@ export TERM=xterm-256color
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-
-```
-### En Mac instalar ctags
-```
-brew install ctags
-```
-### En el mismo archivo .zshrc se coloca el alias
-```
-alias ctags="`brew --prefix`/bin/ctags"
 ```
 
 ### En Mac puede dar errores con la Terminal o ITerm2 debido al Locale, esta es la solución 
