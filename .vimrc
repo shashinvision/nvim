@@ -302,6 +302,9 @@ autocmd BufWrite *.css :CocCommand prettier.formatFile
 autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
 autocmd BufWrite *.vue :CocCommand prettier.formatFile
+autocmd BufWrite *.php :CocCommand prettier.formatFile
+autocmd BufWrite *.yml :CocCommand prettier.formatFile
+autocmd BufWrite *.md :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
              
 nmap <leader>gb :Git blame<cr>
