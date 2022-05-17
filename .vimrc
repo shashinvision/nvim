@@ -297,6 +297,7 @@ nmap   <M-C-RightMouse>      <Plug>(VM-Mouse-Column)
 " comandos automaticos como prettier por ejemplo
 autocmd BufWrite *.html :CocCommand prettier.formatFile
 autocmd BufWrite *.js :CocCommand prettier.formatFile
+autocmd BufWrite *.json :CocCommand prettier.formatFile
 autocmd BufWrite *.css :CocCommand prettier.formatFile
 autocmd BufWrite *.ts :CocCommand prettier.formatFile
 autocmd BufWrite *.scss :CocCommand prettier.formatFile
