@@ -174,6 +174,7 @@ set tags=./tags;/
 " ctags -R -f ./.git/tags .
 
 set updatetime=100
+" Limit popup menu height
 set pumheight=20
 
 inoremap <silent><expr> <TAB>
