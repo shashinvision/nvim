@@ -1,6 +1,4 @@
-call plug#begin() 
-" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-"call plug#begin('~/.vim/plugged') " Para agregar plugins siempre va al principio del docu
+call plug#begin() " Para agregar plugins siempre va al principio del docu
 " con el comando :Pluginstall puedes instalar los plugins que instales, si
 " usar :Plug y luego tabulas y aparecen mas opciones esta confirmado que se
 " instalo bien
@@ -14,11 +12,9 @@ call plug#begin()
 " git clone https://github.com/dracula/vim.git dracula
 " y luego colocar el codigo que viene aca abajo
 " fuente = https://draculatheme.com/vim
-
 "Plug 'dracula/vim', { 'as': 'dracula' }
-"packadd! dracula
-"colorscheme dracula
-
+" packadd! dracula
+" colorscheme dracula
 Plug 'joshdick/onedark.vim'
 " Plug 'itchyny/lightline.vim'
 Plug 'yegappan/mru' " Esto es para acceder al historial de archivos visitados y editados el comando es :MRU
@@ -26,6 +22,8 @@ Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/vim-gitbranch'
 Plug 'jparise/vim-graphql'
@@ -33,11 +31,10 @@ Plug 'christoomey/vim-tmux-navigator' " con control h y control l navego facil e
 " git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 " git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
 Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
 Plug 'puremourning/vimspector'
-" :CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight coc-tabnine
+" :CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight
 " Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
 Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
 " Modo de uso
@@ -86,7 +83,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multicursor
 
 Plug 'vimlab/split-term.vim'
 
-Plug 'ryanoasis/vim-devicons'
+Plug 'mbbill/undotree'
 Plug 'Yggdroot/indentLine'
 "autocomplete
 Plug 'Townk/vim-autoclose'
@@ -216,7 +213,13 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-" key mappings for goToDefinition ir a la definición
+" primero hay que ir al archivo o carpeta en la terimnal y crear un tag, eso
+" se hace ejemplo ctags block.js y creará un archivo con las definiciones 
+" go to definition  like Vscode
+" nmap<f12> <c-]>
+" go back
+" nmap<leader>f12 <c-T>
+" key mappings for goToDefinition
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -252,14 +255,19 @@ nmap <C-q> :q!<CR>
 nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
 
+nnoremap <leader>6 :UndotreeToggle<CR>
 
 nnoremap <leader>h :split<CR>
 nnoremap <leader>v :vsplit<CR>
 " abrir terminal en nvim con lider 1 para abrir vertical leader 2 para abrir horizontal 
+nnoremap <Leader>l :MRU<CR> " Para ver el historial de archivos visitados
 nnoremap <leader>1 :VTerm<CR>
 nnoremap <leader>2 :Term<CR>
+" Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
+nmap <leader>3 :CocList extensions<CR>
+nnoremap <leader>4 :diffthis<CR>
+nnoremap <leader>5 :diffsplit<CR>
 nnoremap <leader>d :bd<CR> " para cerrar el buffer actual 
-nnoremap <Leader>l :MRU<CR> " Para ver el historial de archivos visitados
 "buscar palabras dentro del codigo
 nmap <Leader>b <Plug>(easymotion-s2)
 " Move to word
@@ -329,8 +337,6 @@ augroup toggleCocExtensions
     autocmd BufEnter *.html call CocActionAsync('activeExtension', 'coc-tsserver') 
 augroup END
 
-" Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
-nmap <leader>3 :CocList extensions<CR>
 
 " Solo para Mac se instala pytho3 desde brew lo mism nvim y para que no tenga
 " problemas con reconocer python3 se usan los siguientes comandos
