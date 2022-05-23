@@ -138,7 +138,7 @@ set ignorecase " para innorar el key sensitive en las busquedas, podria interfer
 set smartcase
 " set pythondll=libpython3.8.so
 " identancion
-set foldmethod=manual " para plegar y desplegar codigo 
+set foldmethod=manual " para plegar y desplegar codigo
 " establece el modo manual con set foldmethod=manual. Ahora ya puedes plegar texto como si no hubiera un mañana. Por ejemplo, si quieres plegar las 3 siguientes líneas, desde el modo normal utiliza la siguiente combinación de teclas zf3j.
 " Si, lo adivinaste, en Vim, para plegar o recoger texto se utiliza siempre la z. Así, para plegar utilizas zf<movimiento>. Esto te va a crear un nuevo pliege que vas a poder accionar cuando tu necesites.
 " De la misma manera, en el caso de que quieras plegar dos párrafos, simplemente tienes que utilizar zf2{ para el caso que quieras que sean los dos siguientes, mientras que utilizarás zf2}, en el caso de que quieras que sean los dos anteriores.
@@ -167,16 +167,24 @@ set softtabstop=2 " Let backspace delete indent
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 set fileencoding=utf-8 " The encoding written to file.
 set magic " For regular expressions turn magic on
-" para usar tags 
+" para usar tags
 " set tags=tags;/
 set tags=./tags;/
 " Para indexar toda una carpeta raiz desde la terminal y que git ignore esa carpeta
 " ctags -R -f ./.git/tags .
 
-set updatetime=100
+" improve user experience updating more frequently
+set updatetime=50
 " Limit popup menu height
 set pumheight=20
-
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set nolist
+" remove whitespaces
+autocmd BufWritePre * :%s/\s\+$//e
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+" para el autocompletado de COC seleccionando con la tecla Tab
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ?
@@ -232,7 +240,7 @@ if !has('gui_running')
 endif
 
 " primero hay que ir al archivo o carpeta en la terimnal y crear un tag, eso
-" se hace ejemplo ctags block.js y creará un archivo con las definiciones 
+" se hace ejemplo ctags block.js y creará un archivo con las definiciones
 " go to definition  like Vscode
 " nmap<f12> <c-]>
 " go back
@@ -270,13 +278,14 @@ nmap <C-s> :w<CR>
 nmap <C-x> :x<CR>
 nmap <C-q> :q!<CR>
 " para navegar en el buffer
-nnoremap <C-p> :bprev<CR>
+nnoremap ncmd<C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
 
 nnoremap <leader>h :split<CR>
 nnoremap <leader>v :vsplit<CR>
-" abrir terminal en nvim con lider 1 para abrir vertical leader 2 para abrir horizontal 
-nnoremap <Leader>l :MRU<CR> " Para ver el historial de archivos visitados
+" abrir terminal en nvim con lider 1 para abrir vertical leader 2 para abrir horizontal
+" Para ver el historial de archivos visitados
+nnoremap <Leader>l :MRU<CR>
 nnoremap <leader>1 :VTerm<CR>
 nnoremap <leader>2 :Term<CR>
 " Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
@@ -286,7 +295,11 @@ nnoremap <leader>4 :diffthis<CR>
 " UndoTree sirve para ver un listado en forma de arbol de los cambios en un
 " archivo, es como un versionamiento a tiempo real
 nnoremap <leader>5 :UndotreeToggle<CR>
-nnoremap <leader>d :bd<CR> " para cerrar el buffer actual 
+
+# Para ver los espacios vacíos.
+nnoremap <leader>6 :set list!<CR>
+" para cerrar el buffer actual
+nnoremap <leader>d :bd<CR>
 "buscar palabras dentro del codigo
 nmap <Leader>b <Plug>(easymotion-s2)
 " Move to word
@@ -333,7 +346,7 @@ autocmd BufWrite *.php :CocCommand prettier.formatFile
 autocmd BufWrite *.yml :CocCommand prettier.formatFile
 autocmd BufWrite *.md :CocCommand prettier.formatFile
 autocmd BufWritePost * GitGutter
-             
+
 nmap <leader>gb :Git blame<cr>
 nmap <leader>gs :Git<cr> "Para el status
 nmap <leader>gc :Git commit -v<cr>
@@ -349,11 +362,11 @@ nmap <leader>gl :Git log<cr>
 " autocmd BufReadPost,BufNewFile *.vue setlocal filetype=vue
 augroup toggleCocExtensions
     autocmd!
-    autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver') 
-    " autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver') 
-    autocmd BufEnter *.js call CocActionAsync('activeExtension', 'coc-tsserver') 
-    autocmd BufEnter *.ts call CocActionAsync('activeExtension', 'coc-tsserver') 
-    autocmd BufEnter *.html call CocActionAsync('activeExtension', 'coc-tsserver') 
+    autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver')
+    " autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver')
+    autocmd BufEnter *.js call CocActionAsync('activeExtension', 'coc-tsserver')
+    autocmd BufEnter *.ts call CocActionAsync('activeExtension', 'coc-tsserver')
+    autocmd BufEnter *.html call CocActionAsync('activeExtension', 'coc-tsserver')
 augroup END
 
 
