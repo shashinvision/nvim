@@ -278,7 +278,7 @@ nmap <C-s> :w<CR>
 nmap <C-x> :x<CR>
 nmap <C-q> :q!<CR>
 " para navegar en el buffer
-nnoremap ncmd<C-p> :bprev<CR>
+nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
 
 nnoremap <leader>h :split<CR>
