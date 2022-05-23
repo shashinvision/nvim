@@ -1,5 +1,6 @@
 call plug#begin() " Para agregar plugins siempre va al principio del docu
-" con el comando :Pluginstall puedes instalar los plugins que instales, si
+" call plug#begin('~/.local/share/nvim/plugged') " en caso que no detecte automaticamente la carpeta de plugins se usa esta opcion
+" con el comando :PlugInstall puedes instalar los plugins que instales, si
 " usar :Plug y luego tabulas y aparecen mas opciones esta confirmado que se
 " instalo bien
 
