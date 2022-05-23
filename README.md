@@ -10,6 +10,9 @@ Recomendación: Curso VIM profesional
 ### Todo el contenido equivalente al .vimrc de VIM en NeoVIm se encuentra en el siguiente path:
 
 ```
+mkdir ~/.config/nvim/
+```
+```
 ~/.config/nvim/init.vim
 ```
 
