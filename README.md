@@ -13,7 +13,7 @@ Recomendación: Curso VIM profesional
 mkdir ~/.config/nvim/
 ```
 ```
-~/.config/nvim/init.vim
+touch ~/.config/nvim/init.vim
 ```
 
 ### [OPCIONAL] Puedo modificar el archivo de la ruta para que tome el .vimrc por defecto
