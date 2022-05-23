@@ -296,7 +296,7 @@ nnoremap <leader>4 :diffthis<CR>
 " archivo, es como un versionamiento a tiempo real
 nnoremap <leader>5 :UndotreeToggle<CR>
 
-# Para ver los espacios vacíos.
+" Para ver los espacios vacíos.
 nnoremap <leader>6 :set list!<CR>
 " para cerrar el buffer actual
 nnoremap <leader>d :bd<CR>
