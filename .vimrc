@@ -1,6 +1,5 @@
 call plug#begin() " Para agregar plugins siempre va al principio del docu
-" call plug#begin('~/.local/share/nvim/plugged') " en caso que no detecte automaticamente la carpeta de plugins se usa esta opcion
-" con el comando :PlugInstall puedes instalar los plugins que instales, si
+" con el comando :Pluginstall puedes instalar los plugins que instales, si
 " usar :Plug y luego tabulas y aparecen mas opciones esta confirmado que se
 " instalo bien
 
@@ -139,7 +138,8 @@ set ignorecase " para innorar el key sensitive en las busquedas, podria interfer
 set smartcase
 " set pythondll=libpython3.8.so
 " identancion
-set foldmethod=manual " para plegar y desplegar codigo
+set foldmethod=manual " para plegar y desplegar codigo. para hacer simple, vas al primer cierre del (){}[] y precionar zf% y listo, para desacoplar solo preciona zfa y listo.
+" Mas configuraciones
 " establece el modo manual con set foldmethod=manual. Ahora ya puedes plegar texto como si no hubiera un mañana. Por ejemplo, si quieres plegar las 3 siguientes líneas, desde el modo normal utiliza la siguiente combinación de teclas zf3j.
 " Si, lo adivinaste, en Vim, para plegar o recoger texto se utiliza siempre la z. Así, para plegar utilizas zf<movimiento>. Esto te va a crear un nuevo pliege que vas a poder accionar cuando tu necesites.
 " De la misma manera, en el caso de que quieras plegar dos párrafos, simplemente tienes que utilizar zf2{ para el caso que quieras que sean los dos siguientes, mientras que utilizarás zf2}, en el caso de que quieras que sean los dos anteriores.
