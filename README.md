@@ -15,7 +15,9 @@ mkdir ~/.config/nvim/
 ```
 touch ~/.config/nvim/init.vim
 ```
-
+```
+vim ~/.config/nvim/init.vim
+```
 ### [OPCIONAL] Puedo modificar el archivo de la ruta para que tome el .vimrc por defecto
 
 ```
@@ -48,12 +50,20 @@ en caso de querer instalar distintas versiones de node se puede usar nvm (node v
 ```
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
-
-### Mac
-```brew install ack```
-### o para ubuntu
-```sudo apt install ack```
-
+### Para que funcione el grep de busqueda de palabras de telescope
+```
+brew install ripgrep
+```
+```
+sudo apt-get -y install ripgrep
+```
+### Para que funcine FZF sin problemas
+```
+brew install fzf
+```
+```
+sudo apt install fzf
+```
 ### En Mac instalar ctags
 ```
 brew install ctags
@@ -62,11 +72,13 @@ brew install ctags
 ```
 sudo apt-get install ctags
 ```
-### En el mismo archivo .zshrc se coloca el alias
+### SOLO EN MAC En el mismo archivo .zshrc se coloca el alias
 ```
 alias ctags="`brew --prefix`/bin/ctags"
 ```
-
+### OPCIONAL ACK (Deprecado, ya no lo uso en esta version, pero el codigo esta comendato en el archivo de configuracion, lo dejo solo en caso de querer activarlo)
+```brew install ack```
+```sudo apt install ack```
 
 ### Dentro de nvim se ejecuta el siguiente comando
 
