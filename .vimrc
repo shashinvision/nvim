@@ -15,6 +15,8 @@ call plug#begin() " Para agregar plugins siempre va al principio del docu
 "Plug 'dracula/vim', { 'as': 'dracula' }
 " packadd! dracula
 " colorscheme dracula
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'joshdick/onedark.vim'
 " Plug 'itchyny/lightline.vim'
 Plug 'yegappan/mru' " Esto es para acceder al historial de archivos visitados y editados el comando es :MRU
@@ -36,7 +38,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
 Plug 'puremourning/vimspector'
 " :CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight
 " Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
-Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
+" Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
 " Modo de uso
 " :Ack [options] {pattern} [{directories}]
 
@@ -254,9 +256,9 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 " buscar archivos con FZF
-nnoremap <leader>f :FZF<CR>
+" nnoremap <leader>f :FZF<CR>
 " buscar contenido de archivos con ack
-nnoremap <leader>s :Ack! -i <Space>
+" nnoremap <leader>s :Ack! -i <Space>
 
 " comandos personalizados
 " para guardar rapido
@@ -272,7 +274,6 @@ nnoremap <leader>h :split<CR>
 nnoremap <leader>v :vsplit<CR>
 " abrir terminal en nvim con lider 1 para abrir vertical leader 2 para abrir horizontal
 " Para ver el historial de archivos visitados
-nnoremap <Leader>l :FZFMru<CR>
 nnoremap <leader>1 :VTerm<CR>
 nnoremap <leader>2 :Term<CR>
 " Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
@@ -345,6 +346,13 @@ nmap <leader>gd :Git diff<cr>
 nmap <leader>gw :Git write<cr>
 nmap <leader>gl :Git log<cr>
 
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" Para ver el historial de archivos con FZFMru
+nnoremap <Leader>fr :FZFMru<CR>
 
 " autocmd BufReadPost,BufNewFile *.vue setlocal filetype=vue
 augroup toggleCocExtensions
