@@ -286,7 +286,7 @@ nnoremap <leader>h :split<CR>
 nnoremap <leader>v :vsplit<CR>
 " abrir terminal en nvim con lider 1 para abrir vertical leader 2 para abrir horizontal
 " Para ver el historial de archivos visitados
-nnoremap <Leader>l :MRU<CR>
+nnoremap <Leader>l :FZFMru<CR>
 nnoremap <leader>1 :VTerm<CR>
 nnoremap <leader>2 :Term<CR>
 " Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
