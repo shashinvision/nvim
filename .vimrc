@@ -270,7 +270,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " buscar archivos con FZF
 nnoremap <leader>f :FZF<CR>
 " buscar contenido de archivos con ack
-nnoremap <leader>s :Ack!<Space>
+nnoremap <leader>s :Ack! -i <Space>
 
 " comandos personalizados
 " para guardar rapido
