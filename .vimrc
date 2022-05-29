@@ -142,19 +142,6 @@ set smartcase
 " set pythondll=libpython3.8.so
 " identancion
 set foldmethod=manual " para plegar y desplegar codigo. para hacer simple, vas al primer cierre del (){}[] y precionar zf% y listo, para desacoplar solo preciona zfa y listo.
-" Mas configuraciones
-" establece el modo manual con set foldmethod=manual. Ahora ya puedes plegar texto como si no hubiera un mañana. Por ejemplo, si quieres plegar las 3 siguientes líneas, desde el modo normal utiliza la siguiente combinación de teclas zf3j.
-" Si, lo adivinaste, en Vim, para plegar o recoger texto se utiliza siempre la z. Así, para plegar utilizas zf<movimiento>. Esto te va a crear un nuevo pliege que vas a poder accionar cuando tu necesites.
-" De la misma manera, en el caso de que quieras plegar dos párrafos, simplemente tienes que utilizar zf2{ para el caso que quieras que sean los dos siguientes, mientras que utilizarás zf2}, en el caso de que quieras que sean los dos anteriores.
-" Otra opción es utilizar zfa<elemento>. Esto lo puedes utilizar por ejemplo cuando estás escribiendo código, donde las funciones y otros elementos están definidos por {}. De esta manera, para colapsar una función, tendrás que utilizar zfa{. En este caso, para plegar párrafos, tienes que utilizar zfap.
-" Para facilitarte todo esto del plegado, a continuación encontrarás los comandos mas utilizados en el modo normal,
-" zo abre el pliegue sobre el que te encuentras. También lo puedes hacer con la barra espaciadora.
-" zc hace la operación inversa de la anterior, es decir, cierra el pliegue sobre el que te encuentres…, en caso de que exista claro.
-" za abre o cierra el pliegue el que te encuentres. Es decir, si el pliegue está abierto lo cierra, y en el caso de que esté cerrado lo abre.
-" zd en caso de encontrarte ante un pliegue manual, con esta combinación de teclas, borrará el pliegue. De esta manera ya no podrás activarlo de nuevo. Esto no borra el texto contenido en el pliegue, solo borra el pliegue en si.
-" zj desplaza el cursor hasta el siguiente pliegue.
-" zk mueve el cursor hasta el pliegue anterior.
-" zR abre todos los pliegues en la memoria actual, recuerda el capítulo anterior sobre memorias,
 set shiftwidth=2
 set autoindent
 set smartindent
@@ -223,7 +210,6 @@ let g:airline_theme='onedark'
 
 "configuracion
 " se configura el .zshrc con export TERM=xterm-256color
-
 
 if !has('gui_running')
   set t_Co=256
@@ -355,6 +341,13 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " Para ver el historial de archivos con FZFMru
 nnoremap <Leader>fr :FZFMru<CR>
 
+" para plegar codigo de manera sencilla, debes colocarte en el principo de la
+" llave {}[]() y listo
+nnoremap <leader>zf zf%<cr>
+" Para desplegar el codigo plegado
+nnoremap <leader>za za<cr>
+" para recargar un archivo de forma manual
+nnoremap <leader>ss :source %<cr>
 " autocmd BufReadPost,BufNewFile *.vue setlocal filetype=vue
 augroup toggleCocExtensions
     autocmd!
