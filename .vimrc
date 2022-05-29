@@ -274,7 +274,7 @@ nnoremap <leader>dt :diffthis<CR>
 nnoremap <leader>ut :UndotreeToggle<CR>
 
 " Para ver los espacios vacíos.
-nnoremap <leader>sp :set list!<CR>
+nnoremap <leader>se :set list!<CR>
 " para cerrar el buffer actual
 nnoremap <leader>bd :bd<CR>
 "buscar palabras dentro del codigo
