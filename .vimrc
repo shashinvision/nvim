@@ -223,7 +223,7 @@ endif
 " nmap<leader>f12 <c-T>
 " key mappings for goToDefinition
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gD <Plug>(coc-implementation)
+nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " there's way more, see `:help coc-key-mappings@en'
 
@@ -257,32 +257,32 @@ nmap <C-q> :q!<CR>
 nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
 
-nnoremap <leader>h :split<CR>
-nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>wh :split<CR>
+nnoremap <leader>wv :vsplit<CR>
 " abrir terminal en nvim con lider 1 para abrir vertical leader 2 para abrir horizontal
 " Para ver el historial de archivos visitados
-nnoremap <leader>1 :VTerm<CR>
-nnoremap <leader>2 :Term<CR>
+nnoremap <leader>tv :VTerm<CR>
+nnoremap <leader>th :Term<CR>
 " Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
-nmap <leader>3 :CocList extensions<CR>
+nmap <leader>cl :CocList extensions<CR>
 " Para su correcto uso se debe hacer un split de pantalla con dos archivos, posicionado en cada archivo se hace un leader +4 y se procede a comprar
-nnoremap <leader>4 :diffthis<CR>
+nnoremap <leader>dt :diffthis<CR>
 " UndoTree sirve para ver un listado en forma de arbol de los cambios en un
 " archivo, es como un versionamiento a tiempo real
-nnoremap <leader>5 :UndotreeToggle<CR>
+nnoremap <leader>ut :UndotreeToggle<CR>
 
 " Para ver los espacios vacíos.
-nnoremap <leader>6 :set list!<CR>
+nnoremap <leader>sp :set list!<CR>
 " para cerrar el buffer actual
-nnoremap <leader>d :bd<CR>
+nnoremap <leader>bd :bd<CR>
 "buscar palabras dentro del codigo
-nmap <Leader>b <Plug>(easymotion-s2)
+nmap <Leader>eb <Plug>(easymotion-s2)
 " Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
+map  <Leader>ew <Plug>(easymotion-bd-w)
+nmap <Leader>ew <Plug>(easymotion-overwin-w)
 " <Leader>f{char} to move to {char}
-map  <Leader>c <Plug>(easymotion-bd-f)
-nmap <Leader>c <Plug>(easymotion-overwin-f)
+map  <Leader>ec <Plug>(easymotion-bd-f)
+nmap <Leader>ec <Plug>(easymotion-overwin-f)
 
 " para vcolor Use it:
 " * To insert a color anywhere.
