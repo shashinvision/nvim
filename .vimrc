@@ -355,6 +355,7 @@ autocmd BufWritePost * GitGutter
 augroup toggleCocExtensions
     autocmd!
     autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver')
+    autocmd BufEnter *.* call CocActionAsync('deactivateExtension', 'coc-graphql')
     " autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver')
     autocmd BufEnter *.js call CocActionAsync('activeExtension', 'coc-tsserver')
     autocmd BufEnter *.ts call CocActionAsync('activeExtension', 'coc-tsserver')
