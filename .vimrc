@@ -20,6 +20,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'simeji/winresizer'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'joshdick/onedark.vim'
+Plug 'dm1try/golden_size'
+
 " Plug 'itchyny/lightline.vim'
 Plug 'yegappan/mru' " Esto es para acceder al historial de archivos visitados y editados el comando es :MRU
 Plug 'mhinz/vim-startify'
