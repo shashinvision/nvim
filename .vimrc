@@ -17,6 +17,7 @@ call plug#begin() " Para agregar plugins siempre va al principio del docu
 " packadd! dracula
 " colorscheme dracula
 Plug 'nvim-lua/plenary.nvim'
+Plug 'simeji/winresizer'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'joshdick/onedark.vim'
 " Plug 'itchyny/lightline.vim'
@@ -260,8 +261,16 @@ nnoremap <C-n> :bnext<CR>
 " windows split vertical/horizontal
 nnoremap <leader>wh :split<CR>
 nnoremap <leader>wv :vsplit<CR>
-
+nnoremap <leader>wr :WinResizerStartResize<CR>
+" For winresizer
+" 1. You press keys Ctrl + E or execute :WinResizerStartResize on vim(in normal mode), to run this plugin
+" 2. Start 'window resize mode', and you can resize current vim windows using 'h', 'j', 'k', 'l' keys
+" 3. You want to finish resize mode, then press "Enter" key
+" If you cancel window resize, then press "q" key. You will get window size of before change
+" You can change the mode if you press "e" in 'window resize mode'
 " Terminal split vertical/horizontal
+
+
 nnoremap <leader>tv :VTerm<CR>
 nnoremap <leader>th :Term<CR>
 
