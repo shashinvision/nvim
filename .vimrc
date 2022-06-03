@@ -169,6 +169,12 @@ set tags=./tags;/
 
 " improve user experience updating more frequently
 set updatetime=50
+
+set undofile " Save undos after file closes
+set undodir=~/.config/nvim/undodir " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
+
 " Limit popup menu height
 set pumheight=20
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
