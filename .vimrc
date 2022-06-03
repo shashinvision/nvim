@@ -260,6 +260,8 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " para guardar rapido
 " <CR> es igual a enter
 nmap <C-s> :w<CR>
+"save all buffers open
+nmap <C-a> :wa<CR>
 nmap <C-x> :x<CR>
 nmap <C-q> :q!<CR>
 " para navegar en el buffer
