@@ -40,7 +40,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
 Plug 'puremourning/vimspector'
-" :CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight coc-markdownlint coc-graphql coc-sh coc-stylelint coc-snippets
+" :CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight coc-markdownlint coc-graphql coc-sh coc-stylelint coc-snippets
 " Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
 " Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
 " Modo de uso
@@ -104,6 +104,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'kabbamine/vcoolor.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'posva/vim-vue'
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'MattesGroeger/vim-bookmarks'
 " Add/remove bookmark at current line	mm	:BookmarkToggle
 " Add/edit/remove annotation at current line	mi	:BookmarkAnnotate <TEXT>
@@ -320,6 +322,7 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nmap <Leader>pp <Plug>(Prettier)
 " Para ver el historial de archivos con FZFMru
 nnoremap <Leader>fr :FZFMru<CR>
 
@@ -355,18 +358,8 @@ nmap   <C-LeftMouse>         <Plug>(VM-Mouse-Cursor)
 nmap   <C-RightMouse>        <Plug>(VM-Mouse-Word)
 nmap   <M-C-RightMouse>      <Plug>(VM-Mouse-Column)
 
-
-" comandos automaticos como prettier por ejemplo
-autocmd BufWrite *.html :CocCommand prettier.formatFile
-autocmd BufWrite *.js :CocCommand prettier.formatFile
-autocmd BufWrite *.json :CocCommand prettier.formatFile
-autocmd BufWrite *.css :CocCommand prettier.formatFile
-autocmd BufWrite *.ts :CocCommand prettier.formatFile
-autocmd BufWrite *.scss :CocCommand prettier.formatFile
-autocmd BufWrite *.vue :CocCommand prettier.formatFile
-autocmd BufWrite *.php :CocCommand prettier.formatFile
-autocmd BufWrite *.yml :CocCommand prettier.formatFile
-autocmd BufWrite *.md :CocCommand prettier.formatFile
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.html,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.yml,*.graphql,*.md,*.vue PrettierAsync
 autocmd BufWritePost * GitGutter
 
 " autocmd BufReadPost,BufNewFile *.vue setlocal filetype=vue
