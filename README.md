@@ -39,6 +39,10 @@ source ~/.vimrc
 en caso de querer instalar distintas versiones de node se puede usar nvm (node version manager)
 [Link de web NVM Node Version Manager](https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/)
 
+```
+sudo npm install -g prettier
+```
+
 
 ### [Obligación] Instalaciones a considerar 
 
