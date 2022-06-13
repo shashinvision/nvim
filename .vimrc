@@ -16,6 +16,7 @@ call plug#begin() " Para agregar plugins siempre va al principio del docu
 "Plug 'dracula/vim', { 'as': 'dracula' }
 " packadd! dracula
 " colorscheme dracula
+Plug 'jbgutierrez/vim-better-comments'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'simeji/winresizer'
 Plug 'nvim-telescope/telescope.nvim'
