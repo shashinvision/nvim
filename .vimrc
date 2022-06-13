@@ -151,6 +151,7 @@ set foldmethod=manual " para plegar y desplegar codigo. para hacer simple, vas a
 set shiftwidth=2
 set autoindent
 set smartindent
+set mmp=5000
 set history=1000 " Sets how many lines of history VIM has to remember
 set gdefault " Add g (global) to substitute operations, :s/pattern/replacement/
 set splitbelow " Open split below
