@@ -16,7 +16,7 @@ call plug#begin() " Para agregar plugins siempre va al principio del docu
 "Plug 'dracula/vim', { 'as': 'dracula' }
 " packadd! dracula
 " colorscheme dracula
-" Plug 'jbgutierrez/vim-better-comments'
+Plug 'jbgutierrez/vim-better-comments'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'simeji/winresizer'
 Plug 'nvim-telescope/telescope.nvim'
@@ -324,7 +324,7 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-" nmap <Leader>pp <Plug>(Prettier)
+nmap <Leader>pp <Plug>(Prettier)
 " Para ver el historial de archivos con FZFMru
 nnoremap <Leader>fr :FZFMru<CR>
 
