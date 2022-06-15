@@ -323,10 +323,10 @@ nmap <leader>gl :Git log<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nmap <Leader>pp <Plug>(Prettier)
 " Para ver el historial de archivos con FZFMru
 nnoremap <Leader>fr :FZFMru<CR>
+nmap <Leader>fp <Plug>(Prettier)
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " para plegar codigo de manera sencilla, debes colocarte en el principo de la
 " llave {}[]() y listo
