@@ -16,6 +16,7 @@ call plug#begin() " Para agregar plugins siempre va al principio del docu
 "Plug 'dracula/vim', { 'as': 'dracula' }
 " packadd! dracula
 " colorscheme dracula
+Plug 'StanAngeloff/php.vim'
 Plug 'jbgutierrez/vim-better-comments'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'simeji/winresizer'
@@ -41,7 +42,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
 Plug 'puremourning/vimspector'
-" :CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-prettier coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight coc-markdownlint coc-graphql coc-sh coc-stylelint coc-snippets
 " Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
 " Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
 " Modo de uso
@@ -374,8 +374,39 @@ augroup toggleCocExtensions
     autocmd BufEnter *.js call CocActionAsync('activeExtension', 'coc-tsserver')
     autocmd BufEnter *.ts call CocActionAsync('activeExtension', 'coc-tsserver')
     autocmd BufEnter *.html call CocActionAsync('activeExtension', 'coc-tsserver')
+    autocmd BufEnter *.php :set syntax=php
+
 augroup END
 
+let g:coc_global_extensions = [
+    \ 'coc-tsserver',
+    \ 'coc-json',
+    \ 'coc-html',
+    \ 'coc-css',
+    \ 'coc-phpls',
+    \ 'coc-python',
+    \ '@yaegassy/coc-phpstan',
+    \ 'coc-php-cs-fixer',
+    \ '@yaegassy/coc-intelephense',
+    \ 'coc-jedi',
+	\ 'coc-diagnostic',
+	\ 'coc-just-complete',
+	\ 'coc-vue',
+	\ 'coc-vetur',
+	\ 'coc-prettier',
+	\ 'coc-docker',
+	\ 'coc-sql',
+	\ 'coc-sh',
+	\ 'coc-pyright',
+	\ 'coc-java',
+	\ 'coc-marketplace',
+	\ 'coc-tslint-plugin',
+	\ 'coc-highlight',
+	\ 'coc-graphql',
+	\ 'coc-stylelint',
+	\ 'coc-snippets',
+	\ 'coc-emmet'
+    \]
 
 " Solo para Mac se instala pytho3 desde brew lo mism nvim y para que no tenga
 " problemas con reconocer python3 se usan los siguientes comandos
