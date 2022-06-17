@@ -375,9 +375,10 @@ augroup toggleCocExtensions
     autocmd BufEnter *.js call CocActionAsync('activeExtension', 'coc-tsserver')
     autocmd BufEnter *.ts call CocActionAsync('activeExtension', 'coc-tsserver')
     autocmd BufEnter *.html call CocActionAsync('activeExtension', 'coc-tsserver')
-    autocmd BufEnter *.php :set syntax=php
-
 augroup END
+
+    " Para ogligar a que reconozca una syntax de extensiones especificas
+    autocmd BufEnter *.php :set syntax=php
 
 let g:coc_global_extensions = [
     \ 'coc-tsserver',
