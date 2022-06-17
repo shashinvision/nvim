@@ -98,6 +98,7 @@ quedando de la siguinete forma
 
 ### Para configurar coc debes editar el archivo config conel comando con el comando :CocConfig o en la ruta: 
 ## ahí debes colocar tu licencia de "intelephense.licenceKey"
+## dentro de este repo esta el contenido de ese archivo
 ```
 ~/.config/nvim/coc-settings.json
 ```
