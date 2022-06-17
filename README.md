@@ -96,10 +96,12 @@ quedando de la siguinete forma
 ```
 
 
-### Para instalar los plugins de Coc, el mismo paso anterior colocando lo siguiente
+### Para configurar coc debes editar el archivo config conel comando con el comando :CocConfig o en la ruta: 
+## ahí debes colocar tu licencia de "intelephense.licenceKey"
 ```
-:CocInstall coc-json coc-emmet coc-html coc-vue coc-vetur coc-phpls coc-docker coc-sql coc-tsserver coc-sh coc-css coc-pyright coc-java coc-jedi coc-marketplace coc-tslint-plugin coc-highlight coc-markdownlint coc-graphql coc-sh coc-stylelint coc-snippets
+~/.config/nvim/coc-settings.json
 ```
+
 
 ### En mac necesitamos instalar python la versión 3 
 
