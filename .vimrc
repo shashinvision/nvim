@@ -141,6 +141,7 @@ set showcmd " para mostrar los comandos que se escriben
 set noshowmode " eliminamos que nos indique en que modo estamos (vista, insertar comando)
 set showmatch
 set encoding=utf-8
+set syntax=on
 syntax enable " para resaltar el codigo cuando lo seleccionamos
 colorscheme onedark
 set ignorecase " para innorar el key sensitive en las busquedas, podria interferir en los reemplazos masivos, para eso colocar el comando :set noignorecase
