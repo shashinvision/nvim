@@ -370,9 +370,11 @@ autocmd BufWritePost * GitGutter
 " autocmd BufReadPost,BufNewFile *.vue setlocal filetype=vue
 augroup toggleCocExtensions
     autocmd!
-    autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver')
+
     autocmd BufEnter *.* call CocActionAsync('deactivateExtension', 'coc-graphql')
+    autocmd BufEnter *.vue call CocActionAsync('deactivateExtension', 'coc-tsserver')
     " autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver')
+    autocmd BufEnter *.graphql call CocActionAsync('activeExtension', 'coc-graphql')
     autocmd BufEnter *.js call CocActionAsync('activeExtension', 'coc-tsserver')
     autocmd BufEnter *.ts call CocActionAsync('activeExtension', 'coc-tsserver')
     autocmd BufEnter *.html call CocActionAsync('activeExtension', 'coc-tsserver')
@@ -380,7 +382,7 @@ augroup END
 
     " Para ogligar a que reconozca una syntax de extensiones especificas, se
     " usa tambien el filetype por que afecta de mejor manera, mas que la syntax
-    autocmd BufNewFile,BufEnter *.php set syntax=php
+    " autocmd BufNewFile,BufEnter *.php set syntax=php
     autocmd BufNewFile,BufRead *.php set filetype=php
 
 let g:coc_global_extensions = [
