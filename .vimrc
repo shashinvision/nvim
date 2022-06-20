@@ -382,7 +382,7 @@ augroup END
 
     " Para ogligar a que reconozca una syntax de extensiones especificas, se
     " usa tambien el filetype por que afecta de mejor manera, mas que la syntax
-    " autocmd BufNewFile,BufEnter *.php set syntax=php
+    autocmd BufNewFile,BufEnter *.php set syntax=php
     autocmd BufNewFile,BufRead *.php set filetype=php
 
 let g:coc_global_extensions = [
