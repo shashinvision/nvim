@@ -387,6 +387,7 @@ augroup END
 
 let g:coc_global_extensions = [
     \ 'coc-tsserver',
+    \ 'coc-tabnine',
     \ 'coc-json',
     \ 'coc-html',
     \ 'coc-css',
