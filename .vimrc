@@ -380,10 +380,15 @@ augroup toggleCocExtensions
     autocmd BufEnter *.html call CocActionAsync('activeExtension', 'coc-tsserver')
 augroup END
 
-    " Para ogligar a que reconozca una syntax de extensiones especificas, se
-    " usa tambien el filetype por que afecta de mejor manera, mas que la syntax
+    " Syntax = permite reconocer la sintaxis del archivo y lo obliga a implementarla
+    " FileType = permite cargar otro tipo de enriquecimiento aparte de la sintaxis, para obligar es mejor usar ambos
+    
     autocmd BufNewFile,BufEnter *.php set syntax=php
     autocmd BufNewFile,BufRead *.php set filetype=php
+    
+    " solo le cambio el fileType debido a que la sintaxis de archivos MD la reconoce bien, pero en ocasiones falla al reconocer el tipo de extensión
+    autocmd BufNewFile,BufRead *.md set filetype=txt
+
 
 let g:coc_global_extensions = [
     \ 'coc-tsserver',
