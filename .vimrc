@@ -432,7 +432,7 @@ let g:coc_global_extensions = [
 " pip3 uninstall pynvim
 " pip3 install pynvim
 
-# Codigo LUA
+" Codigo LUA
 lua << EOF
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
