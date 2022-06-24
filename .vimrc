@@ -229,6 +229,9 @@ if !has('gui_running')
   set t_Co=256
 endif
 
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_color_term = 239
+
 " primero hay que ir al archivo o carpeta en la terimnal y crear un tag, eso
 " se hace ejemplo ctags block.js y creará un archivo con las definiciones
 " go to definition  like Vscode
@@ -382,10 +385,10 @@ augroup END
 
     " Syntax = permite reconocer la sintaxis del archivo y lo obliga a implementarla
     " FileType = permite cargar otro tipo de enriquecimiento aparte de la sintaxis, para obligar es mejor usar ambos
-    
+
     autocmd BufNewFile,BufEnter *.php set syntax=php
     autocmd BufNewFile,BufRead *.php set filetype=php
-    
+
     " solo le cambio el fileType debido a que la sintaxis de archivos MD la reconoce bien, pero en ocasiones falla al reconocer el tipo de extensión
     autocmd BufNewFile,BufRead *.md set filetype=txt
 
