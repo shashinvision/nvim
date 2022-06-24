@@ -16,6 +16,8 @@ call plug#begin('~/.config/nvim/plugged')   "directorio donde se van a instalar 
 "Plug 'dracula/vim', { 'as': 'dracula' }
 " packadd! dracula
 " colorscheme dracula
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ap/vim-css-color'
 Plug 'StanAngeloff/php.vim'
 Plug 'jbgutierrez/vim-better-comments'
@@ -92,7 +94,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multicursor
 Plug 'vimlab/split-term.vim'
 
 Plug 'mbbill/undotree'
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 "autocomplete
 Plug 'Townk/vim-autoclose'
 Plug 'jiangmiao/auto-pairs'
@@ -229,8 +231,8 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-let g:indentLine_color_term = 239
+" let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" let g:indentLine_color_term = 239
 
 " primero hay que ir al archivo o carpeta en la terimnal y crear un tag, eso
 " se hace ejemplo ctags block.js y creará un archivo con las definiciones
@@ -429,3 +431,16 @@ let g:coc_global_extensions = [
 " pip3 uninstall neovim
 " pip3 uninstall pynvim
 " pip3 install pynvim
+
+# Codigo LUA
+lua << EOF
+vim.opt.list = true
+vim.opt.listchars:append("space:⋅")
+vim.opt.listchars:append("eol:↴")
+
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+}
+EOF
