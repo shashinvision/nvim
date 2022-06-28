@@ -341,7 +341,9 @@ nnoremap <leader>zf zf%<cr>
 " Para desplegar el codigo plegado
 nnoremap <leader>za za<cr>
 " para recargar un archivo de forma manual
-nnoremap <leader>ss :source %<cr>
+nnoremap <leader>fs :source %<cr>
+" Para seleccionar todo con Control + A
+nnoremap <C-A> ggVG
 
 " para vcolor Use it:
 " * To insert a color anywhere.
