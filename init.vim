@@ -186,6 +186,8 @@ set undoreload=10000        " number of lines to save for undo
 set pumheight=20
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set nolist
+set colorcolumn=80
+
 " remove whitespaces
 autocmd BufWritePre * :%s/\s\+$//e
 nnoremap n nzzzv
