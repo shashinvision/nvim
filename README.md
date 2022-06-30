@@ -85,6 +85,13 @@ alias ctags="`brew --prefix`/bin/ctags"
 ```brew install ack```
 ```sudo apt install ack```
 
+
+### Copia el contenido del archivo init.vim que esta en este repo a la ruta: 
+
+```
+~/.config/nvim/init.vim
+```
+
 ### Dentro de nvim se ejecuta el siguiente comando
 
 
