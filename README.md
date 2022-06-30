@@ -131,7 +131,18 @@ export LANG=en_US.UTF-8
 
 ![Fix Locale](fix_set_locale_en_ack_mac.png)
 
-## Si quiero usar un servidor sin plugin puedo usar esta configuración en neovim rapido
+## Si necesito usar la configuración en un servidor sin necesidad de plugins puedo copiar configuración en neovim rapido
+### Primero instalar NeoVim en el server, luego:
+
+```
+mkdir ~/.config/nvim/
+```
+```
+touch ~/.config/nvim/init.vim
+```
+```
+nvim ~/.config/nvim/init.vim
+```
 
 ```
 
@@ -214,8 +225,6 @@ nnoremap <leader>zf zf%<cr>
 nnoremap <leader>za za<cr>
 " Para seleccionar todo con Control + A
 nnoremap <C-A> ggVG
-
-
 ```
 
 
