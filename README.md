@@ -152,7 +152,6 @@ nvim ~/.config/nvim/init.vim
 ```
 
 ```
-
 let mapleader = "\ " " Esto configura la tecla lider en VIM, en este momento dejamos la tecla 'espacio', esto es para no 'pisar' los atajos que vi tiene con la tecla Control y podemos personalizar todo, se debe usar la combinacion de botones en menos de un segundo para que haga efecto
 set syntax=on
 syntax enable " para resaltar el codigo cuando lo seleccionamos
