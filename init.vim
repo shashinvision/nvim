@@ -4,7 +4,7 @@
 "   CONFIGURACIONES-> Codigo Lua
 " SHORTCUT CONFIG RAW (SIN PLUGINS)
 " SHORTCUT CONFIG CON PLUGINS
-"   *********** FIN INDICE *************
+" *********** FIN INDICE *************
 
 " *********** PLUGINS *************
 call plug#begin('~/.config/nvim/plugged')   "directorio donde se van a instalar los plugins
