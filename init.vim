@@ -1,3 +1,11 @@
+" *********** INDICE *************
+" PLUGINS
+" CONFIGURACIONES
+"   CONFIGURACIONES-> Codigo Lua
+" SHORTCUT CONFIG RAW (SIN PLUGINS)
+" SHORTCUT CONFIG CON PLUGINS
+"   *********** FIN INDICE *************
+
 " *********** PLUGINS *************
 call plug#begin('~/.config/nvim/plugged')   "directorio donde se van a instalar los plugins
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -223,22 +231,11 @@ EOF
 
 " *********** FIN CONFIGURACIONES *************
 
-
-" *********** SHORTCUT CONFIG *************
+" *********** SHORTCUT CONFIG RAW (SIN PLUGINS)*************
 
 nnoremap n nzzzv " Centrar en las busquedas
 nnoremap N Nzzzv " Para ir al centro de la ventana
 nnoremap J mzJ`z
-
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-nnoremap <leader>n :NERDTreeFocus<CR>
-"nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 
 nmap <C-s> :w<CR>
 nmap <leader>a :wa<CR> "save all buffers open
@@ -251,23 +248,47 @@ nnoremap <C-n> :bnext<CR>
 " windows split vertical/horizontal
 nnoremap <leader>wh :split<CR>
 nnoremap <leader>wv :vsplit<CR>
-nnoremap <leader>wr :WinResizerStartResize<CR>
 
-" Terminal split
-nnoremap <leader>tv :VTerm<CR>
-nnoremap <leader>th :Term<CR>
-
-" Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
-nmap <leader>cl :CocList extensions<CR>
 " Para su correcto uso se debe hacer un split de pantalla con dos archivos, posicionado en cada archivo se hace un leader +4 y se procede a comprar
 nnoremap <leader>dt :diffthis<CR>
-" UndoTree sirve para ver un listado en forma de arbol de los cambios en un
-" archivo, es como un versionamiento a tiempo real
-nnoremap <leader>ut :UndotreeToggle<CR>
 
 " para cerrar el buffer actual
 nnoremap <leader>bd :bd<CR>
 
+" para recargar un archivo de forma manual
+nnoremap <leader>fs :source %<cr>
+
+" para plegar codigo de manera sencilla, debes colocarte en el principo de la
+" llave {}[]() y listo
+nnoremap <leader>zf zf%<cr>
+" Para desplegar el codigo plegado
+nnoremap <leader>za za<cr>
+" Para seleccionar todo con Control + A
+nnoremap <C-A> ggVG
+
+
+" *********** FIN SHORTCUT CONFIG RAW (SIN PLUGINS)*************
+
+" *********** SHORTCUT CONFIG CON PLUGINS *************
+
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+"nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+" Terminal split
+nnoremap <leader>tv :VTerm<CR>
+nnoremap <leader>th :Term<CR>
+" UndoTree sirve para ver un listado en forma de arbol de los cambios en un
+" archivo, es como un versionamiento a tiempo real
+nnoremap <leader>ut :UndotreeToggle<CR>
+nnoremap <leader>wr :WinResizerStartResize<CR>
+" Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
+nmap <leader>cl :CocList extensions<CR>
 "buscar palabras dentro del codigo
 nmap <Leader>eb <Plug>(easymotion-s2)
 " Move to word
@@ -298,17 +319,6 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <Leader>fr :FZFMru<CR>
 nmap <Leader>fp <Plug>(Prettier)
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-" para recargar un archivo de forma manual
-nnoremap <leader>fs :source %<cr>
-
-" para plegar codigo de manera sencilla, debes colocarte en el principo de la
-" llave {}[]() y listo
-nnoremap <leader>zf zf%<cr>
-" Para desplegar el codigo plegado
-nnoremap <leader>za za<cr>
-" Para seleccionar todo con Control + A
-nnoremap <C-A> ggVG
-
 " Para multicursor
 
 let g:VM_maps = {}
@@ -319,5 +329,4 @@ let g:VM_mouse_mappings = 1
 nmap   <C-LeftMouse>         <Plug>(VM-Mouse-Cursor)
 nmap   <C-RightMouse>        <Plug>(VM-Mouse-Word)
 nmap   <M-C-RightMouse>      <Plug>(VM-Mouse-Column)
-
-" *********** FIN SHORTCUT CONFIG *************
+" *********** FIN SHORTCUT CONFIG CON PLUGINS *************
