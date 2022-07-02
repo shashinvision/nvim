@@ -112,6 +112,7 @@ set colorcolumn=80
 set wildmenu
 set wildmode=longest:list,full
 set expandtab " On pressing tab, insert 2 spaces
+set linebreak " se corta en palabras y no en caracteres cuando wrap está puesto
 
 autocmd BufWritePre * :%s/\s\+$//e " remove whitespaces
 
