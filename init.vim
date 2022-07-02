@@ -34,8 +34,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary' " con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " necesita nodeJS
 Plug 'puremourning/vimspector'
-" Plug 'frazrepo/vim-rainbow' " Para ver en colores los cierres como estos ()[]{}
-" Plug 'mileszs/ack.vim' " Para buscar contenido en archivos para instalar ack hay que instalarlo en tu SO tmbn con brew install ack o sudo apt install ack
 Plug 'airblade/vim-gitgutter' " Para ver los cambios en git como linea que se agrega con un signo +, si quitamos lineas con - y si se modifico una con ~
 Plug 'vim-scripts/taglist.vim' " Para ver os tags de los archivos
 Plug 'godlygeek/tabular'
@@ -57,6 +55,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'posva/vim-vue'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'Xuyuanp/nerdtree-git-plugin' " Visualización de cambios de git en NerdTree
+Plug 'AndrewRadev/tagalong.vim' " Para cambiar los tags de HTML automáticamente
+" Plug 'terryma/vim-multiple-cursors' " El chiste se cuenta solo
 
 call plug#end() " para indicar que termino el gestor de plugins
 
@@ -108,6 +109,9 @@ set undoreload=10000        " number of lines to save for undo
 set pumheight=20 " Limit popup menu height
 set nolist
 set colorcolumn=80
+set wildmenu
+set wildmode=longest:list,full
+set expandtab " On pressing tab, insert 2 spaces
 
 autocmd BufWritePre * :%s/\s\+$//e " remove whitespaces
 
@@ -267,6 +271,8 @@ nnoremap <leader>za za<cr>
 nnoremap <C-A> ggVG
 
 
+nnoremap bl :ls<cr>:b<space> " Para mostrar un listado de los buffers
+nnoremap <silent> <leader>c :nohlsearch<CR>h:echo " "<CR>  " Limpia las busquedas
 " *********** FIN SHORTCUT CONFIG RAW (SIN PLUGINS)*************
 
 " *********** SHORTCUT CONFIG CON PLUGINS *************
