@@ -195,7 +195,9 @@ set undoreload=10000        " number of lines to save for undo
 set pumheight=20 " Limit popup menu height
 set nolist
 set colorcolumn=80
-
+set wildmenu
+set wildmode=longest:list,full
+set expandtab " On pressing tab, insert 2 spaces
 
 autocmd BufWritePre * :%s/\s\+$//e " remove whitespaces
 
@@ -231,6 +233,9 @@ nnoremap <leader>zf zf%<cr>
 nnoremap <leader>za za<cr>
 " Para seleccionar todo con Control + A
 nnoremap <C-A> ggVG
+nnoremap bl :ls<cr>:b<space> " Para mostrar un listado de los buffers
+nnoremap <silent> <leader>c :nohlsearch<CR>h:echo " "<CR>  " Limpia las busquedas
+
 ```
 
 
