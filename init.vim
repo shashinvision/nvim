@@ -272,7 +272,7 @@ nnoremap <leader>za za<cr>
 nnoremap <C-A> ggVG
 
 
-nnoremap bl :ls<cr>:b<space> " Para mostrar un listado de los buffers
+nnoremap <leader>bl :ls<cr>:b<space> " Para mostrar un listado de los buffers
 nnoremap <silent> <leader>c :nohlsearch<CR>h:echo " "<CR>  " Limpia las busquedas
 " *********** FIN SHORTCUT CONFIG RAW (SIN PLUGINS)*************
 
