@@ -234,7 +234,7 @@ nnoremap <leader>zf zf%<cr>
 nnoremap <leader>za za<cr>
 " Para seleccionar todo con Control + A
 nnoremap <C-A> ggVG
-nnoremap bl :ls<cr>:b<space> " Para mostrar un listado de los buffers
+nnoremap <leader>bl :ls<cr>:b<space> " Para mostrar un listado de los buffers
 nnoremap <silent> <leader>c :nohlsearch<CR>h:echo " "<CR>  " Limpia las busquedas
 
 ```
