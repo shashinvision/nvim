@@ -203,8 +203,6 @@ set linebreak " se corta en palabras y no en caracteres cuando wrap está puesto
 autocmd BufWritePre * :%s/\s\+$//e " remove whitespaces
 
 nnoremap n nzzzv " Centrar en las busquedas
-nnoremap N Nzzzv " Para ir al centro de la ventana
-nnoremap J mzJ`z
 
 nmap <C-s> :w<CR>
 nmap <leader>a :wa<CR> "save all buffers open
