@@ -239,8 +239,6 @@ EOF
 " *********** SHORTCUT CONFIG RAW (SIN PLUGINS)*************
 
 nnoremap n nzzzv " Centrar en las busquedas
-nnoremap N Nzzzv " Para ir al centro de la ventana
-nnoremap J mzJ`z
 
 nmap <C-s> :w<CR>
 nmap <leader>a :wa<CR> "save all buffers open
