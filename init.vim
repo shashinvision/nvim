@@ -18,7 +18,7 @@ Plug 'simeji/winresizer'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'joshdick/onedark.vim'
 Plug 'dm1try/golden_size'
-Plug 'rhysd/git-messenger.vim'
+" Plug 'rhysd/git-messenger.vim'
 Plug 'yegappan/mru' " Esto es para acceder al historial de archivos visitados y editados el comando es :MRU
 Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
@@ -27,6 +27,8 @@ Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
+Plug 'APZelos/blamer.nvim'
+
 Plug 'itchyny/vim-gitbranch'
 Plug 'jparise/vim-graphql'
 Plug 'christoomey/vim-tmux-navigator' " con control h y control l navego facil entre pantalla, con nerdtree me posiciono en otro archicvo y presiono la tecla s y divide la pantalla
@@ -58,7 +60,8 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Xuyuanp/nerdtree-git-plugin' " Visualización de cambios de git en NerdTree
 Plug 'AndrewRadev/tagalong.vim' " Para cambiar los tags de HTML automáticamente
 " Plug 'terryma/vim-multiple-cursors' " El chiste se cuenta solo
-
+Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
 call plug#end() " para indicar que termino el gestor de plugins
 
 " *********** FIN PLUGINS *************
@@ -137,6 +140,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
 
 " se configura el .zshrc con export TERM=xterm-256color
+let g:blamer_enabled = 1
+
 
 if !has('gui_running')
   set t_Co=256
@@ -308,13 +313,14 @@ nmap <leader>gb :Git blame<cr>
 nmap <leader>gs :Git<cr> "Para el status
 nmap <leader>gc :Git commit -v<cr>
 nmap <leader>ga :Git add -p<cr>
-nmap <leader>gmm :Git commit --amend<cr>
-nmap <leader>gm: :GitMessenger<cr>
+nmap <leader>gm :Git commit --amend<cr>
 nmap <leader>gp :Git push<cr>
 nmap <leader>gu :Git pull<cr>
 nmap <leader>gd :Git diff<cr>
 nmap <leader>gw :Git write<cr>
 nmap <leader>gl :Git log<cr>
+nmap <leader>gh :DiffviewFileHistory<cr>
+
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
