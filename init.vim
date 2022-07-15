@@ -18,7 +18,7 @@ Plug 'simeji/winresizer'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'joshdick/onedark.vim'
 Plug 'dm1try/golden_size'
-" Plug 'rhysd/git-messenger.vim'
+Plug 'rhysd/git-messenger.vim'
 Plug 'yegappan/mru' " Esto es para acceder al historial de archivos visitados y editados el comando es :MRU
 Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
@@ -320,6 +320,7 @@ nmap <leader>gd :Git diff<cr>
 nmap <leader>gw :Git write<cr>
 nmap <leader>gl :Git log<cr>
 nmap <leader>gh :DiffviewFileHistory<cr>
+nmap <leader>mg :GitMessenger<cr>
 
 
 " Find files using Telescope command-line sugar.
