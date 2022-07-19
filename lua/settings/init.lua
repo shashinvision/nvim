@@ -12,6 +12,6 @@ cmd 'source ~/.config/nvim/lua/settings/config.vim'
 cmd 'source ~/.config/nvim/lua/settings/keymaps.vim'
 
 -- Telescope configuration
-require('plugins/telescopeconfig')
+require('plugins/config/telescope')
 
 
