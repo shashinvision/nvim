@@ -1,15 +1,26 @@
 " *********** CONFIGURACIONES *************
 colorscheme onedark
+filetype plugin indent on
+let mapleader = "\ " " Esto configura la tecla lider en VIM, en este momento dejamos la tecla 'espacio', esto es para no 'pisar' los atajos que vi tiene con la tecla Control y podemos personalizar todo, se debe usar la combinacion de botones en menos de un segundo para que haga efecto
+set syntax=on
 syntax enable " para resaltar el codigo cuando lo seleccionamos
 set nocompatible
+set number " para que me muestre los numeros de las lineas
+set rnu " set relativenumber - para que me de el numero de lineas relativo
+set cursorline "Para que muestre el cursor donde estamos
+set mouse=a "Para activar el mouse
+set clipboard=unnamed " Para poder utilizar el copy/paste fuera de la terminal, solo selecciona en modo visual teclas la letra y para copiar, para pegar desde fuera de la terminal teclas la letra p en modo visual y listo
+set clipboard=unnamedplus
 set laststatus=10 " Para guardar la cantidad de rehacer y deshacer
 set showcmd " para mostrar los comandos que se escriben
 set noshowmode " eliminamos que nos indique en que modo estamos (vista, insertar comando)
 set showmatch
 set encoding=utf-8
+set ignorecase " para innorar el key sensitive en las busquedas, podria interferir en los reemplazos masivos, para eso colocar el comando :set noignorecase
 set smartcase
 set foldmethod=manual " para plegar y desplegar codigo. para hacer simple, vas al primer cierre del (){}[] y precionar zf% y listo, para desacoplar solo preciona zfa y listo.
 set shiftwidth=2
+set autoindent
 set smartindent
 set mmp=5000
 set history=1000 " Sets how many lines of history VIM has to remember
