@@ -11,6 +11,7 @@ local key = vim.keymap -- for keymaps
 cmd 'source ~/.config/nvim/lua/settings/config.vim'
 cmd 'source ~/.config/nvim/lua/settings/keymaps.vim'
 
+-- **** Lua plugins configs ***
 -- Telescope configuration
 require('plugins/config/telescope')
 
