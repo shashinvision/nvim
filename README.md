@@ -28,7 +28,7 @@ o
 nvim ~/.config/nvim/init.vim
 ```
 
-y escribir dentro del archivo 
+y escribir dentro del archivo
 ```
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
@@ -39,13 +39,13 @@ source ~/.vimrc
 en caso de querer instalar distintas versiones de node se puede usar nvm (node version manager)
 [Link de web NVM Node Version Manager](https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/)
 
-### Instalamos prettier 
+### Instalamos prettier
 ```
 sudo npm install -g prettier
 ```
 
 
-### [Obligación] Instalaciones a considerar 
+### [Obligación] Instalaciones a considerar
 
 ```git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline```
 
@@ -81,12 +81,16 @@ sudo apt-get install ctags
 ```
 alias ctags="`brew --prefix`/bin/ctags"
 ```
+### En mac para que funcione bien Vim Spectre (Busqueda/reemplazo) en proyectos
+```
+brew install gnu-sed
+```
 ### OPCIONAL ACK (Deprecado, ya no lo uso en esta version, pero el codigo esta comendato en el archivo de configuracion, lo dejo solo en caso de querer activarlo)
 ```brew install ack```
 ```sudo apt install ack```
 
 
-### Copia el contenido del archivo init.vim que esta en este repo a la ruta: 
+### Copia el contenido del archivo init.vim que esta en este repo a la ruta:
 
 ```
 ~/.config/nvim/init.vim
@@ -103,7 +107,7 @@ quedando de la siguinete forma
 ```
 
 
-### Para configurar coc debes editar el archivo config conel comando con el comando :CocConfig o en la ruta: 
+### Para configurar coc debes editar el archivo config conel comando con el comando :CocConfig o en la ruta:
 ## ahí debes colocar tu licencia de "intelephense.licenceKey"
 ## dentro de este repo esta el contenido de ese archivo
 ```
@@ -111,7 +115,7 @@ quedando de la siguinete forma
 ```
 
 
-### En mac necesitamos instalar python la versión 3 
+### En mac necesitamos instalar python la versión 3
 
 
 ### Solo para Mac se instala python3 desde brew lo mism nvim y para que no tenga problemas con reconocer python3 se usan los siguientes comandos
@@ -132,7 +136,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
 
-### En Mac puede dar errores con la Terminal o ITerm2 debido al Locale, esta es la solución 
+### En Mac puede dar errores con la Terminal o ITerm2 debido al Locale, esta es la solución
 
 [Link de Fuente](https://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/)
 

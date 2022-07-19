@@ -54,5 +54,6 @@ Plug 'AndrewRadev/tagalong.vim' -- Para cambiar los tags de HTML automáticament
 -- Plug 'terryma/vim-multiple-cursors' -- El chiste se cuenta solo
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
-
+Plug 'nvim-lua/plenary.nvim'
+Plug 'windwp/nvim-spectre'
 vim.call('plug#end')
