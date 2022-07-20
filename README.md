@@ -238,7 +238,8 @@ nnoremap <leader>za za<cr>
 nnoremap <C-A> ggVG
 nnoremap <leader>bl :ls<cr>:b<space> " Para mostrar un listado de los buffers
 nnoremap <silent> <leader>c :nohlsearch<CR>h:echo " "<CR>  " Limpia las busquedas
-
+" para abrir/cerrar el explorador Lexplore
+nnoremap <leader>l :Lexplore<cr>
 ```
 
 

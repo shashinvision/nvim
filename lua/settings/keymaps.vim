@@ -20,6 +20,9 @@ nnoremap <leader>dt :diffthis<CR>
 " para cerrar el buffer actual
 nnoremap <leader>bd :bd<CR>
 
+" para abrir/cerrar el explorador Lexplore
+nnoremap <leader>l :Lexplore<cr>
+
 " para recargar un archivo de forma manual
 nnoremap <leader>fs :source %<cr>
 
