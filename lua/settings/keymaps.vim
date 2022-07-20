@@ -21,7 +21,7 @@ nnoremap <leader>dt :diffthis<CR>
 nnoremap <leader>bd :bd<CR>
 
 " para abrir/cerrar el explorador Lexplore
-nnoremap <leader>l :Lexplore<cr>
+nnoremap <leader>e :Lexplore<cr>
 
 " para recargar un archivo de forma manual
 nnoremap <leader>fs :source %<cr>
