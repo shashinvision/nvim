@@ -5,8 +5,6 @@ local set  = vim.opt -- Generals options (Windows/Files)
 local g = vim.g -- Globals values
 local env = vim.env -- Environment variables
 local cmd = vim.cmd -- for VimScript commands
-local key = vim.keymap -- for keymaps
-local api = vim.api -- API VIM
 
 g.mapleader = ' ' -- tecla lider, en este caso el espacio
 set.compatible = false

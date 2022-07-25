@@ -45,7 +45,6 @@ Plug 'alvan/vim-closetag'
 Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
 Plug 'kabbamine/vcoolor.vim'
-Plug 'easymotion/vim-easymotion'
 Plug 'posva/vim-vue'
 Plug ('prettier/vim-prettier', { ['do'] = 'yarn install --frozen-lockfile --production' })
 Plug 'MattesGroeger/vim-bookmarks'
