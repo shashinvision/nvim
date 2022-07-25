@@ -1,7 +1,5 @@
 " *********** CONFIGURACIONES *************
 
-autocmd BufWritePre * :%s/\s\+$//e " remove whitespaces
-
 " Para el theme de onedark
 if (empty($TMUX))
   if (has("nvim"))

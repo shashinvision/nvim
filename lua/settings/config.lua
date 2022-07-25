@@ -6,13 +6,14 @@ local g = vim.g -- Globals values
 local env = vim.env -- Environment variables
 local cmd = vim.cmd -- for VimScript commands
 local key = vim.keymap -- for keymaps
+local api = vim.api -- API VIM
 
 g.mapleader = ' ' -- tecla lider, en este caso el espacio
 set.compatible = false
-cmd 'syntax on'
-cmd 'syntax enable' --para resaltar el codigo cuando lo seleccionamos
-cmd 'filetype plugin indent on'
-cmd 'colorscheme onedark'
+cmd('syntax on')
+cmd('syntax enable') --para resaltar el codigo cuando lo seleccionamos
+cmd('filetype plugin indent on')
+cmd('colorscheme onedark')
 set.number = true --para que me muestre los numeros de las lineas
 set.relativenumber = true -- para que me de el numero de lineas relativo
 set.cursorline = true -- Para que muestre el cursor donde estamos
@@ -58,3 +59,7 @@ set.expandtab = true -- On pressing tab, insert 2 spaces
 o.wrap = true
 o.list = false
 set.linebreak = true -- Se corta en palabras y no en caracteres cuando wrap está puesto
+
+cmd([[
+      autocmd BufWritePre * :%s/\s\+$//e
+    ]]) --  remove whitespaces
