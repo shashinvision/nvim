@@ -66,6 +66,7 @@ cmd([[
       autocmd BufNewFile,BufEnter *.php set syntax=php
       autocmd BufNewFile,BufRead *.php set filetype=php
       autocmd BufNewFile,BufRead *.md set filetype=txt
+
       if (empty($TMUX))
         if (has("nvim"))
           "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -81,7 +82,6 @@ cmd([[
         let g:airline_symbols = {}
       endif
 
-      set laststatus=2
       let g:airline_symbols.space = "\ua0"
       let g:airline#extensions#tabline#enabled = 1
       let g:airline_theme='onedark'
