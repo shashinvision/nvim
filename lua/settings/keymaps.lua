@@ -85,6 +85,6 @@ keymap('n', '<leader>S', '<cmd>lua require("spectre").open()<CR>', {noremap = tr
 keymap('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {noremap = true})
 keymap('v', '<leader>s', '<esc>:lua require("spectre").open_visual()<CR>', {noremap = true})
 --  search in current file
-keymap('v', '<leader>sp', 'viw:lua require("spectre").open_file_search()<cr>', {noremap = true})
+keymap('n', '<leader>sp', 'viw:lua require("spectre").open_file_search()<cr>', {noremap = true})
 -- run command :Spectre
 keymap('n', '<leader>st', ':Startify<cr>', {noremap = true})
