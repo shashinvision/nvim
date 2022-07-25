@@ -8,7 +8,7 @@ local cmd = vim.cmd -- for VimScript commands
 local key = vim.keymap -- for keymaps
 
 g.mapleader = ' ' -- tecla lider, en este caso el espacio
-cmd 'set nocompatible'
+set.compatible = false
 cmd 'syntax on'
 cmd 'syntax enable' --para resaltar el codigo cuando lo seleccionamos
 cmd 'filetype plugin indent on'
@@ -20,7 +20,7 @@ set.mouse = 'a' --Para activar el mouse
 set.clipboard = 'unnamedplus' --  Para poder utilizar el copy/paste fuera de la terminal, solo selecciona en modo visual teclas la letra y para copiar, para pegar desde fuera de la terminal teclas la letra p en modo visual y listo
 set.laststatus = 10 -- Para guardar la cantidad de rehacer y deshacer
 set.showcmd = true -- para mostrar los comandos que se escriben
-set.noshowmode = true -- eliminamos que nos indique en que modo estamos (vista, insertar comando)
+o.showmode = false -- eliminamos que nos indique en que modo estamos (vista, insertar comando)
 set.showmatch = true
 set.encoding = 'utf-8'
 set.fileencoding = 'utf-8' -- The encoding written to file.
@@ -38,7 +38,7 @@ set.splitbelow = true -- Open split below
 set.splitright = true -- Open split right
 set.hlsearch = true -- Highlight search results
 set.incsearch = true -- Makes search act like search in modern browsers
-set.nojoinspaces = true-- Prevents inserting two spaces after punctuation on a join (J)
+o.joinspaces = false -- Prevents inserting two spaces after punctuation on a join (J)
 set.tabstop = 2 -- An indentation every two columns
 set.softtabstop = 2 -- Let backspace delete indent
 set.viewoptions = 'folds,options,cursor,unix,slash' -- Better Unix / Windows compatibility
@@ -50,11 +50,11 @@ set.undodir = '~/.config/nvim/undodir' -- where to save undo histories
 set.undolevels = 1000 -- How many undos
 set.undoreload = 10000 -- Number of lines to save for undo
 set.pumheight = 20 -- Limit popup menu height
-set.colorcolumn = 80
+o.colorcolumn = 80
 set.wildmenu = true
 set.wildmode = 'longest:list,full'
 set.wildoptions = 'pum'
 set.expandtab = true -- On pressing tab, insert 2 spaces
-set.nowrap = true
-set.nolist = true
+o.wrap = true
+o.list = false
 set.linebreak = true -- Se corta en palabras y no en caracteres cuando wrap está puesto
