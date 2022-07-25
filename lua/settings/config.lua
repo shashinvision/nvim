@@ -14,6 +14,7 @@ cmd('syntax on')
 cmd('syntax enable') --para resaltar el codigo cuando lo seleccionamos
 cmd('filetype plugin indent on')
 cmd('colorscheme onedark')
+set.colorcolumn='80'
 set.number = true --para que me muestre los numeros de las lineas
 set.relativenumber = true -- para que me de el numero de lineas relativo
 set.cursorline = true -- Para que muestre el cursor donde estamos
@@ -51,7 +52,6 @@ set.undodir = '~/.config/nvim/undodir' -- where to save undo histories
 set.undolevels = 1000 -- How many undos
 set.undoreload = 10000 -- Number of lines to save for undo
 set.pumheight = 20 -- Limit popup menu height
-o.colorcolumn = 80
 set.wildmenu = true
 set.wildmode = 'longest:list,full'
 set.wildoptions = 'pum'

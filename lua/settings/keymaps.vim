@@ -111,4 +111,5 @@ vnoremap <leader>s <esc>:lua require('spectre').open_visual()<CR>
 nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 " run command :Spectre
 
+nnoremap <leader>st :Startify<cr>
 " *********** FIN SHORTCUT CONFIG CON PLUGINS *************
