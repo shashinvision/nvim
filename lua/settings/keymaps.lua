@@ -26,7 +26,7 @@ keymap('n', '<leader>za', 'za<cr>', {noremap = true}) -- Para desplegar el codig
 keymap('n', '<C-A>','ggVG', {noremap = true}) --" Para seleccionar todo con Control + A
 keymap('n', '<leader>bl', ':buffers<CR>', {noremap = true}) --" Para mostrar un listado de los buffers
 keymap('n', '<leader>c', ':nohlsearch<CR>h:echo " "<CR>', {noremap = true, silent = true})  -- Limpia las busquedas
-keymap('n','gd' ,'<Plug> (coc-definition)', {silent = true})
+keymap('n','gd', '<Plug>(coc-definition)', {silent = true})
 keymap('n','gi', '<Plug>(coc-implementation)', {silent = true})
 keymap('n','gr','<Plug>(coc-references)', {silent = true})
 keymap('n','<C-t>', ':NERDTreeToggle<CR>', {noremap = true})
