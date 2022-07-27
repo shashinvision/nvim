@@ -80,7 +80,7 @@ keymap('n', '<C-RightMouse>', '<Plug>(VM-Mouse-Word)', {noremap = true})
 keymap('n', '<M-C-RightMouse>', '<Plug>(VM-Mouse-Column)', {noremap = true})
 
 -- Neovim Spectre
-keymap('n', '<leader>S', '<cmd>lua require("spectre").open()<CR>', {noremap = true})
+keymap('n', '<leader>s', '<cmd>lua require("spectre").open()<CR>', {noremap = true})
 -- search current word
 keymap('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {noremap = true})
 keymap('v', '<leader>s', '<esc>:lua require("spectre").open_visual()<CR>', {noremap = true})
