@@ -5,6 +5,8 @@ local set  = vim.opt -- Generals options (Windows/Files)
 local g = vim.g -- Globals values
 local env = vim.env -- Environment variables
 local cmd = vim.cmd -- for VimScript commands
+local key = vim.keymap -- for keymaps
+local api = vim.api -- API VIM
 
 g.mapleader = ' ' -- tecla lider, en este caso el espacio
 set.compatible = false
@@ -46,8 +48,7 @@ set.magic = true -- For regular expressions turn magic on
 set.tags = './tags;/' -- para usar tags Para indexar toda una carpeta raiz desde la terminal y que git ignore esa carpeta ctags -R -f ./.git/tags .
 set.updatetime = 50 -- improve user experience updating more frequently
 set.undofile = true -- Save undos after file closes
--- set.undodir="~/.config/nvim/undodir"
-cmd('set undodir=~/.config/nvim/undodir') -- where to save undo histories, lua have a trouble with path HOME path '~''
+set.undodir = '~/.config/nvim/undodir' -- where to save undo histories
 set.undolevels = 1000 -- How many undos
 set.undoreload = 10000 -- Number of lines to save for undo
 set.pumheight = 20 -- Limit popup menu height
@@ -59,14 +60,12 @@ o.wrap = true
 o.list = false
 set.linebreak = true -- Se corta en palabras y no en caracteres cuando wrap está puesto
 
--- cmd('source ~/.config/nvim/lua/settings/config.vim')
 cmd([[
-        autocmd BufWritePre * :%s/\s\+$//e "remove whitespaces
+      autocmd BufWritePre * :%s/\s\+$//e "remove whitespaces
       autocmd BufWritePost * GitGutter
       autocmd BufNewFile,BufEnter *.php set syntax=php
       autocmd BufNewFile,BufRead *.php set filetype=php
       autocmd BufNewFile,BufRead *.md set filetype=txt
-
       if (empty($TMUX))
         if (has("nvim"))
           "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -82,6 +81,7 @@ cmd([[
         let g:airline_symbols = {}
       endif
 
+      set laststatus=2
       let g:airline_symbols.space = "\ua0"
       let g:airline#extensions#tabline#enabled = 1
       let g:airline_theme='onedark'
@@ -133,4 +133,4 @@ cmd([[
           \ 'coc-snippets',
           \ 'coc-emmet'
           \]
-]])
+    ]])
