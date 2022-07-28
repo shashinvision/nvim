@@ -58,9 +58,9 @@ keymap('n','<leader>gh' , ':DiffviewFileHistory<cr>', {noremap = true})
 keymap('n','<leader>mg' , ':GitMessenger<cr>', {noremap = true})
 
 -- Find files using Telescope command-line sugar.
-keymap('n', '<leader>ff' , '<cmd>Telescope find_files<cr>', {noremap = true})
-keymap('n', '<leader>fg' , '<cmd>Telescope live_grep<cr>', {noremap = true})
-keymap('n', '<leader>fb' , '<cmd>Telescope buffers<cr>', {noremap = true})
+keymap('n', '<leader>ff' , "<cmd>:lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
+keymap('n', '<leader>fg' , "<cmd>:lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
+keymap('n', '<leader>fb' , "<cmd>:lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
 
 -- Para ver el historial de archivos con FZFMru
 keymap('n', '<Leader>fr', ':FZFMru<CR>', {noremap = true})
