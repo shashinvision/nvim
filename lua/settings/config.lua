@@ -19,6 +19,7 @@ set.number = true --para que me muestre los numeros de las lineas
 set.relativenumber = true -- para que me de el numero de lineas relativo
 set.cursorline = true -- Para que muestre el cursor donde estamos
 set.mouse = 'a' --Para activar el mouse
+set.clipboard = 'unnamed' --  Para poder utilizar el copy/paste fuera de la terminal, solo selecciona en modo visual teclas la letra y para copiar, para pegar desde fuera de la terminal teclas la letra p en modo visual y listo
 set.clipboard = 'unnamedplus' --  Para poder utilizar el copy/paste fuera de la terminal, solo selecciona en modo visual teclas la letra y para copiar, para pegar desde fuera de la terminal teclas la letra p en modo visual y listo
 set.laststatus = 10 -- Para guardar la cantidad de rehacer y deshacer
 set.showcmd = true -- para mostrar los comandos que se escriben
