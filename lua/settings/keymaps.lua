@@ -21,8 +21,8 @@ keymap('n', '<leader>dt', ':diffthis<CR>', {noremap = true}) -- Para su correcto
 keymap('n', '<leader>bd', ':bd<CR>', {noremap = true}) -- para cerrar el buffer actual
 keymap('n', '<leader>e', ':Lexplore<cr>', {noremap = true}) -- para abrir/cerrar el explorador Lexplore
 keymap('n', '<leader>fs', ':source %<cr>', {noremap = true}) -- para recargar un archivo de forma manual
-keymap('n', '<leader>zf', 'zf%<cr>', {noremap = true}) -- para plegar codigo de manera sencilla, debes colocarte en el principo de la, llave {}[]() y listo
-keymap('n', '<leader>za', 'za<cr>', {noremap = true}) -- Para desplegar el codigo plegado
+keymap('n', '<leader>z%', 'za%<CR>', {noremap = true}) -- Te lleva al final o el principio de llave relacionada {}[]()
+keymap('n', '<leader>zf', 'zf%<CR>', {noremap = true}) -- para plegar codigo de manera sencilla, debes colocarte en el principo de la, llave {}[]() y listo, con za en modo normal vuelves a desplegar el codigo
 keymap('n', '<C-A>','ggVG', {noremap = true}) --" Para seleccionar todo con Control + A
 keymap('n', '<leader>bl', ':buffers<CR>', {noremap = true}) --" Para mostrar un listado de los buffers
 keymap('n', '<leader>c', ':nohlsearch<CR>h:echo " "<CR>', {noremap = true, silent = true})  -- Limpia las busquedas
