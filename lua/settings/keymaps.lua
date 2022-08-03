@@ -88,3 +88,15 @@ keymap('v', '<leader>s', '<esc>:lua require("spectre").open_visual()<CR>', {nore
 keymap('n', '<leader>sp', 'viw:lua require("spectre").open_file_search()<cr>', {noremap = true})
 -- run command :Spectre
 keymap('n', '<leader>st', ':Startify<cr>', {noremap = true})
+
+-- for Vim-Bookmarks
+keymap('n', '<leader><leader>', '<Plug>BookmarkToggle', {noremap = true})
+keymap('n', '<leader>bi', '<Plug>BookmarkAnnotate', {noremap = true})
+keymap('n', '<leader>ba', '<Plug>BookmarkShowAll', {noremap = true})
+keymap('n', '<leader>bn', '<Plug>BookmarkNext', {noremap = true})
+keymap('n', '<leader>bp', '<Plug>BookmarkPrev', {noremap = true})
+keymap('n', '<leader>bc', '<Plug>BookmarkClear', {noremap = true})
+keymap('n', '<leader>bx', '<Plug>BookmarkClearAll', {noremap = true})
+keymap('n', '<leader>bk', '<Plug>BookmarkMoveUp', {noremap = true})
+keymap('n', '<leader>bj', '<Plug>BookmarkMoveDown', {noremap = true})
+keymap('n', '<leader>bg', '<Plug>BookmarkMoveToLine', {noremap = true})
