@@ -67,6 +67,9 @@ keymap('n', '<Leader>fr', ':FZFMru<CR>', {noremap = true})
 keymap('n', '<Leader>fp', '<Plug>(Prettier)', {noremap = true})
 keymap('n', '<Leader>fh', '<cmd>Telescope help_tags<cr>', { noremap = true})
 
+-- Live Serve
+keymap('n', '<Leader>ls', ':Bracey<cr>', { noremap = true})
+keymap('n', '<Leader>lss', ':BraceyStop<cr>', { noremap = true})
 -- Para multicursor
 cmd([[
     let g:VM_maps = {}
