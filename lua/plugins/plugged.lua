@@ -40,7 +40,7 @@ Plug 'mbbill/undotree'
 Plug 'Townk/vim-autoclose'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
--- Plug 'turbio/bracey.vim', {['do'] = 'npm install --prefix server'} --WebDevelopment
+Plug 'turbio/bracey.vim', {['do'] = 'npm install --prefix server'} --WebDevelopment
 Plug 'alvan/vim-closetag'
 Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
