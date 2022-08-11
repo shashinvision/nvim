@@ -94,6 +94,15 @@ cmd([[
         set t_Co=256
       endif
 
+      if has("termguicolors")     " set true colors
+          set t_8f=\[[38;2;%lu;%lu;%lum
+          set t_8b=\[[48;2;%lu;%lu;%lum
+          set termguicolors
+      endif
+
+      hi! Normal ctermbg=NONE guibg=NONE
+      hi! NonText ctermbg=NONE guibg=NONE
+
       augroup toggleCocExtensions
             autocmd!
             autocmd BufEnter *.* call CocActionAsync('deactivateExtension', 'coc-graphql')
