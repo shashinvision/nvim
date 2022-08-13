@@ -118,7 +118,7 @@ quedando de la siguinete forma
 ### En mac necesitamos instalar python la versión 3
 
 
-### Solo para Mac se instala python3 desde brew lo mism nvim y para que no tenga problemas con reconocer python3 se usan los siguientes comandos
+### Para Mac y Linux se instala python3 desde brew lo mism nvim y para que no tenga problemas con reconocer python3 se usan los siguientes comandos
 ```pip3 uninstall neovim```
 
 ```pip3 uninstall pynvim```
