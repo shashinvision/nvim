@@ -90,9 +90,7 @@ cmd([[
 
       let g:blamer_enabled = 1
 
-      if !has('gui_running')
-        set t_Co=256
-      endif
+
 
       if has("termguicolors")     " set true colors
           set t_8f=\[[38;2;%lu;%lu;%lum
@@ -144,4 +142,10 @@ cmd([[
           \ 'coc-snippets',
           \ 'coc-emmet'
           \]
+
+      if !has('gui_running')
+        set t_Co=256
+        let g:AutoClosePreserveDotReg = 0
+      endif
+        inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
     ]])
