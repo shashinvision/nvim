@@ -52,7 +52,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin' -- Visualización de cambios de git en NerdTr
 Plug 'AndrewRadev/tagalong.vim' -- Para cambiar los tags de HTML automáticamente
 -- Plug 'terryma/vim-multiple-cursors' -- El chiste se cuenta solo
 Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
 Plug 'sindrets/diffview.nvim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'windwp/nvim-spectre'
 vim.call('plug#end')
