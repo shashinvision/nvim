@@ -8,6 +8,7 @@ keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = false })
 keymap('n', '<C-j>', '<C-w>j', { noremap = true, silent = false })
 keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = false })
 
+keymap('i', 'jk', '<ESC>', {noremap = true}) -- Simula la tecla escape en el modo insert
 keymap('n', 'n', 'nzzzv', { noremap = true }) --Centrar en las busquedas
 keymap('n', '<C-s>', ':w<CR>', { noremap = true }) -- Save buffer
 keymap('n', '<leader>a', ':wa<CR>', { noremap = true }) -- save all buffers open

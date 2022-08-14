@@ -240,6 +240,13 @@ nnoremap <leader>bl :ls<cr>:b<space> " Para mostrar un listado de los buffers
 nnoremap <silent> <leader>c :nohlsearch<CR>h:echo " "<CR>  " Limpia las busquedas
 " para abrir/cerrar el explorador Lexplore
 nnoremap <leader>e :Lexplore<cr>
+inoremap jk <Esc>
+nnoremap <leader><leader> <S-$>%  " Te lleva al final o el principio de llave relacionada {}[]()
+nnoremap <leader>z <S-$>zf% " para plegar codigo de manera sencilla, debes colocarte en el principo de la, llave {}[]() y listo, con za en modo normal vuelves a desplegar el codigo
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
 ```
 
 

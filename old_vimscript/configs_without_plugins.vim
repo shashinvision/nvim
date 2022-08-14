@@ -68,7 +68,7 @@ nnoremap <leader>dt :diffthis<CR>
 
 " para cerrar el buffer actual
 nnoremap <leader>bd :bd<CR>
-
+inoremap jk <Esc>
 " para recargar un archivo de forma manual
 nnoremap <leader>fs :source %<cr>
 
