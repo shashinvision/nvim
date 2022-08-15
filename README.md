@@ -156,6 +156,7 @@ nvim ~/.config/nvim/init.vim
 ```
 
 ```
+
 let mapleader = "\ " " Esto configura la tecla lider en VIM, en este momento dejamos la tecla 'espacio', esto es para no 'pisar' los atajos que vi tiene con la tecla Control y podemos personalizar todo, se debe usar la combinacion de botones en menos de un segundo para que haga efecto
 set syntax=on
 syntax enable " para resaltar el codigo cuando lo seleccionamos
@@ -236,18 +237,23 @@ nnoremap <leader>zf zf%<cr>
 nnoremap <leader>za za<cr>
 " Para seleccionar todo con Control + A
 nnoremap <C-A> ggVG
-nnoremap <leader>bl :ls<cr>:b<space> " Para mostrar un listado de los buffers
-nnoremap <silent> <leader>c :nohlsearch<CR>h:echo " "<CR>  " Limpia las busquedas
+" Para mostrar un listado de los buffers
+nnoremap <leader>bl :ls<cr>:b<space>
+" Limpia las busquedas
+nnoremap <silent> <leader>c :nohlsearch<CR>h:echo " "<CR>
 " para abrir/cerrar el explorador Lexplore
 nnoremap <leader>e :Lexplore<cr>
 inoremap jk <Esc>
-nnoremap <leader><leader> <S-$>%  " Te lleva al final o el principio de llave relacionada {}[]()
-nnoremap <leader>z <S-$>zf% " para plegar codigo de manera sencilla, debes colocarte en el principo de la, llave {}[]() y listo, con za en modo normal vuelves a desplegar el codigo
+" Te lleva al final o el principio de llave relacionada {}[]()
+nnoremap <leader><leader> <S-$>%
+" para plegar codigo de manera sencilla, debes colocarte en el principo de la, llave {}[]() y listo, con za en modo normal vuelves a desplegar el codigo
+nnoremap <leader>z <S-$>zf%
+" Mover entre splits de windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
+nnoremap <leader>c :nohlsearch<CR>h:echo " "<CR>
+nnoremap <leader>bl :buffers<CR>
+nnoremap <leader>t :terminal<CR>
 ```
-
-
-
