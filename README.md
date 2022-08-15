@@ -1,39 +1,15 @@
 ### Mi Configuración de NeoVIM
 
-Recomendación: Curso VIM profesional
-[Link Curso VIM Profesional](https://www.udemy.com/course/vim-profesional/)
+Les dejo mi guia completa de Vim Facil 
+[Link Curso VIM Profesional](https://www.youtube.com/playlist?list=PLt8PjPook45ZemtwXONrL5mrN-NTd71Lo)
 
 
 
-### Se debe instalar neovim
-
-### Todo el contenido equivalente al .vimrc de VIM en NeoVIm se encuentra en el siguiente path:
-
+### Se debe instalar neovim primero que todo, posteriormente se debe clonar este repo en la ruta ~/.config/
 ```
-mkdir ~/.config/nvim/
-```
-```
-touch ~/.config/nvim/init.vim
-```
-```
-vim ~/.config/nvim/init.vim
-```
-### [OPCIONAL] Puedo modificar el archivo de la ruta para que tome el .vimrc por defecto
-
-```
-vim ~/.config/nvim/init.vim
-```
-o
-```
-nvim ~/.config/nvim/init.vim
+cd ~/.config && git clone https://github.com/shashinvision/nvim.git
 ```
 
-y escribir dentro del archivo
-```
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath=&runtimepath
-source ~/.vimrc
-```
 
 ### Debemos instalar nodeJS idealmente con la versión 12+
 en caso de querer instalar distintas versiones de node se puede usar nvm (node version manager)
