@@ -94,7 +94,7 @@ keymap('n', '<leader>sp', 'viw:lua require("spectre").open_file_search()<cr>', {
 keymap('n', '<leader>st', ':Startify<cr>', {noremap = true})
 
 -- for Vim-Bookmarks
-keymap('n', '<leader>bt', '<Plug>BookmarkToggle', {noremap = true})
+keymap('n', '<leader>bm', '<Plug>BookmarkToggle', {noremap = true})
 keymap('n', '<leader>bi', '<Plug>BookmarkAnnotate', {noremap = true})
 keymap('n', '<leader>ba', '<Plug>BookmarkShowAll', {noremap = true})
 keymap('n', '<leader>bn', '<Plug>BookmarkNext', {noremap = true})
