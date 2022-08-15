@@ -1,7 +1,7 @@
 ### Mi Configuración de NeoVIM
 
 Les dejo mi guia completa de Vim Facil 
-[Link Curso VIM Profesional](https://www.youtube.com/playlist?list=PLt8PjPook45ZemtwXONrL5mrN-NTd71Lo)
+[Link Curso VIM Fácil](https://www.youtube.com/playlist?list=PLt8PjPook45ZemtwXONrL5mrN-NTd71Lo)
 
 
 
