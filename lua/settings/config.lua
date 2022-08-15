@@ -147,5 +147,7 @@ cmd([[
         set t_Co=256
         let g:AutoClosePreserveDotReg = 0
       endif
-        inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
+
+      " Este comando es para usar el Tab para seleccionar el autocompletar en de Coc
+      inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
     ]])
