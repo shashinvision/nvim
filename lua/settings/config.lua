@@ -114,6 +114,7 @@ cmd([[
 
       let g:coc_global_extensions = [
           \ 'coc-tsserver',
+          \ 'coc-tslint-plugin',
           \ 'coc-tabnine',
           \ 'coc-json',
           \ 'coc-html',

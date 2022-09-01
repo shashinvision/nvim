@@ -55,4 +55,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug 'windwp/nvim-spectre'
+-- Autocomplete
+Plug ('Shougo/deoplete.nvim', { ['do'] = ':UpdateRemotePlugins' })
+-- Typescript
+Plug 'leafgarland/typescript-vim'
+Plug ('mhartington/nvim-typescript', { ['do'] = './install.sh' })
 vim.call('plug#end')
