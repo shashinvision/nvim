@@ -59,5 +59,8 @@ Plug 'windwp/nvim-spectre'
 Plug ('Shougo/deoplete.nvim', { ['do'] = ':UpdateRemotePlugins' })
 -- Typescript
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'Quramy/tsuquyomi'
+Plug 'neoclide/vim-jsx-improve'
 Plug ('mhartington/nvim-typescript', { ['do'] = './install.sh' })
 vim.call('plug#end')
