@@ -74,9 +74,9 @@ keymap('n', '<Leader>lss', ':BraceyStop<cr>', { noremap = true})
 -- Para multicursor
 cmd([[
     let g:VM_maps = {}
-    let g:VM_maps['Find Under']         = '<C-d>'  " replace C-n
-    let g:VM_maps['Find Subword Under'] = '<C-d>'  " replace visual C-n
-    let g:VM_mouse_mappings = 1
+    let g:VM_maps['Find Under']         = '<C-d>'  " replace C-d
+    let g:VM_maps['Find Subword Under'] = '<C-d>'  " replace visual C-d
+    " let g:VM_mouse_mappings = 1
   ]])
 
 keymap('n', '<C-LeftMouse>', '<Plug>(VM-Mouse-Cursor)', {noremap = true})
@@ -104,3 +104,7 @@ keymap('n', '<leader>bx', '<Plug>BookmarkClearAll', {noremap = true})
 keymap('n', '<leader>bk', '<Plug>BookmarkMoveUp', {noremap = true})
 keymap('n', '<leader>bj', '<Plug>BookmarkMoveDown', {noremap = true})
 keymap('n', '<leader>bg', '<Plug>BookmarkMoveToLine', {noremap = true})
+
+-- for react refactor coc
+keymap('x', '<leader>ra', '<Plug>(coc-codeaction-selected)', {noremap = true})
+keymap('n', '<leader>ra', '<Plug>(coc-codeaction-selected)', {noremap = true})

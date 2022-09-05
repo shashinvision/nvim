@@ -137,6 +137,7 @@ cmd([[
           \ 'coc-java',
           \ 'coc-marketplace',
           \ 'coc-tslint-plugin',
+          \'coc-react-refactor',
           \ 'coc-highlight',
           \ 'coc-graphql',
           \ 'coc-stylelint',
