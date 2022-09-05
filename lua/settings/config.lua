@@ -90,7 +90,8 @@ cmd([[
 
       let g:blamer_enabled = 1
 
-
+      let g:user_emmet_install_global = 0
+      autocmd FileType html,css,js,jsx EmmetInstall
 
       if has("termguicolors")     " set true colors
           set t_8f=\[[38;2;%lu;%lu;%lum

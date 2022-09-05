@@ -39,5 +39,9 @@
       "isStdout": false,
       "doesWriteToFile": true
     }
+  },
+  "emmet": {
+    "includeLanguages": { "vue-html": "html", "javascript": "javascriptreact" },
+    "priority": 100
   }
 }
