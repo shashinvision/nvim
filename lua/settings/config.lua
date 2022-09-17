@@ -12,6 +12,7 @@ g.mapleader = ' ' -- tecla lider, en este caso el espacio
 set.compatible = false
 cmd('syntax on')
 cmd('syntax enable') --para resaltar el codigo cuando lo seleccionamos
+cmd('filetype off') -- Requerido
 cmd('filetype plugin indent on')
 cmd('colorscheme onedark')
 set.colorcolumn='80'
