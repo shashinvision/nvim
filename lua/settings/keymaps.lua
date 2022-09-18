@@ -4,8 +4,8 @@ local cmd = vim.cmd -- for VimScript commands
 
 
 -- Increment/decrement
-keymap('n', '+', '<C-a>')
-keymap('n', '-', '<C-x>')
+keymap('n', '+', '<C-a>', {noremap = true})
+keymap('n', '-', '<C-x>', {noremap = true})
 -- Move on windows
 keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = false })
 keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = false })
