@@ -10,6 +10,11 @@ local api = vim.api -- API VIM
 
 g.mapleader = ' ' -- tecla lider, en este caso el espacio
 set.compatible = false
+set.title = true
+set.filetype = 'none'
+set.cmdheight = 1
+set.scrolloff = 10
+set.inccommand = 'split'
 cmd('syntax on')
 cmd('syntax enable') --para resaltar el codigo cuando lo seleccionamos
 cmd('filetype plugin indent on')
@@ -25,6 +30,7 @@ set.laststatus = 10 -- Para guardar la cantidad de rehacer y deshacer
 set.showcmd = true -- para mostrar los comandos que se escriben
 o.showmode = false -- eliminamos que nos indique en que modo estamos (vista, insertar comando)
 set.showmatch = true
+vim.scriptencoding = 'utf-8'
 set.encoding = 'utf-8'
 set.fileencoding = 'utf-8' -- The encoding written to file.
 set.ignorecase = true -- para innorar el key sensitive en las busquedas, podria interferir en los reemplazos masivos, para eso colocar el comando :set noignorecase
@@ -32,6 +38,7 @@ set.autoindent = true
 set.autoread = true
 set.smartcase = true
 set.smartindent = true
+set.smarttab = true
 set.foldmethod = 'manual' -- para plegar y desplegar codigo. para hacer simple, vas al primer cierre del (){}[] y precionar zf% y listo, para desacoplar solo preciona zfa y listo.
 set.shiftwidth = 2
 set.maxmempattern = 5000 -- maxmempattern or set.mmp = 5000
@@ -44,6 +51,7 @@ set.incsearch = true -- Makes search act like search in modern browsers
 o.joinspaces = false -- Prevents inserting two spaces after punctuation on a join (J)
 set.tabstop = 2 -- An indentation every two columns
 set.softtabstop = 2 -- Let backspace delete indent
+set.backspace = { 'start', 'eol', 'indent' }
 set.viewoptions = 'folds,options,cursor,unix,slash' -- Better Unix / Windows compatibility
 set.magic = true -- For regular expressions turn magic on
 set.tags = './tags;/' -- para usar tags Para indexar toda una carpeta raiz desde la terminal y que git ignore esa carpeta ctags -R -f ./.git/tags .
@@ -51,16 +59,24 @@ set.updatetime = 50 -- improve user experience updating more frequently
 set.undofile = true -- Save undos after file closes
 cmd('set undodir=~/.config/nvim/undodir') -- where to save undo histories, lua have a trouble with path HOME path '~''
 -- set.undodir = '~/.config/nvim/undodir' -- where to save undo histories
+set.wildoptions = 'pum'
+set.winblend = 0
 set.undolevels = 1000 -- How many undos
 set.undoreload = 10000 -- Number of lines to save for undo
 set.pumheight = 20 -- Limit popup menu height
 set.wildmenu = true
 set.wildmode = 'longest:list,full'
-set.wildoptions = 'pum'
+set.background = 'dark'
+set.pumblend = 5
 set.expandtab = true -- On pressing tab, insert 2 spaces
-o.wrap = true
+set.wrap = true
 o.list = false
 set.linebreak = true -- Se corta en palabras y no en caracteres cuando wrap está puesto
+set.breakindent = true
+set.path:append { '**' } -- Finding files - Search down into subfolders
+set.wildignore:append { '*/node_modules/*' }
+set.wildignore:append { '*/vendor/*' }
+set.termguicolors = true
 
 cmd([[
       autocmd BufWritePre * :%s/\s\+$//e "remove whitespaces
@@ -72,9 +88,6 @@ cmd([[
         if (has("nvim"))
           "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
           let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-        endif
-        if (has("termguicolors"))
-          set termguicolors
         endif
       endif
 

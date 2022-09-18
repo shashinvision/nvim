@@ -2,6 +2,10 @@ local api = vim.api -- API VIM
 local keymap = api.nvim_set_keymap  -- for keymaps
 local cmd = vim.cmd -- for VimScript commands
 
+
+-- Increment/decrement
+keymap('n', '+', '<C-a>')
+keymap('n', '-', '<C-x>')
 -- Move on windows
 keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = false })
 keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = false })
