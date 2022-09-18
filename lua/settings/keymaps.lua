@@ -6,6 +6,10 @@ local cmd = vim.cmd -- for VimScript commands
 -- Increment/decrement
 keymap('n', '+', '<C-a>', {noremap = true})
 keymap('n', '-', '<C-x>', {noremap = true})
+-- New tab
+keymap('n', 'te', ':tabedit', {noremap = true})
+-- Delete a word backwards
+keymap('n', 'db', 'vb"_d', {noremap = true})
 -- Move on windows
 keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = false })
 keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = false })
@@ -20,16 +24,17 @@ keymap('n', '<C-x>', ':x<CR>', { noremap = true }) -- save and exit
 keymap('n', '<C-q>', ':q!<CR>', { noremap = true }) -- Exit without save Force!!!
 keymap('n', '<C-p>', ':bprev<CR>', { noremap = true }) -- buffer previous
 keymap('n','<C-n>', ':bnext<CR>', { noremap = true }) --buffer next
-keymap('n', '<leader>wh', ':split<CR>', { noremap = true }) -- horizontal split
-keymap('n', '<leader>wv', ':vsplit<CR>', {noremap = true}) --vertical split
-keymap('n', '<leader>dt', ':diffthis<CR>', {noremap = true}) -- Para su correcto uso se debe hacer un split de pantalla con dos archivos, posicionado en cada archivo se hace un leader +4 y se procede a comprar
-keymap('n', '<leader>bd', ':bd<CR>', {noremap = true}) -- para cerrar el buffer actual
+keymap('n', 'wh', ':split<Return><C-w>w', { noremap = true }) -- horizontal split
+keymap('n', 'wv', ':vsplit<Return><C-w>h', {noremap = true}) --vertical split
+keymap('n', 'dt', ':diffthis<CR>', {noremap = true}) -- Para su correcto uso se debe hacer un split de pantalla con dos archivos, posicionado en cada archivo se hace un leader +4 y se procede a comprar
+keymap('n', 'bd', ':bd<CR>', {noremap = true}) -- para cerrar el buffer actual
 keymap('n', '<leader>e', ':Lexplore<cr>', {noremap = true}) -- para abrir/cerrar el explorador Lexplore
-keymap('n', '<leader>fs', ':source %<cr>', {noremap = true}) -- para recargar un archivo de forma manual
+keymap('n', 'fs', ':source %<cr>', {noremap = true}) -- para recargar un archivo de forma manual
 keymap('n', '<leader><leader>', '<S-$>%', {noremap = true, silent = false }) -- Te lleva al final o el principio de llave relacionada {}[]()
 keymap('n', '<leader>z', '<S-$>zf%', {noremap = true, silent = false }) -- para plegar codigo de manera sencilla, debes colocarte en el principo de la, llave {}[]() y listo, con za en modo normal vuelves a desplegar el codigo
-keymap('n', '<C-A>','ggVG', {noremap = true}) --" Para seleccionar todo con Control + A
-keymap('n', '<leader>bl', ':buffers<CR>', {noremap = true}) --" Para mostrar un listado de los buffers
+-- select all
+keymap('n', '<C-a>','ggVG', {noremap = true}) --" Para seleccionar todo con Control + A
+keymap('n', 'bl', ':buffers<CR>', {noremap = true}) --" Para mostrar un listado de los buffers
 keymap('n', '<leader>c', ':nohlsearch<CR>h:echo " "<CR>', {noremap = true, silent = true})  -- Limpia las busquedas
 keymap('n','gd', '<Plug>(coc-definition)', {silent = true})
 keymap('n','gi', '<Plug>(coc-implementation)', {silent = true})
@@ -38,15 +43,15 @@ keymap('n','<C-t>', ':NERDTreeToggle<CR>', {noremap = true})
 keymap('n','<C-f>', ':NERDTreeFind<CR>', {noremap = true})
 
 -- Terminal split
-keymap('n', '<leader>tv', ':VTerm<CR>', {noremap = true})
-keymap('n', '<leader>th', ':Term<CR>', {noremap = true})
+keymap('n', 'tv', ':VTerm<CR>', {noremap = true})
+keymap('n', 'th', ':Term<CR>', {noremap = true})
 
 -- UndoTree sirve para ver un listado en forma de arbol de los cambios en un archivo, es como un versionamiento a tiempo real
-keymap('n', '<leader>ut', ':UndotreeToggle<CR>', {noremap = true})
-keymap('n', '<leader>wr', ':WinResizerStartResize<CR>', {noremap = true})
+keymap('n', 'ut', ':UndotreeToggle<CR>', {noremap = true})
+keymap('n', 'wr', ':WinResizerStartResize<CR>', {noremap = true})
 
 -- Para elegir que extension de VUE quiero desabilitar por el momento, solo dura la sesion de VIM en la que estas
-keymap('n', '<leader>cl', ':CocList extensions<CR>', {noremap = true})
+keymap('n', 'cl', ':CocList extensions<CR>', {noremap = true})
 
 -- Para Git
 keymap('n','<leader>gb' , ':Git blame<cr>', {noremap = true})
@@ -63,18 +68,17 @@ keymap('n','<leader>gh' , ':DiffviewFileHistory<cr>', {noremap = true})
 keymap('n','<leader>mg' , ':GitMessenger<cr>', {noremap = true})
 
 -- Find files using Telescope command-line sugar.
-keymap('n', '<leader>ff' , "<cmd>:lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
-keymap('n', '<leader>fg' , "<cmd>:lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
-keymap('n', '<leader>fb' , "<cmd>:lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
+keymap('n', 'ff' , "<cmd>:lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
+keymap('n', 'fg' , "<cmd>:lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
+keymap('n', 'fb' , "<cmd>:lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
 
 -- Para ver el historial de archivos con FZFMru
-keymap('n', '<Leader>fr', ':FZFMru<CR>', {noremap = true})
-keymap('n', '<Leader>fp', '<Plug>(Prettier)', {noremap = true})
-keymap('n', '<Leader>fh', '<cmd>Telescope help_tags<cr>', { noremap = true})
+keymap('n', 'fr', ':FZFMru<CR>', {noremap = true})
+keymap('n', 'fp', '<Plug>(Prettier)', {noremap = true})
 
 -- Live Serve
-keymap('n', '<Leader>ls', ':Bracey<cr>', { noremap = true})
-keymap('n', '<Leader>lss', ':BraceyStop<cr>', { noremap = true})
+keymap('n', 'ls', ':Bracey<cr>', { noremap = true})
+keymap('n', 'lp', ':BraceyStop<cr>', { noremap = true})
 -- Para multicursor
 cmd([[
     let g:VM_maps = {}
@@ -98,17 +102,17 @@ keymap('n', '<leader>sp', 'viw:lua require("spectre").open_file_search()<cr>', {
 keymap('n', '<leader>st', ':Startify<cr>', {noremap = true})
 
 -- for Vim-Bookmarks
-keymap('n', '<leader>bm', '<Plug>BookmarkToggle', {noremap = true})
-keymap('n', '<leader>bi', '<Plug>BookmarkAnnotate', {noremap = true})
-keymap('n', '<leader>ba', '<Plug>BookmarkShowAll', {noremap = true})
-keymap('n', '<leader>bn', '<Plug>BookmarkNext', {noremap = true})
-keymap('n', '<leader>bp', '<Plug>BookmarkPrev', {noremap = true})
-keymap('n', '<leader>bc', '<Plug>BookmarkClear', {noremap = true})
-keymap('n', '<leader>bx', '<Plug>BookmarkClearAll', {noremap = true})
-keymap('n', '<leader>bk', '<Plug>BookmarkMoveUp', {noremap = true})
-keymap('n', '<leader>bj', '<Plug>BookmarkMoveDown', {noremap = true})
-keymap('n', '<leader>bg', '<Plug>BookmarkMoveToLine', {noremap = true})
+keymap('n', 'bm', '<Plug>BookmarkToggle', {noremap = true})
+keymap('n', 'bi', '<Plug>BookmarkAnnotate', {noremap = true})
+keymap('n', 'ba', '<Plug>BookmarkShowAll', {noremap = true})
+keymap('n', 'bn', '<Plug>BookmarkNext', {noremap = true})
+keymap('n', 'bp', '<Plug>BookmarkPrev', {noremap = true})
+keymap('n', 'bc', '<Plug>BookmarkClear', {noremap = true})
+keymap('n', 'bx', '<Plug>BookmarkClearAll', {noremap = true})
+keymap('n', 'bk', '<Plug>BookmarkMoveUp', {noremap = true})
+keymap('n', 'bj', '<Plug>BookmarkMoveDown', {noremap = true})
+keymap('n', 'bg', '<Plug>BookmarkMoveToLine', {noremap = true})
 
 -- for react refactor coc
-keymap('x', '<leader>ra', '<Plug>(coc-codeaction-selected)', {noremap = true})
-keymap('n', '<leader>ra', '<Plug>(coc-codeaction-selected)', {noremap = true})
+keymap('x', 'ra', '<Plug>(coc-codeaction-selected)', {noremap = true})
+keymap('n', 'ra', '<Plug>(coc-codeaction-selected)', {noremap = true})
