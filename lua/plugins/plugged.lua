@@ -14,8 +14,12 @@ Plug 'dm1try/golden_size'
 Plug 'rhysd/git-messenger.vim'
 Plug 'yegappan/mru' -- Esto es para acceder al historial de archivos visitados y editados el comando es :MRU
 Plug 'mhinz/vim-startify'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+-- Plug 'vim-airline/vim-airline'
+-- Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
+-- If you want to have icons in your statusline choose one of these
+Plug 'kyazdani42/nvim-web-devicons'
+Plug ('akinsho/bufferline.nvim', { tag = 'v2.*' })
 Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'

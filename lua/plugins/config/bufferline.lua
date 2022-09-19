@@ -1,0 +1,3 @@
+require('bufferline').setup {
+
+}
