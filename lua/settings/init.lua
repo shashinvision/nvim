@@ -10,3 +10,5 @@ require('plugins/config/telescope')
 require('plugins/config/lualine')
 -- BufferLine
 require('plugins/config/bufferline')
+-- nvim-tree
+require('plugins/config/nvimtree')

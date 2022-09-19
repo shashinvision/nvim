@@ -1,6 +1,5 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
-
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug ('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 Plug 'ap/vim-css-color'
@@ -14,14 +13,11 @@ Plug 'dm1try/golden_size'
 Plug 'rhysd/git-messenger.vim'
 Plug 'yegappan/mru' -- Esto es para acceder al historial de archivos visitados y editados el comando es :MRU
 Plug 'mhinz/vim-startify'
--- Plug 'vim-airline/vim-airline'
--- Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lualine/lualine.nvim'
 -- If you want to have icons in your statusline choose one of these
 Plug 'kyazdani42/nvim-web-devicons'
 Plug ('akinsho/bufferline.nvim', { tag = 'v2.*' })
-Plug 'preservim/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'APZelos/blamer.nvim'
@@ -38,7 +34,6 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-surround' -- Para eliminar todo lo que este rodeado por un elemento ejemplo comillas dobles para cambiar las comillas simples por dobles cs'" con ds" se eliminan las comillas
 Plug ('mg979/vim-visual-multi', {branch = 'master'}) -- Multicursor Ctrl+d como en VSCode
-
 Plug 'vimlab/split-term.vim'
 Plug 'mbbill/undotree'
 Plug 'Townk/vim-autoclose'
@@ -52,7 +47,6 @@ Plug 'kabbamine/vcoolor.vim'
 Plug 'posva/vim-vue'
 Plug ('prettier/vim-prettier', { ['do'] = 'yarn install --frozen-lockfile --production' })
 Plug 'MattesGroeger/vim-bookmarks'
-Plug 'Xuyuanp/nerdtree-git-plugin' -- Visualización de cambios de git en NerdTree
 Plug 'AndrewRadev/tagalong.vim' -- Para cambiar los tags de HTML automáticamente
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'

@@ -39,9 +39,8 @@ keymap('n', '<leader>c', ':nohlsearch<CR>h:echo " "<CR>', {noremap = true, silen
 keymap('n','gd', '<Plug>(coc-definition)', {silent = true})
 keymap('n','gi', '<Plug>(coc-implementation)', {silent = true})
 keymap('n','gr','<Plug>(coc-references)', {silent = true})
-keymap('n','<C-t>', ':NERDTreeToggle<CR>', {noremap = true})
-keymap('n','<C-f>', ':NERDTreeFind<CR>', {noremap = true})
-
+keymap('n', '<C-t>', '<cmd>NvimTreeToggle<cr>', {noremap = true})
+keymap('n', '<C-f>', '<cmd>NvimTreeFindFile<cr>', {noremap = true})
 -- Terminal split
 keymap('n', 'tv', ':VTerm<CR>', {noremap = true})
 keymap('n', 'th', ':Term<CR>', {noremap = true})
