@@ -12,3 +12,5 @@ require('plugins/config/lualine')
 require('plugins/config/bufferline')
 -- nvim-tree
 require('plugins/config/nvimtree')
+-- treesitter
+require('plugins/config/treesitter')
