@@ -77,8 +77,8 @@ keymap('n', 'fr', ':FZFMru<CR>', {noremap = true})
 keymap('n', 'fp', '<Plug>(Prettier)', {noremap = true})
 
 -- Live Serve
-keymap('n', 'ls', ':Bracey<cr>', { noremap = true})
-keymap('n', 'lp', ':BraceyStop<cr>', { noremap = true})
+keymap('n', '<leader>ls', ':Bracey<cr>', { noremap = true})
+keymap('n', '<leader>lp', ':BraceyStop<cr>', { noremap = true})
 -- Para multicursor
 cmd([[
     let g:VM_maps = {}
