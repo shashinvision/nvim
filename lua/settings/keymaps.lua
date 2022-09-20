@@ -73,6 +73,7 @@ keymap('n', 'fb' , "<cmd>:lua require'telescope.builtin'.buffers(require('telesc
 
 -- Para ver el historial de archivos con FZFMru
 keymap('n', 'fr', ':FZFMru<CR>', {noremap = true})
+-- Prettier
 keymap('n', 'fp', '<Plug>(Prettier)', {noremap = true})
 
 -- Live Serve
@@ -91,14 +92,14 @@ keymap('n', '<C-RightMouse>', '<Plug>(VM-Mouse-Word)', {noremap = true})
 keymap('n', '<M-C-RightMouse>', '<Plug>(VM-Mouse-Column)', {noremap = true})
 
 -- Neovim Spectre
-keymap('n', '<leader>s', '<cmd>lua require("spectre").open()<CR>', {noremap = true})
+keymap('n', 'sh', '<cmd>lua require("spectre").open()<CR>', {noremap = true})
+keymap('v', 'sh', '<esc>:lua require("spectre").open_visual()<CR>', {noremap = true})
 -- search current word
-keymap('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {noremap = true})
-keymap('v', '<leader>s', '<esc>:lua require("spectre").open_visual()<CR>', {noremap = true})
+keymap('n', 'sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {noremap = true})
 --  search in current file
-keymap('n', '<leader>sp', 'viw:lua require("spectre").open_file_search()<cr>', {noremap = true})
+keymap('n', 'sf', 'viw:lua require("spectre").open_file_search()<cr>', {noremap = true})
 -- run command :Spectre
-keymap('n', '<leader>st', ':Startify<cr>', {noremap = true})
+keymap('n', 'st', ':Startify<cr>', {noremap = true})
 
 -- for Vim-Bookmarks
 keymap('n', 'bm', '<Plug>BookmarkToggle', {noremap = true})
