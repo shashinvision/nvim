@@ -45,8 +45,8 @@ set.shiftwidth = 2
 set.maxmempattern = 5000 -- maxmempattern or set.mmp = 5000
 set.history = 1000 -- Sets how many lines of history VIM has to remember
 set.gdefault = true -- Add g (global) to substitute operations, :s/pattern/replacement/
--- set.splitbelow = true -- Open split below
--- set.splitright = true -- Open split right
+set.splitbelow = true -- Open split below
+set.splitright = true -- Open split right
 set.hlsearch = true -- Highlight search results
 set.incsearch = true -- Makes search act like search in modern browsers
 o.joinspaces = false -- Prevents inserting two spaces after punctuation on a join (J)

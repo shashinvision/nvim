@@ -7,7 +7,7 @@ local cmd = vim.cmd -- for VimScript commands
 keymap('n', '+', '<C-a>', {noremap = true})
 keymap('n', '-', '<C-x>', {noremap = true})
 -- New tab
-keymap('n', 'nf', ':tabedit', {noremap = true})
+keymap('n', '<leader>nf', ':DashboardNewFile<CR>', {noremap = true})
 -- Delete a word backwards
 keymap('n', 'db', 'vb"_d', {noremap = true})
 -- Move on windows
@@ -101,6 +101,7 @@ keymap('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=
 keymap('n', '<leader>sf', 'viw:lua require("spectre").open_file_search()<cr>', {noremap = true})
 -- run command :Spectre
 -- keymap('n', '<leader>st', ':Startify<cr>', {noremap = true})
+keymap('n', '<leader>da', ':Dashboard<cr>', {noremap = true})
 
 -- for Vim-Bookmarks
 keymap('n', 'bm', '<Plug>BookmarkToggle', {noremap = true})
