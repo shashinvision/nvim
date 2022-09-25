@@ -22,7 +22,7 @@
       {icon = '🔍 ',
       desc = 'Find  word                              ',
       action = 'Telescope live_grep',
-      shortcut = 'f g'},
+      shortcut = 'f w'},
       {icon = '🔍 ',
       desc = 'Find  File                              ',
       action = 'Telescope find_files find_command=rg,--hidden,--files',
