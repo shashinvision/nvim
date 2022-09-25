@@ -69,7 +69,7 @@ keymap('n','<leader>mg' , ':GitMessenger<cr>', {noremap = true})
 -- Find files using Telescope command-line sugar.
 keymap('n', 'ff' , "<cmd>:lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
 keymap('n', 'fw' , "<cmd>:lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
-keymap('n','fb',':Telescope file_browser<cr>',{ noremap = true })
+keymap("n", "fb", "<Cmd>lua require('telescope').extensions.file_browser.file_browser(require('telescope.themes').get_dropdown({}))<CR>", {noremap = true})
 keymap('n', 'fh' , "<cmd>:lua require'telescope.builtin'.oldfiles(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
 keymap('n', '<leader>fb' , "<cmd>:lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
 
