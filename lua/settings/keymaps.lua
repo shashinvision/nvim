@@ -73,7 +73,7 @@ keymap('n', 'fb' , "<cmd>:lua require'telescope.builtin'.buffers(require('telesc
 keymap('n','<leader>fb',':Telescope file_browser<cr>',{ noremap = true })
 
 -- Para ver el historial de archivos con FZFMru
-keymap('n', 'fh', ':FZFMru<CR>', {noremap = true})
+keymap('n', 'fh', ':Telescope oldfiles<CR>', {noremap = true})
 -- Prettier
 keymap('n', 'fp', '<Plug>(Prettier)', {noremap = true})
 

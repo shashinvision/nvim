@@ -37,7 +37,7 @@
       shortcut = 'f f'},
       {icon = '⌚ ',
       desc = 'Recently opened files                   ',
-      action =  'FZFMru',
+      action =  'Telescope oldfiles',
       shortcut = 'f h'},
       {icon = '🔖  ',
       desc = 'Bookmarks                               ',
