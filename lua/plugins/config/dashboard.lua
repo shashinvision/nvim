@@ -44,3 +44,4 @@
       action =  'BookmarkShowAll',
       shortcut = 'b a'},
     }
+  db.custom_footer = {'ShashinV Have a fun time on Neovim'}
