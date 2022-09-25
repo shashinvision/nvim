@@ -100,7 +100,7 @@ keymap('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=
 keymap('n', '<leader>sf', 'viw:lua require("spectre").open_file_search()<cr>', {noremap = true})
 -- run command :Spectre
 -- keymap('n', '<leader>st', ':Startify<cr>', {noremap = true})
-keymap('n', '<leader>da', ':Dashboard<cr>', {noremap = true})
+keymap('n', '<leader>d', ':Dashboard<cr>', {noremap = true})
 
 -- for Vim-Bookmarks
 keymap('n', 'bm', '<Plug>BookmarkToggle', {noremap = true})
