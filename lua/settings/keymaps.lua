@@ -7,7 +7,7 @@ local cmd = vim.cmd -- for VimScript commands
 keymap('n', '+', '<C-a>', {noremap = true})
 keymap('n', '-', '<C-x>', {noremap = true})
 -- New tab
-keymap('n', 'te', ':tabedit', {noremap = true})
+keymap('n', 'nf', ':tabedit', {noremap = true})
 -- Delete a word backwards
 keymap('n', 'db', 'vb"_d', {noremap = true})
 -- Move on windows
@@ -70,9 +70,10 @@ keymap('n','<leader>mg' , ':GitMessenger<cr>', {noremap = true})
 keymap('n', 'ff' , "<cmd>:lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
 keymap('n', 'fg' , "<cmd>:lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
 keymap('n', 'fb' , "<cmd>:lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
+keymap('n','<leader>fb',':Telescope file_browser<cr>',{ noremap = true })
 
 -- Para ver el historial de archivos con FZFMru
-keymap('n', 'fr', ':FZFMru<CR>', {noremap = true})
+keymap('n', 'fh', ':FZFMru<CR>', {noremap = true})
 -- Prettier
 keymap('n', 'fp', '<Plug>(Prettier)', {noremap = true})
 
@@ -99,7 +100,7 @@ keymap('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=
 --  search in current file
 keymap('n', '<leader>sf', 'viw:lua require("spectre").open_file_search()<cr>', {noremap = true})
 -- run command :Spectre
-keymap('n', '<leader>st', ':Startify<cr>', {noremap = true})
+-- keymap('n', '<leader>st', ':Startify<cr>', {noremap = true})
 
 -- for Vim-Bookmarks
 keymap('n', 'bm', '<Plug>BookmarkToggle', {noremap = true})

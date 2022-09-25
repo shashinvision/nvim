@@ -14,3 +14,5 @@ require('plugins/config/bufferline')
 require('plugins/config/nvimtree')
 -- treesitter
 require('plugins/config/treesitter')
+-- Dashboard nvim
+require('plugins/config/dashboard')
