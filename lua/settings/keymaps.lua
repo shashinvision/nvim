@@ -70,10 +70,9 @@ keymap('n','<leader>mg' , ':GitMessenger<cr>', {noremap = true})
 keymap('n', 'ff' , "<cmd>:lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
 keymap('n', 'fg' , "<cmd>:lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
 keymap('n', 'fb' , "<cmd>:lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
+keymap('n', 'fh' , "<cmd>:lua require'telescope.builtin'.oldfiles(require('telescope.themes').get_dropdown({}))<cr>", {noremap = true})
 keymap('n','<leader>fb',':Telescope file_browser<cr>',{ noremap = true })
 
--- Para ver el historial de archivos con FZFMru
-keymap('n', 'fh', ':Telescope oldfiles<CR>', {noremap = true})
 -- Prettier
 keymap('n', 'fp', '<Plug>(Prettier)', {noremap = true})
 
