@@ -82,9 +82,10 @@ set.termguicolors = true
 cmd([[
       autocmd BufWritePre * :%s/\s\+$//e "remove whitespaces
       autocmd BufWritePost * GitGutter
-      autocmd BufNewFile,BufEnter *.php set syntax=php
-      autocmd BufNewFile,BufRead *.php set filetype=php
       autocmd BufNewFile,BufRead *.md set filetype=txt
+     " autocmd BufNewFile,BufEnter *.php set syntax=php
+     " autocmd BufNewFile,BufRead *.php set filetype=php
+
       if (empty($TMUX))
         if (has("nvim"))
           "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -105,7 +106,7 @@ cmd([[
       let g:blamer_enabled = 1
 
       let g:user_emmet_install_global = 0
-      autocmd FileType html,css,js,jsx EmmetInstall
+      autocmd FileType html,css,js,jsx,vue EmmetInstall
 
       if has("termguicolors")     " set true colors
           set t_8f=\[[38;2;%lu;%lu;%lum
@@ -123,6 +124,7 @@ cmd([[
             " autocmd BufLeave *.vue call CocActionAsync('activeExtension', 'coc-tsserver')
             autocmd BufEnter *.graphql call CocActionAsync('activeExtension', 'coc-graphql')
             autocmd BufEnter *.js call CocActionAsync('activeExtension', 'coc-tsserver')
+            autocmd BufEnter *.jsx call CocActionAsync('activeExtension', 'coc-tsserver')
             autocmd BufEnter *.ts call CocActionAsync('activeExtension', 'coc-tsserver')
             autocmd BufEnter *.html call CocActionAsync('activeExtension', 'coc-tsserver')
       augroup END
@@ -152,13 +154,18 @@ cmd([[
           \ 'coc-java',
           \ 'coc-marketplace',
           \ 'coc-tslint-plugin',
-          \'coc-react-refactor',
+          \ 'coc-react-refactor',
           \ 'coc-highlight',
           \ 'coc-graphql',
           \ 'coc-stylelint',
           \ 'coc-snippets',
+          \ 'coc-go',
+          \ 'coc-pairs',
           \ 'coc-emmet'
           \]
+
+
+      autocmd FileType markdown let b:coc_pairs_disabled = ['`']
 
       if !has('gui_running')
         set t_Co=256
@@ -167,4 +174,5 @@ cmd([[
 
       " Este comando es para usar el Tab para seleccionar el autocompletar en de Coc
       inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
+
     ]])

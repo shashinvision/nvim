@@ -39,7 +39,7 @@ Plug ('mg979/vim-visual-multi', {branch = 'master'}) -- Multicursor Ctrl+d como 
 Plug 'vimlab/split-term.vim'
 Plug 'mbbill/undotree'
 Plug 'Townk/vim-autoclose'
-Plug 'jiangmiao/auto-pairs'
+-- Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug ('turbio/bracey.vim', {['do'] = 'npm install --prefix server'}) --WebDevelopment
 Plug 'alvan/vim-closetag'
