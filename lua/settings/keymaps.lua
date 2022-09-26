@@ -39,7 +39,6 @@ keymap('n', '<leader>c', ':nohlsearch<CR>h:echo " "<CR>', {noremap = true, silen
 
 -- COC Mappings
 keymap('n','gd', '<Plug>(coc-definition)', {noremap = true})
-keymap('n','gt', '<Plug>(coc-type-definition)', {noremap = true})
 keymap('n','gi', '<Plug>(coc-implementation)', {noremap = true})
 keymap('n','gr','<Plug>(coc-references)', {noremap = true})
 
