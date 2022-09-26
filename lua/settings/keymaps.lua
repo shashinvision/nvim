@@ -19,7 +19,7 @@ keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = false })
 keymap('i', 'jk', '<ESC>', {noremap = true}) -- Simula la tecla escape en el modo insert
 keymap('n', 'n', 'nzzzv', { noremap = true }) --Centrar en las busquedas
 keymap('n', '<C-s>', ':w<CR>', { noremap = true }) -- Save buffer
-keymap('n', '<leader>a', ':wa<CR>', { noremap = true }) -- save all buffers open
+keymap('n', '<leader>sa', ':wa<CR>', { noremap = true }) -- save all buffers open
 keymap('n', '<C-x>', ':x<CR>', { noremap = true }) -- save and exit
 keymap('n', '<C-q>', ':q!<CR>', { noremap = true }) -- Exit without save Force!!!
 keymap('n', '<C-p>', ':bprev<CR>', { noremap = true }) -- buffer previous
@@ -36,9 +36,24 @@ keymap('n', '<leader>z', '<S-$>zf%', {noremap = true, silent = false }) -- para 
 keymap('n', '<C-a>','ggVG', {noremap = true}) --" Para seleccionar todo con Control + A
 keymap('n', 'bl', ':buffers<CR>', {noremap = true}) --" Para mostrar un listado de los buffers
 keymap('n', '<leader>c', ':nohlsearch<CR>h:echo " "<CR>', {noremap = true, silent = true})  -- Limpia las busquedas
-keymap('n','gd', '<Plug>(coc-definition)', {silent = true})
-keymap('n','gi', '<Plug>(coc-implementation)', {silent = true})
-keymap('n','gr','<Plug>(coc-references)', {silent = true})
+
+-- COC Mappings
+keymap('n','gd', '<Plug>(coc-definition)', {noremap = true})
+keymap('n','gt', '<Plug>(coc-type-definition)', {noremap = true})
+keymap('n','gi', '<Plug>(coc-implementation)', {noremap = true})
+keymap('n','gr','<Plug>(coc-references)', {noremap = true})
+
+-- COC Refactoring
+keymap('n','cr', '<Plug>(coc-rename)', {noremap = true})
+keymap('n','cf', '<Plug>(coc-format)', {noremap = true})
+keymap('x','cf', '<Plug>(coc-ormat-selected)', {noremap = true})
+keymap('n','ca', '<Plug>(coc-codeaction)', {noremap = true})
+keymap('x','ca', '<Plug>(coc-codeaction-selected)', {noremap = true})
+keymap('n','cx', '<Plug>(coc-fix-current)', {noremap = true})
+
+-- COC Show info mappings
+keymap('n','ci', ':call CocAction("doHover")<CR>', {noremap = true})
+
 keymap('n', '<C-t>', '<cmd>NvimTreeToggle<cr>', {noremap = true})
 keymap('n', '<C-f>', '<cmd>NvimTreeFindFile<cr>', {noremap = true})
 -- Terminal split

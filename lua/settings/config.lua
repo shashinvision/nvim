@@ -175,4 +175,6 @@ cmd([[
       " Este comando es para usar el Tab para seleccionar el autocompletar en de Coc
       inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
 
+      " Highlight current identifier usage in current document
+      autocmd CursorHold * silent call CocActionAsync('highlight')
     ]])
