@@ -138,7 +138,6 @@ cmd([[
           \ 'coc-css',
           \ 'coc-phpls',
           \ 'coc-python',
-          \ '@yaegassy/coc-phpstan',
           \ 'coc-php-cs-fixer',
           \ '@yaegassy/coc-intelephense',
           \ 'coc-jedi',
