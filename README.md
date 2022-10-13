@@ -1,6 +1,6 @@
 ### Mi Configuración de NeoVIM
 
-Les dejo mi guia completa de Vim Facil 
+Les dejo mi guia completa de Vim Facil
 [Link Curso VIM Fácil](https://www.youtube.com/playlist?list=PLt8PjPook45ZemtwXONrL5mrN-NTd71Lo)
 
 
@@ -65,6 +65,15 @@ brew install gnu-sed
 ```brew install ack```
 ```sudo apt install ack```
 
+### Instalar GRIP(GitHub Readme Instant Preview) para Markdown preview https://github.com/joeyespo/grip
+### En Mac
+```
+brew install grip
+```
+### O desde Python
+```
+pip install grip
+```
 
 ### Copia el contenido del archivo init.vim que esta en este repo a la ruta:
 

@@ -62,4 +62,5 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'Quramy/tsuquyomi'
 Plug 'neoclide/vim-jsx-improve'
 Plug ('mhartington/nvim-typescript', { ['do'] = './install.sh' })
+Plug 'JamshedVesuna/vim-markdown-preview'
 vim.call('plug#end')

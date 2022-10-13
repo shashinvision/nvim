@@ -176,4 +176,7 @@ cmd([[
 
       " Highlight current identifier usage in current document
       autocmd CursorHold * silent call CocActionAsync('highlight')
+
+      let vim_markdown_preview_github=1
+
     ]])
