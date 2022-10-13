@@ -178,5 +178,7 @@ cmd([[
       autocmd CursorHold * silent call CocActionAsync('highlight')
 
       let vim_markdown_preview_github=1
+      let vim_markdown_preview_hotkey='<Leader>mp'
+      let vim_markdown_preview_browser='Brave Browser'
 
     ]])
