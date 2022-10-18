@@ -2,6 +2,7 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug ('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
+Plug 'p00f/nvim-ts-rainbow'
 Plug 'ap/vim-css-color'
 Plug 'StanAngeloff/php.vim'
 Plug 'jbgutierrez/vim-better-comments'
