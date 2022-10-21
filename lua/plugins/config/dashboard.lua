@@ -15,7 +15,7 @@
       '',
     }
   db.custom_center = {
-      {icon = '📑  ',
+      {icon = '  ',
       desc ='New File                          ',
       action =  'DashboardNewFile',
       shortcut = 'Leader n f'},
