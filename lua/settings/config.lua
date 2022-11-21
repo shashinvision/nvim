@@ -140,6 +140,7 @@ cmd([[
           \ 'coc-python',
           \ 'coc-php-cs-fixer',
           \ '@yaegassy/coc-intelephense',
+          \ '@yaegassy/coc-volar-tools',
           \ 'coc-jedi',
           \ 'coc-diagnostic',
           \ 'coc-just-complete',
