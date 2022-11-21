@@ -131,7 +131,7 @@ cmd([[
 
       " This is for NVM(node version manager), execute this command in your terminal: nvm which node or nvm which current
       " And put this path in global cocvariable
-      let g:coc_node_path = '~/.nvm/versions/node/v18.12.1/bin/node'
+      "example: let g:coc_node_path = '~/.nvm/versions/node/v18.12.1/bin/node'
       let g:coc_global_extensions = [
           \ 'coc-tsserver',
           \ 'coc-tslint-plugin',
