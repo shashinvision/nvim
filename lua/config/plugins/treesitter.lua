@@ -10,6 +10,7 @@ require('nvim-treesitter.configs').setup({
     'tsx',
     'css',
     'json',
+    'vim',
     'lua',
     'php',
     'html',
