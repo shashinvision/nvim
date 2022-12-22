@@ -45,7 +45,7 @@
       shortcut = 'Ctrl t'},
       {icon = '⚙  ',
       desc = 'Config                                      ',
-      action =  'edit ~/.config/nvim/lua/settings/init.lua',
+      action =  'edit ~/.config/nvim/lua/config/init.lua',
       shortcut = ''},
     }
   db.custom_footer = {'ShashinV Have a fun time on Neovim'}
