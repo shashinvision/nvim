@@ -14,8 +14,19 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = false })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = false })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = false })
 
+-- Move lines
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Replace a word in entire buffer
+vim.keymap.set("n", "<leader>rr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Make a file executable
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
 vim.keymap.set('i', 'jk', '<ESC>', {noremap = true}) -- Simula la tecla escape en el modo insert
 vim.keymap.set('n', 'n', 'nzzzv', { noremap = true }) --Centrar en las busquedas
+vim.keymap.set('n', 'N', 'Nzzzv', { noremap = true }) --Centrar en las busquedas
 vim.keymap.set('n', '<C-s>', ':w<CR>', { noremap = true }) -- Save buffer
 vim.keymap.set('n', '<leader>sa', ':wa<CR>', { noremap = true }) -- save all buffers open
 vim.keymap.set('n', '<C-x>', ':x<CR>', { noremap = true }) -- save and exit
