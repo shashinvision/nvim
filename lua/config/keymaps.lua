@@ -119,3 +119,5 @@ vim.keymap.set('n', 'bk', '<Plug>BookmarkMoveUp', {noremap = true})
 vim.keymap.set('n', 'bj', '<Plug>BookmarkMoveDown', {noremap = true})
 vim.keymap.set('n', 'bg', '<Plug>BookmarkMoveToLine', {noremap = true})
 
+-- To Show Diagnostic with LSP
+vim.keymap.set('n', '<S-e>', '<cmd>lua vim.diagnostic.open_float()<CR>', {noremap = false})

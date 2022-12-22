@@ -38,7 +38,10 @@ return require('packer').startup(function(use)
     use 'yegappan/mru' -- Esto es para acceder al historial de archivos visitados y editados el comando es :MRU
     -- use 'mhinz/vim-startify'
     use 'glepnir/dashboard-nvim'
-    use 'nvim-lualine/lualine.nvim'
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
     -- If you want to have icons in your statusline choose one of these
     use 'kyazdani42/nvim-web-devicons'
     -- using packer.nvim

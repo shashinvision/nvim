@@ -9,7 +9,6 @@ lsp.ensure_installed({
   'sumneko_lua'
 })
 
-require('lspconfig').intelephense.setup {}
 lsp.nvim_workspace()
 
 lsp.setup()
