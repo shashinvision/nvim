@@ -9,10 +9,10 @@ vim.keymap.set('n', '<leader>nf', ':DashboardNewFile<CR>', {noremap = true})
 -- Delete a word backwards
 vim.keymap.set('n', 'db', 'vb"_d', {noremap = true})
 -- Move on windows
-vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = false })
-vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = false })
-vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = false })
-vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>h', '<C-w>h', { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>l', '<C-w>l', { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>j', '<C-w>j', { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>k', '<C-w>k', { noremap = true, silent = false })
 
 -- Move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
