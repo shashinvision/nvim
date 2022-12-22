@@ -23,13 +23,12 @@ sudo npm install -g prettier
 
 ### [Obligación] Instalaciones a considerar
 
-```git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline```
-
-```git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes```
-
-### Instalar Plug Para VIM NVIM
 ```
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\\n ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+## posteriormente ejecutar el comando
+```
+:PackerSync
 ```
 ### Para que funcione el grep de busqueda de palabras de telescope
 ```
@@ -45,25 +44,10 @@ brew install fzf
 ```
 sudo apt install fzf
 ```
-### En Mac instalar ctags
-```
-brew install ctags
-```
-### En ubuntu
-```
-sudo apt-get install ctags
-```
-### SOLO EN MAC En el mismo archivo .zshrc se coloca el alias
-```
-alias ctags="`brew --prefix`/bin/ctags"
-```
 ### En mac para que funcione bien Vim Spectre (Busqueda/reemplazo) en proyectos
 ```
 brew install gnu-sed
 ```
-### OPCIONAL ACK (Deprecado, ya no lo uso en esta version, pero el codigo esta comendato en el archivo de configuracion, lo dejo solo en caso de querer activarlo)
-```brew install ack```
-```sudo apt install ack```
 
 ### Instalar GRIP(GitHub Readme Instant Preview) para Markdown preview https://github.com/joeyespo/grip
 ### En Mac
@@ -80,28 +64,7 @@ pip install grip
 ```
 ~/.config/nvim/init.vim
 ```
-
-### Dentro de nvim se ejecuta el siguiente comando
-
-
-Presionar tecla Escape, luego : y escribir PlugInstall
-quedando de la siguinete forma
-
-```
-:PlugInstall
-```
-
-
-### Para configurar coc debes editar el archivo config conel comando con el comando :CocConfig o en la ruta:
-## ahí debes colocar tu licencia de "intelephense.licenceKey"
-## dentro de este repo esta el contenido de ese archivo
-```
-~/.config/nvim/coc-settings.json
-```
-
-
 ### En mac necesitamos instalar python la versión 3
-
 
 ### Para Mac y Linux se instala python3 desde brew lo mism nvim y para que no tenga problemas con reconocer python3 se usan los siguientes comandos
 ```pip3 uninstall neovim```
@@ -140,7 +103,7 @@ touch ~/.config/nvim/init.vim
 nvim ~/.config/nvim/init.vim
 ```
 
-## Esta configuración tambien es compatible con vim en el archivo ~/.vimrc, si no lo tienes puedes crearlo con touch ~/.vimrc y copiarla ahí
+## CONFIGURACION PARA SERVIDORES, Esta configuración tambien es compatible con vim en el archivo ~/.vimrc, si no lo tienes puedes crearlo con touch ~/.vimrc y copiarla ahí
 
 ```
 
