@@ -30,6 +30,11 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\\n ~/.local/share/
 ```
 :PackerSync
 ```
+### Para instalar servers con LSP solo usa el comandos
+```
+:Mason
+```
+### Luego con la tecla i encima de la opción se instala y listo
 ### Para que funcione el grep de busqueda de palabras de telescope
 ```
 brew install ripgrep
