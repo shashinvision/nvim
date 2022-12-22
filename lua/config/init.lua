@@ -12,6 +12,7 @@ require('config/plugins/nvimtree')
 require('config/plugins/treesitter')
 -- Dashboard nvim
 require('config/plugins/dashboard')
+require('config/plugins/lsp')
 -- **** End Lua plugins configs ***
 
 -- *** Settings ***

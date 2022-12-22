@@ -4,6 +4,8 @@ require('nvim-treesitter.configs').setup({
   },
   ensure_installed = {
     'javascript',
+    'c',
+    'rust',
     'typescript',
     'tsx',
     'css',
@@ -12,7 +14,8 @@ require('nvim-treesitter.configs').setup({
     'php',
     'html',
     'python',
-    'java'
+    'java',
+    'help'
   },
   rainbow = {
     enable = true,
