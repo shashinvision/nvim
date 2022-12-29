@@ -130,7 +130,7 @@ set encoding=utf-8
 set ignorecase " para innorar el key sensitive en las busquedas, podria interferir en los reemplazos masivos, para eso colocar el comando :set noignorecase
 set smartcase
 set foldmethod=manual " para plegar y desplegar codigo. para hacer simple, vas al primer cierre del (){}[] y precionar zf% y listo, para desacoplar solo preciona zfa y listo.
-set shiftwidth=2
+set shiftwidth=4
 set autoindent
 set smartindent
 set mmp=5000
@@ -141,8 +141,8 @@ set splitright " Open split right
 set hlsearch " Highlight search results
 set incsearch " Makes search act like search in modern browsers
 set nojoinspaces " Prevents inserting two spaces after punctuation on a join (J)
-set tabstop=2 " An indentation every four columns
-set softtabstop=2 " Let backspace delete indent
+set tabstop=4 " An indentation every four columns
+set softtabstop=4 " Let backspace delete indent
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 set fileencoding=utf-8 " The encoding written to file.
 set magic " For regular expressions turn magic on
@@ -163,6 +163,7 @@ set linebreak " se corta en palabras y no en caracteres cuando wrap está puesto
 autocmd BufWritePre * :%s/\s\+$//e " remove whitespaces
 
 nnoremap n nzzzv " Centrar en las busquedas
+nnoremap N Nzzzv " Centrar en las busquedas
 
 nmap <C-s> :w<CR>
 nmap <leader>a :wa<CR> "save all buffers open
