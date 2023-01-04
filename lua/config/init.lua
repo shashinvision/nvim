@@ -1,7 +1,5 @@
 -- **** Lua plugins configs ***
 require("config/packer")
--- Telescope configuration
--- require('config/plugins/telescope')
 -- Lua Line Config
 require('config/plugins/lualine')
 -- BufferLine
@@ -13,6 +11,8 @@ require('config/plugins/treesitter')
 -- Dashboard nvim
 require('config/plugins/dashboard')
 require('config/plugins/lsp')
+-- indent-blankline configuration
+ require('config/plugins/indent-blankline')
 -- **** End Lua plugins configs ***
 
 -- *** Settings ***

@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
     use 'jbgutierrez/vim-better-comments'
     use 'nvim-lua/plenary.nvim'
     use 'simeji/winresizer'
+    use "lukas-reineke/indent-blankline.nvim"
     use {
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
     -- or                            , branch = '0.1.x',

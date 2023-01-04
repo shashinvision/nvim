@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/felipemancillareyes/.local/share/nvim/site/pack/packer/start/golden_size",
     url = "https://github.com/dm1try/golden_size"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/felipemancillareyes/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/felipemancillareyes/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
