@@ -26,13 +26,13 @@ return require('packer').startup(function(use)
     use 'jbgutierrez/vim-better-comments'
     use 'nvim-lua/plenary.nvim'
     use 'simeji/winresizer'
-    use "lukas-reineke/indent-blankline.nvim"
     use {
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
     -- or                            , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
     use 'nvim-telescope/telescope-file-browser.nvim'
+    use "lukas-reineke/indent-blankline.nvim"
     use 'joshdick/onedark.vim'
     use 'dm1try/golden_size'
     use 'rhysd/git-messenger.vim'
