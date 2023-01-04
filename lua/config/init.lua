@@ -9,7 +9,7 @@ require('config/plugins/nvimtree')
 -- treesitter
 require('config/plugins/treesitter')
 -- indent-blankline configuration
-require('config/plugins/indent_blankline')
+require('config/plugins/indentblankline')
 -- Dashboard nvim
 require('config/plugins/dashboard')
 require('config/plugins/lsp')
