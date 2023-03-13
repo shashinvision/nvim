@@ -6,7 +6,17 @@ lsp.preset('recommended')
 lsp.ensure_installed({
   'tsserver',
   'eslint',
-  'sumneko_lua'
+  'emmet_ls',
+  'lua_ls',
+  -- 'sumneko_lua',
+  'pyright',
+  'bashls',
+  'cssls',
+  'eslint',
+  'html',
+  'jsonls',
+  'tsserver',
+  'yamlls'
 })
 
 lsp.nvim_workspace()
