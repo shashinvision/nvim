@@ -1,5 +1,7 @@
 -- **** Lua plugins configs ***
 require("config/packer")
+-- Dashboard nvim
+-- require('config/plugins/dashboard')
 -- Lua Line Config
 require('config/plugins/lualine')
 -- BufferLine
@@ -10,8 +12,6 @@ require('config/plugins/nvimtree')
 require('config/plugins/treesitter')
 -- indent-blankline configuration
 require('config/plugins/indentblankline')
--- Dashboard nvim
-require('config/plugins/dashboard')
 require('config/plugins/lsp')
 -- **** End Lua plugins configs ***
 

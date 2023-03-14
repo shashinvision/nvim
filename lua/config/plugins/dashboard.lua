@@ -1,4 +1,4 @@
-  local db = require('dashboard')
+  local db = require('dashboard-nvim')
   db.preview_file_height = 11
   db.preview_file_width = 70
     db.default_banner = {

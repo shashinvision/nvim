@@ -38,7 +38,16 @@ return require('packer').startup(function(use)
     use 'rhysd/git-messenger.vim'
     use 'yegappan/mru' -- Esto es para acceder al historial de archivos visitados y editados el comando es :MRU
     -- use 'mhinz/vim-startify'
-    use 'glepnir/dashboard-nvim'
+    use {
+      'glepnir/dashboard-nvim',
+      event = 'VimEnter',
+      config = function()
+        require('dashboard').setup {
+          -- config
+        }
+      end,
+      requires = {'nvim-tree/nvim-web-devicons'}
+    }
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
