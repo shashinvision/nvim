@@ -84,6 +84,7 @@ set.guicursor = ""
 set.signcolumn = "yes"
 
 cmd([[
+      let g:nvim_tree_show_hidden = 1
       autocmd BufWritePre * :%s/\s\+$//e "remove whitespaces
       autocmd BufWritePost * GitGutter
       autocmd BufNewFile,BufRead *.md set filetype=txt
