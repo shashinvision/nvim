@@ -96,6 +96,7 @@ return require('packer').startup(function(use)
     use 'Quramy/tsuquyomi'
     use 'neoclide/vim-jsx-improve'
     use 'JamshedVesuna/vim-markdown-preview'
+    use 'leafoftree/vim-vue-plugin'
 
     -- https://github.com/VonHeikemen/lsp-zero.nvim
     use {
