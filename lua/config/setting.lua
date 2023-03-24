@@ -113,5 +113,8 @@ cmd([[
         set t_Co=256
         let g:AutoClosePreserveDotReg = 0
       endif
-    let g:vue_disable_pre_processors=1
+    " let g:vue_disable_pre_processors=1
+    " let g:polyglot_disabled = ['vue']
+    let g:vue_pre_processors = 'detect_on_enter'
+
     ]])
