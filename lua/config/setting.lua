@@ -115,8 +115,8 @@ cmd([[
         let g:AutoClosePreserveDotReg = 0
       endif
 
-    " let g:vue_disable_pre_processors=1
-     let g:vue_pre_processors = 'detect_on_enter'
+     let g:vue_disable_pre_processors=1
+    " let g:vue_pre_processors = 'detect_on_enter'
     " let g:polyglot_disabled = ['vue']
      let g:user_emmet_install_global = 0
      autocmd FileType html,css,vue EmmetInstall
