@@ -98,6 +98,20 @@ return require('packer').startup(function(use)
     use 'JamshedVesuna/vim-markdown-preview'
     use 'leafoftree/vim-vue-plugin'
     -- use {'tzachar/compe-tabnine', run='./install.sh', requires='hrsh7th/nvim-compe'}
+    use {
+      'm-demare/hlargs.nvim',
+      requires = { 'nvim-treesitter/nvim-treesitter' }
+    }
+    use {
+      'sudormrfbin/cheatsheet.nvim',
+
+      requires = {
+        {'nvim-telescope/telescope.nvim'},
+        {'nvim-lua/popup.nvim'},
+        {'nvim-lua/plenary.nvim'},
+      }
+    }
+
     -- https://github.com/VonHeikemen/lsp-zero.nvim
     use {
       'VonHeikemen/lsp-zero.nvim',
