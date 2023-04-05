@@ -13,6 +13,7 @@ require('config/plugins/treesitter')
 -- indent-blankline configuration
 require('config/plugins/indentblankline')
 require('config/plugins/lsp')
+require('config/plugins/tabnine')
 -- **** End Lua plugins configs ***
 
 -- *** Settings ***

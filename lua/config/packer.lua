@@ -76,7 +76,7 @@ return require('packer').startup(function(use)
     use 'vimlab/split-term.vim'
     use 'mbbill/undotree'
     use 'Townk/vim-autoclose'
-    -- use 'jiangmiao/auto-pairs'
+    use 'jiangmiao/auto-pairs'
     use 'mattn/emmet-vim'
     use 'turbio/bracey.vim' --WebDevelopment
     use 'alvan/vim-closetag'
@@ -97,7 +97,7 @@ return require('packer').startup(function(use)
     use 'neoclide/vim-jsx-improve'
     use 'JamshedVesuna/vim-markdown-preview'
     use 'leafoftree/vim-vue-plugin'
-
+    use {'tzachar/compe-tabnine', run='./install.sh', requires='hrsh7th/nvim-compe'}
     -- https://github.com/VonHeikemen/lsp-zero.nvim
     use {
       'VonHeikemen/lsp-zero.nvim',
@@ -120,6 +120,7 @@ return require('packer').startup(function(use)
         {'rafamadriz/friendly-snippets'},
       }
     }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
