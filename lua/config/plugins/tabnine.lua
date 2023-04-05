@@ -1,6 +1,11 @@
 require('compe').setup({
   source = {
-    tabnine = true,
+    -- tabnine = true,
+    tabnine = {
+                detail_level = 1,
+                max_request = 4,
+                request_timeout = 5000
+            },
     nvim_lsp = true,
   },
    priority = {
