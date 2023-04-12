@@ -4,6 +4,7 @@ require('bufferline').setup {
     offsets = {
       {filetype = 'NvimTree'}
     },
+    buffer_close_icon = '',
   },
   highlights = {
     buffer_selected = {
