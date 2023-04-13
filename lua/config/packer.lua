@@ -93,7 +93,7 @@ return require('packer').startup(function(use)
     -- Typescript
     use 'leafgarland/typescript-vim'
     use 'peitalin/vim-jsx-typescript'
-    use 'Quramy/tsuquyomi'
+    -- use 'Quramy/tsuquyomi'
     use 'neoclide/vim-jsx-improve'
     use 'JamshedVesuna/vim-markdown-preview'
     use 'leafoftree/vim-vue-plugin'
