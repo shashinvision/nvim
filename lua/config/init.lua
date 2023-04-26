@@ -14,6 +14,7 @@ require('config/plugins/treesitter')
 require('config/plugins/indentblankline')
 require('config/plugins/lsp')
 require('config/plugins/hlargs')
+require('config/plugins/todocomments')
 -- require('config/plugins/tabnine')
 -- **** End Lua plugins configs ***
 

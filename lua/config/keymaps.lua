@@ -121,3 +121,4 @@ vim.keymap.set('n', 'bg', '<Plug>BookmarkMoveToLine', {noremap = true})
 
 -- To Show Diagnostic with LSP
 vim.keymap.set('n', '<S-e>', '<cmd>lua vim.diagnostic.open_float()<CR>', {noremap = true, silent = false})
+vim.keymap.set('n', '<leader>td', '<cmd>TodoTelescope<CR>', {noremap = true})
