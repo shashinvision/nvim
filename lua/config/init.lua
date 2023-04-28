@@ -15,7 +15,7 @@ require('config/plugins/indentblankline')
 require('config/plugins/lsp')
 require('config/plugins/hlargs')
 require('config/plugins/todocomments')
-require('config/plugins/trouble')
+require('config/plugins/troubleplugin')
 -- require('config/plugins/tabnine')
 -- **** End Lua plugins configs ***
 
