@@ -99,7 +99,6 @@ cmd([[
         endif
       endif
 
-      " autocmd FileType html,css,js,jsx,vue EmmetInstall
 
       if has("termguicolors")     " set true colors
           set t_8f=\[[38;2;%lu;%lu;%lum
@@ -119,7 +118,8 @@ cmd([[
     " let g:vue_pre_processors = 'detect_on_enter'
     " let g:polyglot_disabled = ['vue']
      let g:user_emmet_install_global = 0
-     autocmd FileType html,css,vue EmmetInstall
+
+    autocmd FileType html,css,js,jsx,vue EmmetInstall
 
     let g:vim_vue_plugin_config = {
           \'syntax': {
