@@ -16,6 +16,7 @@ require('config/plugins/lsp')
 require('config/plugins/hlargs')
 require('config/plugins/todocomments')
 require('config/plugins/troubleplugin')
+-- require('config/plugins/compe')
 -- require('config/plugins/tabnine')
 -- **** End Lua plugins configs ***
 

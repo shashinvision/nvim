@@ -98,6 +98,7 @@ return require('packer').startup(function(use)
     use 'JamshedVesuna/vim-markdown-preview'
     use 'leafoftree/vim-vue-plugin'
     -- use {'tzachar/compe-tabnine', run='./install.sh', requires='hrsh7th/nvim-compe'}
+    -- use 'hrsh7th/nvim-compe'
     use {
       'm-demare/hlargs.nvim',
       requires = { 'nvim-treesitter/nvim-treesitter' }
@@ -143,9 +144,11 @@ return require('packer').startup(function(use)
         {'saadparwaiz1/cmp_luasnip'},
         {'hrsh7th/cmp-nvim-lsp'},
         {'hrsh7th/cmp-nvim-lua'},
+        {'hrsh7th/cmp-cmdline'},
 
         -- Snippets
         {'L3MON4D3/LuaSnip'},
+        {'saadparwaiz1/cmp_luasnip'},
         {'rafamadriz/friendly-snippets'},
       }
     }
