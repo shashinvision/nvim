@@ -81,7 +81,7 @@ set.wildignore:append { '*/vendor/*' }
 set.termguicolors = true
 set.swapfile = false
 set.guicursor = ""
-set.signcolumn = "yes"
+set.signcolumn = 'yes' -- Reserve space for diagnostic icons
 
 cmd([[
       let g:nvim_tree_show_hidden = 1

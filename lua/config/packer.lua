@@ -12,7 +12,10 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
+  use {
+    "williamboman/mason.nvim",
+    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+    }
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
@@ -145,11 +148,19 @@ return require('packer').startup(function(use)
         {'hrsh7th/cmp-nvim-lsp'},
         {'hrsh7th/cmp-nvim-lua'},
         {'hrsh7th/cmp-cmdline'},
+        {'hrsh7th/cmp-vsnip'},
+        {'hrsh7th/cmp-nvim-lsp'},
+        {'hrsh7th/vim-vsnip'},
 
         -- Snippets
         {'L3MON4D3/LuaSnip'},
         {'saadparwaiz1/cmp_luasnip'},
         {'rafamadriz/friendly-snippets'},
+        {'SirVer/ultisnips'},
+        {'quangnguyen30192/cmp-nvim-ultisnips'},
+
+        {'dcampos/nvim-snippy'},
+        {'dcampos/cmp-snippy'}
       }
     }
     -- Lua
