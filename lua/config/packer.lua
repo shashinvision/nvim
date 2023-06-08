@@ -25,7 +25,6 @@ return require('packer').startup(function(use)
          }
     use 'p00f/nvim-ts-rainbow'
     use 'ap/vim-css-color'
-    use 'StanAngeloff/php.vim'
     use 'jbgutierrez/vim-better-comments'
     use 'nvim-lua/plenary.nvim'
     use 'simeji/winresizer'
@@ -71,9 +70,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-commentary' -- con gcc en modo vista gcc para descomentar una linea, con control v y seleccionamos varias lineas y colocamos gc y se comentan todas
     use 'puremourning/vimspector'
     use 'airblade/vim-gitgutter' -- Para ver los cambios en git como linea que se agrega con un signo +, si quitamos lineas con - y si se modifico una con ~
-    use 'vim-scripts/taglist.vim' -- Para ver os tags de los archivos
     use 'godlygeek/tabular'
-    use 'plasticboy/vim-markdown'
     use 'tpope/vim-surround' -- Para eliminar todo lo que este rodeado por un elemento ejemplo comillas dobles para cambiar las comillas simples por dobles cs'" con ds" se eliminan las comillas
     use 'mg979/vim-visual-multi' -- Multicursor Ctrl+d como en VSCode
     use 'vimlab/split-term.vim'
